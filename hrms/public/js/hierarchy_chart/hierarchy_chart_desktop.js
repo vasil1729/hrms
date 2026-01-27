@@ -12,20 +12,10 @@ hrms.HierarchyChart = class {
 		this.method = method;
 		this.doctype = doctype;
 
-		this.setup_page_style();
 		this.page.main.addClass("frappe-card");
 
 		this.nodes = {};
 		this.setup_node_class();
-	}
-
-	setup_page_style() {
-		this.page.main.css({
-			"min-height": "300px",
-			"max-height": "700px",
-			overflow: "auto",
-			position: "relative",
-		});
 	}
 
 	setup_node_class() {
@@ -228,6 +218,15 @@ hrms.HierarchyChart = class {
 			})
 			.then((r) => {
 				if (r.message.length) {
+					me.page.body.find("#hierarchy-empty-root").remove();
+
+					me.page.main.css({
+						"min-height": "300px",
+						"max-height": "700px",
+						overflow: "auto",
+						position: "relative",
+					});
+
 					let expand_node;
 					let node;
 
@@ -255,6 +254,39 @@ hrms.HierarchyChart = class {
 					if (!expanded_view) {
 						me.expand_node(expand_node);
 					}
+				} else {
+					me.page.body.find("#hierarchy-empty-root").remove();
+					const empty_html = frappe.render_template("hierarchy_empty_state", {
+						doctype: me.doctype,
+						company: me.company,
+						can_create: frappe.model.can_create("Employee"),
+						device_type: "desktop",
+					});
+
+					$("#hierarchy-chart-wrapper").remove();
+					me.page.body.append(empty_html);
+
+					me.page.main.css({
+						"min-height": "100%",
+						"max-height": "100%",
+					});
+
+					(function () {
+						const root = document.getElementById("hierarchy-empty-root");
+						if (!root) return;
+						try {
+							const rect = root.getBoundingClientRect();
+							const windowHeight = window.innerHeight;
+							const height = Math.max(300, Math.floor(windowHeight - rect.top - 20));
+							root.style.height = height + "px";
+							root.style.overflow = "auto";
+							root.style.position = "relative";
+						} catch (e) {}
+					})();
+					me.page.body.find("#add-doc-btn").on("click", () => {
+						frappe.route_options = { company: me.company };
+						frappe.new_doc(me.doctype);
+					});
 				}
 			});
 	}
