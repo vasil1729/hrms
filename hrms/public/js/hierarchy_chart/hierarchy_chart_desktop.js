@@ -259,7 +259,7 @@ hrms.HierarchyChart = class {
 					const empty_html = frappe.render_template("hierarchy_empty_state", {
 						doctype: me.doctype,
 						company: me.company,
-						can_create: frappe.model.can_create("Employee"),
+						can_create: frappe.model.can_create(me.doctype),
 						device_type: "desktop",
 					});
 
