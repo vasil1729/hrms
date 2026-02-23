@@ -27,7 +27,7 @@ frappe.ui.form.on("Interview Type", {
 		frappe.call({
 			method: "hrms.hr.doctype.interview_type.interview_type.create_interview",
 			args: {
-				doc: frm.doc,
+				docname: frm.doc.name,
 			},
 			callback: function (r) {
 				var doclist = frappe.model.sync(r.message);

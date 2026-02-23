@@ -24,18 +24,16 @@ class InterviewType(Document):
 
 
 @frappe.whitelist()
-def create_interview(doc):
-	if isinstance(doc, str):
-		doc = json.loads(doc)
-		doc = frappe.get_doc(doc)
+def create_interview(docname: str):
+	interview_type = frappe.get_doc("Interview Type", docname)
 
 	interview = frappe.new_doc("Interview")
-	interview.interview_type = doc.name
-	interview.designation = doc.designation
+	interview.interview_type = interview_type.name
+	interview.designation = interview_type.designation
 
-	if doc.interviewers:
+	if interview_type.interviewers:
 		interview.interview_details = []
-		for d in doc.interviewers:
+		for d in interview_type.interviewers:
 			interview.append("interview_details", {"interviewer": d.user})
 
 	return interview
