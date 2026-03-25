@@ -727,7 +727,9 @@ def get_attachments(dt: str, dn: str):
 
 
 @frappe.whitelist()
-def upload_base64_file(content, filename, dt=None, dn=None, fieldname=None):
+def upload_base64_file(
+	content: str, filename: str, dt: str | None = None, dn: str | None = None, fieldname: str | None = None
+):
 	import base64
 	import io
 	from mimetypes import guess_type
