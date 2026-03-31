@@ -56,6 +56,8 @@
   {
    "fieldname": "company",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Company",
    "options": "Company",
    "reqd": 1
@@ -75,6 +77,8 @@
   {
    "fieldname": "designation",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Designation",
    "options": "Designation",
    "reqd": 1
@@ -82,6 +86,8 @@
   {
    "fieldname": "department",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Department",
    "options": "Department"
   },
@@ -107,6 +113,8 @@
    "default": "0",
    "fieldname": "publish",
    "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Publish on website"
   },
   {
@@ -201,6 +209,8 @@
   {
    "fieldname": "employment_type",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Employment Type",
    "options": "Employment Type"
   },
@@ -265,7 +275,7 @@
  "idx": 1,
  "is_published_field": "publish",
  "links": [],
- "modified": "2026-03-30 17:21:23.211297",
+ "modified": "2026-03-31 12:54:28.114314",
  "modified_by": "Administrator",
  "module": "HR",
  "name": "Job Opening",
