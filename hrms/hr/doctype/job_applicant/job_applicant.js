@@ -17,13 +17,28 @@ frappe.ui.form.on("Job Applicant", {
 		});
 		frm.events.create_custom_buttons(frm);
 		frm.events.make_dashboard(frm);
+		frappe.boot.desk_settings.form_navigation_buttons = 1;
 	},
 
 	create_custom_buttons: function (frm) {
-		if (!frm.doc.__islocal && frm.doc.status !== "Rejected" && frm.doc.status !== "Accepted") {
-			frm.add_custom_button(__("Create Interview"), function () {
-				frm.events.create_dialog(frm);
-			});
+		if (!frm.doc.__islocal) {
+			if (frm.doc.status == "Open") {
+				frm.add_custom_button(__("Shortlist"), () => {
+					frm.set_value("status", "Shortlisted");
+					frm.save();
+					frm.refresh();
+				});
+				frm.add_custom_button(__("Reject"), () => {
+					frm.set_value("status", "Rejected");
+					frm.save();
+					frm.refresh();
+				});
+			}
+			if (frm.doc.status !== "Rejected" && frm.doc.status !== "Accepted") {
+				frm.add_custom_button(__("Create Interview"), function () {
+					frm.events.create_dialog(frm);
+				});
+			}
 		}
 
 		if (!frm.doc.__islocal && frm.doc.status == "Accepted") {
