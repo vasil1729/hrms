@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2026-04-05 09:45+0000\n"
-"PO-Revision-Date: 2026-04-09 15:24\n"
+"PO-Revision-Date: 2026-04-10 15:29\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Croatian\n"
 "MIME-Version: 1.0\n"
@@ -386,7 +386,7 @@ msgstr "Knjigovodstvo & Plaćanje"
 #: hrms/hr/workspace/expenses/expenses.json
 #: hrms/payroll/workspace/payroll/payroll.json
 msgid "Accounting Reports"
-msgstr "Knjogovodstveni Izvještaji"
+msgstr "Knjigovodstvena Izvješća"
 
 #: hrms/payroll/doctype/salary_component/salary_component.py:105
 msgid "Accounts not set for Salary Component {0}"
@@ -5146,7 +5146,7 @@ msgstr "Odbici Poreza na Platu"
 #: hrms/payroll/workspace/tax_&_benefits/tax_&_benefits.json
 #: hrms/workspace_sidebar/tax_&_benefits.json
 msgid "Income Tax Slab"
-msgstr "Tabela Poreza na Platu"
+msgstr "Tablica Poreza na Platu"
 
 #. Name of a DocType
 #: hrms/payroll/doctype/income_tax_slab_other_charges/income_tax_slab_other_charges.json
@@ -8425,7 +8425,7 @@ msgstr "Povrat Troška"
 #: hrms/hr/workspace/recruitment/recruitment.json
 #: hrms/workspace_sidebar/recruitment.json
 msgid "Recruitment"
-msgstr "Zapošljavanje"
+msgstr "Regrutiranje"
 
 #. Name of a report
 #. Label of a Link in the HR Setup Workspace
@@ -9507,7 +9507,7 @@ msgstr "Dokument je podijeljen s korisnikom {0} s dozvolom 'Podnesi'"
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
 #: hrms/workspace_sidebar/shift_&_attendance.json
 msgid "Shift & Attendance"
-msgstr "Smjena & Prisustvo"
+msgstr "Smjena&Prisustvo"
 
 #. Label of the shift_actual_end (Datetime) field in DocType 'Employee Checkin'
 #: hrms/hr/doctype/employee_checkin/employee_checkin.json
@@ -10044,7 +10044,7 @@ msgstr "Uzmite Tačno Završene Godine"
 #: hrms/payroll/workspace/tax_&_benefits/tax_&_benefits.json
 #: hrms/workspace_sidebar/tax_&_benefits.json
 msgid "Tax & Benefits"
-msgstr "Porez & Beneficije"
+msgstr "Porez&Beneficije"
 
 #. Label of the tax_deducted_till_date (Currency) field in DocType 'Salary
 #. Structure Assignment'
@@ -11241,7 +11241,7 @@ msgstr "Ljubičasta"
 
 #: hrms/patches/v15_0/notify_about_loan_app_separation.py:16
 msgid "WARNING: Loan Management module has been separated from ERPNext."
-msgstr "UPOZORENJE: Modul Upravljanja Kreditom je odvojen od Sustava."
+msgstr "UPOZORENJE: Modul Upravljanja Kreditom je odvojen od ERPNext."
 
 #: hrms/hr/doctype/leave_application/leave_application.py:480
 msgid "Warning: Insufficient leave balance for Leave Type {0} in this allocation."
