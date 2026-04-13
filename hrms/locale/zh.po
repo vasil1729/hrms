@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2026-04-05 09:45+0000\n"
-"PO-Revision-Date: 2026-04-06 14:49\n"
+"POT-Creation-Date: 2026-04-12 09:46+0000\n"
+"PO-Revision-Date: 2026-04-13 16:27\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -348,7 +348,7 @@ msgstr "在{1}至{2}期间存在{0}（"
 #: hrms/hr/doctype/attendance/attendance.json
 #: hrms/hr/doctype/employee_attendance_tool/employee_attendance_tool.json
 #: hrms/hr/doctype/training_event_employee/training_event_employee.json
-#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:732
+#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:736
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.json
 msgid "Absent"
 msgstr "缺勤"
@@ -651,11 +651,11 @@ msgstr "员工建档的必填任务尚未全部完成"
 msgid "Allocate Based On Leave Policy"
 msgstr "按假期政策分配"
 
-#: hrms/hr/doctype/leave_control_panel/leave_control_panel.js:176
+#: hrms/hr/doctype/leave_control_panel/leave_control_panel.js:177
 msgid "Allocate Leave"
 msgstr "分配假期"
 
-#: hrms/hr/doctype/leave_control_panel/leave_control_panel.js:192
+#: hrms/hr/doctype/leave_control_panel/leave_control_panel.js:193
 msgid "Allocate leaves to {0} employee(s)?"
 msgstr "是否为{0}名员工分配假期？"
 
@@ -681,7 +681,7 @@ msgstr "已分配假期"
 msgid "Allocated Via"
 msgstr ""
 
-#: hrms/hr/doctype/leave_control_panel/leave_control_panel.js:205
+#: hrms/hr/doctype/leave_control_panel/leave_control_panel.js:206
 msgid "Allocating Leave"
 msgstr "假期分配中"
 
@@ -1394,7 +1394,7 @@ msgstr "考勤设置"
 msgid "Attendance To Date"
 msgstr "考勤截止日期"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:144
+#: hrms/hr/doctype/attendance_request/attendance_request.py:187
 msgid "Attendance Updated"
 msgstr "考勤已更新"
 
@@ -1446,11 +1446,11 @@ msgstr "考勤记录成功"
 msgid "Attendance marked successfully."
 msgstr "考勤记录成功."
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:163
+#: hrms/hr/doctype/attendance_request/attendance_request.py:206
 msgid "Attendance not submitted for {0} as it is a Holiday."
 msgstr "{0}为节假日，未提交考勤"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:172
+#: hrms/hr/doctype/attendance_request/attendance_request.py:215
 msgid "Attendance not submitted for {0} as {1} is on leave."
 msgstr "{0}因{1}请假未提交考勤"
 
@@ -1562,7 +1562,7 @@ msgstr "等待回复"
 msgid "Backdated Leave Application is restricted. Please set the {} in {}"
 msgstr "禁止补请假申请，请在{}设置{}"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:286
+#: hrms/hr/doctype/expense_claim/expense_claim.js:290
 msgid "Bank Entries"
 msgstr "银行流水"
 
@@ -1883,11 +1883,11 @@ msgstr "事假"
 msgid "Cause of Grievance"
 msgstr "申诉事由"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:128
+#: hrms/hr/doctype/attendance_request/attendance_request.py:171
 msgid "Changed the status from {0} to {1} and Status for Other Half to {2} via Attendance Request"
 msgstr "通过考勤申请将状态从{0}更改为{1}，并将另一半状态更改为{2}"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:132
+#: hrms/hr/doctype/attendance_request/attendance_request.py:175
 msgid "Changed the status from {0} to {1} via Attendance Request"
 msgstr "通过考勤申请将状态从{0}更改为{1}"
 
@@ -2238,6 +2238,10 @@ msgstr "批量创建工资条"
 msgid "Create Shifts After"
 msgstr "创建班次时间范围"
 
+#: hrms/public/js/templates/hierarchy_empty_state.html:25
+msgid "Create {0}"
+msgstr ""
+
 #: hrms/hr/doctype/appraisal_cycle/appraisal_cycle.py:217
 msgid "Creating Appraisals"
 msgstr "正在创建绩效考核"
@@ -2400,7 +2404,7 @@ msgstr "每日工作摘要组成员"
 msgid "Daily Work Summary Replies"
 msgstr "每日工作摘要回复"
 
-#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:167
+#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:187
 msgid "Date Range Exceeded"
 msgstr "日期范围超出"
 
@@ -2805,11 +2809,11 @@ msgstr "收入项"
 msgid "Earnings & Deductions"
 msgstr "收入与扣除项"
 
-#: frontend/src/components/ExpensesTable.vue:213
+#: frontend/src/components/ExpensesTable.vue:218
 msgid "Edit Expense Item"
 msgstr "编辑费用项"
 
-#: frontend/src/components/ExpenseTaxesTable.vue:221
+#: frontend/src/components/ExpenseTaxesTable.vue:225
 msgid "Edit Expense Tax"
 msgstr "编辑费用税费"
 
@@ -3385,7 +3389,7 @@ msgstr "由于缺少员工打卡记录，该员工另一半被标记为缺勤"
 msgid "Employee {0} : {1}"
 msgstr "员工{0}：{1}"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:90
+#: hrms/hr/doctype/attendance_request/attendance_request.py:133
 msgid "Employee {0} already has an Attendance Request {1} that overlaps with this period"
 msgstr "员工{0}已有考勤申请{1}与本期间重叠"
 
@@ -3622,7 +3626,8 @@ msgstr "输入本期间需分配的假期天数"
 msgid "Enter yearly benefit amounts"
 msgstr "输入年度福利金额"
 
-#: frontend/src/components/FormField.vue:42
+#: frontend/src/components/FormField.vue:40
+#: frontend/src/components/FormField.vue:52
 msgid "Enter {0}"
 msgstr "输入{0}"
 
@@ -3630,7 +3635,7 @@ msgstr "输入{0}"
 msgid "Error creating {0}"
 msgstr "创建{0}时出错"
 
-#: frontend/src/components/FormView.vue:592
+#: frontend/src/components/FormView.vue:591
 msgid "Error deleting {0}"
 msgstr "删除{0}时出错"
 
@@ -3650,7 +3655,7 @@ msgstr "所得税税级公式或条件错误：{0}"
 msgid "Error in some rows"
 msgstr "部分行数据错误"
 
-#: frontend/src/components/FormView.vue:570
+#: frontend/src/components/FormView.vue:569
 msgid "Error updating {0}"
 msgstr "更新{0}时出错"
 
@@ -3956,7 +3961,7 @@ msgstr "费用报销汇总"
 #. Label of the expense_type (Data) field in DocType 'Expense Claim Type'
 #. Label of a Link in the Expenses Workspace
 #. Label of a Workspace Sidebar Item
-#: hrms/hr/doctype/expense_claim/expense_claim.py:743
+#: hrms/hr/doctype/expense_claim/expense_claim.py:747
 #: hrms/hr/doctype/expense_claim_detail/expense_claim_detail.json
 #: hrms/hr/doctype/expense_claim_type/expense_claim_type.json
 #: hrms/hr/workspace/expenses/expenses.json
@@ -3983,7 +3988,7 @@ msgstr "费用报销记录"
 msgid "Expense Date"
 msgstr "费用日期"
 
-#: frontend/src/components/ExpensesTable.vue:211
+#: frontend/src/components/ExpensesTable.vue:216
 msgid "Expense Item"
 msgstr "费用项"
 
@@ -3993,7 +3998,7 @@ msgstr "费用项"
 msgid "Expense Proof"
 msgstr "费用凭证"
 
-#: frontend/src/components/ExpenseTaxesTable.vue:219
+#: frontend/src/components/ExpenseTaxesTable.vue:223
 msgid "Expense Tax"
 msgstr "费用税费"
 
@@ -4049,7 +4054,7 @@ msgstr "过期假期天数"
 msgid "Explanation"
 msgstr "说明"
 
-#: hrms/public/js/hierarchy_chart/hierarchy_chart_desktop.js:137
+#: hrms/public/js/hierarchy_chart/hierarchy_chart_desktop.js:136
 msgid "Exporting..."
 msgstr "导出中..."
 
@@ -4061,7 +4066,7 @@ msgstr "为员工创建/提交{0}失败："
 msgid "Failed to delete defaults for country {0}."
 msgstr "删除国家{0}默认设置失败"
 
-#: hrms/api/__init__.py:787
+#: hrms/api/__init__.py:783
 msgid "Failed to download PDF: {0}"
 msgstr "无法下载 PDF： {0}"
 
@@ -4755,7 +4760,7 @@ msgstr "半日制员工标识标题"
 msgid "Half Day Records"
 msgstr "半日假记录"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:54
+#: hrms/hr/doctype/attendance_request/attendance_request.py:55
 msgid "Half day date should be in between from date and to date"
 msgstr "半日假日期应在起止日期之间"
 
@@ -5056,7 +5061,7 @@ msgstr "激励"
 msgid "Incentive Amount"
 msgstr "激励金额"
 
-#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:102
+#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:122
 msgid "Include Company Descendants"
 msgstr "包含子公司"
 
@@ -5425,7 +5430,7 @@ msgstr "应付薪资账户无效，账户币种必须为{0}或{1}"
 msgid "Invalid Shift Times"
 msgstr "无效班次时间"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:991
+#: hrms/hr/doctype/expense_claim/expense_claim.py:995
 msgid "Invalid parameters provided. Please pass the required arguments."
 msgstr "参数无效，请传递必要参数"
 
@@ -5836,7 +5841,7 @@ msgstr "纬度：{0}°"
 
 #. Option for the 'Calculate Payroll Working Days Based On' (Select) field in
 #. DocType 'Payroll Settings'
-#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:734
+#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:738
 #: hrms/overrides/dashboard_overrides.py:12
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.json
 msgid "Leave"
@@ -5975,7 +5980,7 @@ msgstr "假期封存日期"
 msgid "Leave Block List Name"
 msgstr "假期封存列表名称"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:1418
+#: hrms/hr/doctype/leave_application/leave_application.py:1423
 msgid "Leave Blocked"
 msgstr "已封存假期"
 
@@ -6794,11 +6799,11 @@ msgstr "净工资不可为负数"
 msgid "New Employee ID"
 msgstr "新员工编号"
 
-#: frontend/src/components/ExpensesTable.vue:213
+#: frontend/src/components/ExpensesTable.vue:218
 msgid "New Expense Item"
 msgstr "新建费用项"
 
-#: frontend/src/components/ExpenseTaxesTable.vue:221
+#: frontend/src/components/ExpenseTaxesTable.vue:225
 msgid "New Expense Tax"
 msgstr "新建费用税费"
 
@@ -6953,9 +6958,9 @@ msgstr "未找到符合该条件的考勤记录"
 msgid "No attendance records found."
 msgstr "未找到考勤记录"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:63
-msgid "No attendance records to create"
-msgstr "无需创建考勤记录"
+#: hrms/hr/doctype/attendance_request/attendance_request.py:73
+msgid "No attendance records to create due to following reasons"
+msgstr ""
 
 #: hrms/hr/doctype/interview/interview.py:116
 msgid "No changes found in timings."
@@ -7250,7 +7255,7 @@ msgstr "仅面试官可提交面试反馈"
 msgid "Only Interviews with Cleared or Rejected status can be submitted."
 msgstr "仅通过或拒绝状态的面试可提交"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:136
+#: hrms/hr/doctype/leave_application/leave_application.py:137
 msgid "Only Leave Applications with status 'Approved' and 'Rejected' can be submitted"
 msgstr "仅'已批准'或'已拒绝'状态的请假申请可提交"
 
@@ -7301,7 +7306,7 @@ msgid "Optional Leaves are holidays that Employees can choose to avail from a li
 msgstr "可选假期是员工可从公司公布的假期列表中选择的节假日"
 
 #. Label of a Workspace Sidebar Item
-#: hrms/hr/page/organizational_chart/organizational_chart.js:4
+#: hrms/hr/page/organizational_chart/organizational_chart.js:154
 #: hrms/workspace_sidebar/hr_setup.json
 msgid "Organizational Chart"
 msgstr "组织架构图"
@@ -7331,7 +7336,7 @@ msgstr "超额分配"
 msgid "Overall Average Rating"
 msgstr "总体平均评分"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:95
+#: hrms/hr/doctype/attendance_request/attendance_request.py:138
 msgid "Overlapping Attendance Request"
 msgstr "重叠考勤申请"
 
@@ -7851,10 +7856,6 @@ msgstr "请先选择公司"
 msgid "Please assign a Salary Structure for Employee {0} applicable from or before {1} first"
 msgstr "请先为员工{0}分配自{1}或之前生效的薪资结构"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:64
-msgid "Please check if employee is on leave or attendance with the same status exists for selected day(s)."
-msgstr "请检查员工是否请假或所选日期存在相同状态考勤"
-
 #: hrms/templates/emails/training_event.html:17
 msgid "Please confirm once you have completed your training"
 msgstr "完成培训后请确认"
@@ -7920,12 +7921,12 @@ msgstr "请选择班次表和分配日期"
 msgid "Please select Shift Type and assignment date(s)."
 msgstr "请选择班次类型和分配日期"
 
-#: hrms/public/js/hierarchy_chart/hierarchy_chart_mobile.js:233
+#: hrms/public/js/hierarchy_chart/hierarchy_chart_mobile.js:240
 msgid "Please select a company first"
 msgstr "请先选择公司"
 
-#: hrms/public/js/hierarchy_chart/hierarchy_chart_desktop.js:103
-#: hrms/public/js/hierarchy_chart/hierarchy_chart_desktop.js:299
+#: hrms/public/js/hierarchy_chart/hierarchy_chart_desktop.js:93
+#: hrms/public/js/hierarchy_chart/hierarchy_chart_desktop.js:293
 msgid "Please select a company first."
 msgstr "请先选择公司"
 
@@ -8010,7 +8011,7 @@ msgstr "请在薪资设置中选择薪资计算依据"
 msgid "Please set Relieving Date for employee: {0}"
 msgstr "请设置员工{0}的离职日期"
 
-#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:166
+#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:186
 #: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:52
 msgid "Please set a date range less than 90 days."
 msgstr "请设置小于90天的日期范围。"
@@ -8035,7 +8036,7 @@ msgstr ""
 msgid "Please set the Appraisal Template for all the {0} or select the template in the Employees table below."
 msgstr "请为所有{0}设置考核模板，或在下方员工表中选择模板"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:523
+#: hrms/hr/doctype/expense_claim/expense_claim.js:527
 msgid "Please set the Company"
 msgstr "请设置公司"
 
@@ -8131,7 +8132,7 @@ msgstr "首选住宿区域"
 #: hrms/hr/doctype/attendance/attendance.json
 #: hrms/hr/doctype/employee_attendance_tool/employee_attendance_tool.json
 #: hrms/hr/doctype/training_event_employee/training_event_employee.json
-#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:733
+#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:737
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.json
 msgid "Present"
 msgstr "出勤"
@@ -8792,11 +8793,11 @@ msgstr "行号#{0}：组件{1}已启用{2}和{3}选项"
 msgid "Row #{0}: Timesheet amount will overwrite the Earning component amount for the Salary Component {1}"
 msgstr "行号#{0}：工时表金额将覆盖薪资组件{1}的收入项金额"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:959
+#: hrms/hr/doctype/expense_claim/expense_claim.py:963
 msgid "Row No {0}: Amount cannot be greater than the Outstanding Amount against Expense Claim {1}. Outstanding Amount is {2}"
 msgstr "行号{0}：金额不可超过费用报销{1}的未结金额{2}"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:557
+#: hrms/hr/doctype/expense_claim/expense_claim.py:561
 msgid "Row {0}# Allocated amount {1} cannot be greater than unclaimed amount {2}"
 msgstr "行号{0}# 分配金额{1}不可超过未申领金额{2}"
 
@@ -9187,7 +9188,7 @@ msgstr "批准金额"
 msgid "Sanctioned Amount (Company Currency)"
 msgstr ""
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:581
+#: hrms/hr/doctype/expense_claim/expense_claim.py:585
 msgid "Sanctioned Amount cannot be greater than Claim Amount in Row {0}."
 msgstr "行号{0}中批准金额不可超过报销金额"
 
@@ -9263,9 +9264,15 @@ msgstr "选择条款与条件"
 msgid "Select Users"
 msgstr "选择用户"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:568
+#: hrms/hr/doctype/expense_claim/expense_claim.js:572
 msgid "Select an employee to get the employee advance."
 msgstr "选择员工以获取预支款"
+
+#. Description of the 'Include Holidays' (Check) field in DocType 'Attendance
+#. Request'
+#: hrms/hr/doctype/attendance_request/attendance_request.json
+msgid "Select if any of the days selected for request are holidays"
+msgstr ""
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.js:237
 msgid "Select the Employee for which you want to allocate leaves."
@@ -9315,6 +9322,14 @@ msgstr "选择员工申请的假期类型如病假、特权假、事假等"
 msgid "Select your Leave Approver i.e. the person who approves or rejects your leaves."
 msgstr "选择您的假期审批人"
 
+#: hrms/hr/doctype/expense_claim/expense_claim.js:607
+msgid "Selected employee advance is not of employee {0}"
+msgstr ""
+
+#: hrms/hr/doctype/expense_claim/expense_claim.py:554
+msgid "Selected employee advance is not of employee {}"
+msgstr ""
+
 #. Label of the self_appraisal_tab (Tab Break) field in DocType 'Appraisal'
 #: hrms/hr/doctype/appraisal/appraisal.json
 #: hrms/hr/doctype/employee_performance_feedback/employee_performance_feedback.py:61
@@ -9343,7 +9358,7 @@ msgstr "自主学习"
 msgid "Self-approval for Expense Claims is not allowed"
 msgstr "不允许费用报销的自我审批"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:909
+#: hrms/hr/doctype/leave_application/leave_application.py:910
 msgid "Self-approval for leaves is not allowed"
 msgstr "禁止自我审批假期"
 
@@ -9461,7 +9476,7 @@ msgstr "设置前雇主收入与税费期初余额"
 msgid "Set optional filters to fetch employees in the appraisee list"
 msgstr "设置可选筛选条件获取被考核人列表"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:742
+#: hrms/hr/doctype/expense_claim/expense_claim.py:746
 msgid "Set the default account for the {0} {1}"
 msgstr "为{0}{1}设置默认账户"
 
@@ -10015,7 +10030,7 @@ msgstr "所有前期税级总和"
 msgid "Sum of benefit amounts {0} exceeds maximum limit of {1}"
 msgstr "福利金额总和{0}超过最大限额{1}"
 
-#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:108
+#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:128
 msgid "Summarized View"
 msgstr "汇总视图"
 
@@ -10244,6 +10259,10 @@ msgstr "理论"
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:577
 msgid "There are more holidays than working days this month."
 msgstr "本月节假日多于工作日"
+
+#: hrms/hr/doctype/attendance_request/attendance_request.py:87
+msgid "There are multiple shifts assigned to the employee for the same period. Please mention the shift"
+msgstr ""
 
 #: hrms/payroll/doctype/arrear/arrear.py:410
 msgid "There are no arrear differences between existing and new salary structure components."
@@ -10687,7 +10706,7 @@ msgstr "总分"
 msgid "Total Self Score"
 msgstr "自评总分"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:575
+#: hrms/hr/doctype/expense_claim/expense_claim.py:579
 msgid "Total advance amount cannot be greater than total sanctioned amount"
 msgstr "预支总额不可超过批准总额"
 
@@ -11076,7 +11095,7 @@ msgstr "更新状态"
 msgid "Update Tax"
 msgstr "更新税务"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:138
+#: hrms/hr/doctype/attendance_request/attendance_request.py:181
 msgid "Updated status from {0} to {1} for date {2} in the attendance record {3}"
 msgstr "考勤记录{3}中日期{2}的状态已从{0}更新为{1}"
 
@@ -11461,7 +11480,7 @@ msgstr "根据母公司{4}的编制计划{3}，您最多可规划{2}的{0}个空
 msgid "You can only submit Leave Encashment for a valid encashment amount"
 msgstr "仅当存在有效兑现金额时可提交假期折现申请"
 
-#: hrms/api/__init__.py:744
+#: hrms/api/__init__.py:740
 msgid "You can only upload JPG, PNG, PDF, TXT or Microsoft documents."
 msgstr "仅可上传JPG、PNG、PDF、TXT或Microsoft文档"
 
@@ -11498,6 +11517,10 @@ msgstr "您近期无节假日安排"
 msgid "You have no upcoming shifts"
 msgstr "您暂无即将排班"
 
+#: hrms/public/js/templates/hierarchy_empty_state.html:9
+msgid "You haven't created a {0} for {1} yet."
+msgstr ""
+
 #: hrms/overrides/employee_master.py:83
 msgid "You may add additional details, if any, and submit the offer."
 msgstr "您可补充其他详细信息（如有）并提交录用通知"
@@ -11517,6 +11540,10 @@ msgstr "您的面试时段已从{0}{1}-{2}调整至{3}{4}-{5}"
 #: frontend/src/views/Login.vue:63
 msgid "Your password has expired. Please reset your password to continue"
 msgstr "密码已过期，请重置密码以继续"
+
+#: hrms/hr/doctype/attendance_request/attendance_request.py:69
+msgid "action"
+msgstr "操作"
 
 #: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:121
 msgid "active"
@@ -11567,6 +11594,10 @@ msgstr "处理"
 msgid "processed"
 msgstr "已处理"
 
+#: hrms/hr/doctype/attendance_request/attendance_request.py:68
+msgid "reason"
+msgstr "原因"
+
 #: hrms/www/jobs/index.html:122
 msgid "result"
 msgstr "结果"
@@ -11587,6 +11618,10 @@ msgstr "评审"
 msgid "submitted"
 msgstr "已提交"
 
+#: hrms/hr/page/organizational_chart/organizational_chart.js:30
+msgid "the selected company"
+msgstr ""
+
 #: hrms/payroll/doctype/salary_component/salary_component.py:187
 msgid "via Salary Component sync"
 msgstr "通过薪资组件同步"
@@ -11605,7 +11640,7 @@ msgstr ""
 msgid "{0} & {1}"
 msgstr "{0} & {1}"
 
-#: frontend/src/components/ExpenseClaimItem.vue:84
+#: frontend/src/components/ExpenseClaimItem.vue:83
 msgid "{0} & {1} more"
 msgstr "{0} 及另外{1}项"
 
@@ -11670,7 +11705,7 @@ msgstr ""
 msgid "{0} created successfully!"
 msgstr "{0}创建成功！"
 
-#: frontend/src/components/FormView.vue:583
+#: frontend/src/components/FormView.vue:582
 msgid "{0} deleted successfully!"
 msgstr "{0}删除成功！"
 
@@ -11736,7 +11771,7 @@ msgstr "{0}成功！"
 msgid "{0} to {1} employee(s)?"
 msgstr "确认将{0}应用于{1}名员工？"
 
-#: frontend/src/components/FormView.vue:561
+#: frontend/src/components/FormView.vue:560
 msgid "{0} updated successfully!"
 msgstr "{0}更新成功！"
 
