@@ -178,28 +178,11 @@ function set_leave_type_summary(quick_entry, summary) {
 
 	quick_entry._leave_type_summary
 		.html(
-			`
-			<div class="row mx-n1" role="status" aria-live="polite" aria-atomic="true">
-				<div class="col-sm-4 px-1 mb-2">
-					<div class="form-control d-flex flex-column h-100 py-2">
-						<span class="small text-muted">${__("Allocated")}</span>
-						<span class="h4 mb-0 font-weight-bold">${allocated}</span>
-					</div>
-				</div>
-				<div class="col-sm-4 px-1 mb-2">
-					<div class="form-control d-flex flex-column h-100 py-2">
-						<span class="small text-muted">${__("Used")}</span>
-						<span class="h4 mb-0 font-weight-bold">${used}</span>
-					</div>
-				</div>
-				<div class="col-sm-4 px-1 mb-2">
-					<div class="form-control d-flex flex-column h-100 py-2">
-						<span class="small text-muted">${__("Remaining")}</span>
-						<span class="h4 mb-0 font-weight-bold">${remaining}</span>
-					</div>
-				</div>
-			</div>
-		`,
+			frappe.render_template("leave_application_calendar_summary", {
+				allocated,
+				used,
+				remaining,
+			}),
 		)
 		.show();
 }
@@ -316,36 +299,28 @@ function refresh_leave_metrics(quick_entry) {
 	const request_id = (quick_entry._leave_metrics_request_id || 0) + 1;
 	quick_entry._leave_metrics_request_id = request_id;
 
-	Promise.all([
-		frappe.call({
-			method: "hrms.hr.doctype.leave_application.leave_application.get_number_of_leave_days",
+	frappe
+		.call({
+			method: "hrms.hr.doctype.leave_application.leave_application.get_leave_metrics_and_details",
 			args: {
 				employee,
 				leave_type,
 				from_date,
 				to_date,
 			},
-		}),
-		frappe.call({
-			method: "hrms.hr.doctype.leave_application.leave_application.get_leave_details",
-			args: {
-				employee,
-				date: from_date,
-			},
-		}),
-	])
-		.then(([days_response, details_response]) => {
+		})
+		.then((response) => {
 			if (quick_entry._leave_metrics_request_id !== request_id) {
 				return;
 			}
 
-			const requested_days = days_response?.message;
-			const allocation = details_response?.message?.leave_allocation?.[leave_type] || {};
+			const requested_days = response?.message?.number_of_leave_days;
+			const allocation = response?.message?.leave_allocation?.[leave_type] || {};
 			const allocated = format_metric(allocation?.total_leaves);
 			const used = format_metric(allocation?.leaves_taken);
 			const remaining = format_metric(allocation?.remaining_leaves);
 			const has_allocation = Object.prototype.hasOwnProperty.call(
-				details_response?.message?.leave_allocation || {},
+				response?.message?.leave_allocation || {},
 				leave_type,
 			);
 
@@ -462,17 +437,17 @@ function sync_leave_approver(quick_entry, employee, options = {}) {
 
 	return frappe
 		.call({
-			method: "hrms.hr.doctype.leave_application.leave_application.get_mandatory_approval",
+			method: "hrms.hr.doctype.leave_application.leave_application.get_leave_approver_and_mandatory",
 			args: {
-				doctype: "Leave Application",
+				employee,
 			},
 		})
-		.then((mandatory_response) => {
+		.then((response) => {
 			if (!is_latest_request()) {
 				return;
 			}
 
-			const is_mandatory = Number(mandatory_response?.message);
+			const { is_mandatory, leave_approver } = response?.message || {};
 
 			if (!employee) {
 				if (!is_latest_request()) {
@@ -480,24 +455,17 @@ function sync_leave_approver(quick_entry, employee, options = {}) {
 				}
 
 				set_leave_approver_value(quick_entry, "");
-				return { is_mandatory, leave_approver: "" };
+				return { is_mandatory: Number(is_mandatory) || 0, leave_approver: "" };
 			}
 
-			return frappe
-				.call({
-					method: "hrms.hr.doctype.leave_application.leave_application.get_leave_approver",
-					args: {
-						employee,
-					},
-				})
-				.then((r) => {
-					if (!is_latest_request()) {
-						return;
-					}
-
-					const leave_approver = set_leave_approver_value(quick_entry, r?.message || "");
-					return { is_mandatory, leave_approver };
-				});
+			const leave_approver_value = set_leave_approver_value(
+				quick_entry,
+				leave_approver || "",
+			);
+			return {
+				is_mandatory: Number(is_mandatory) || 0,
+				leave_approver: leave_approver_value,
+			};
 		})
 		.then((result) => {
 			if (result) {

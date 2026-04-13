@@ -939,6 +939,28 @@ def get_allocation_expiry_for_cf_leaves(
 
 
 @frappe.whitelist()
+def get_leave_metrics_and_details(
+	employee: str,
+	leave_type: str,
+	from_date: datetime.date,
+	to_date: datetime.date,
+	half_day: int | str | None = None,
+	half_day_date: datetime.date | str | None = None,
+) -> dict:
+	"""Returns both number of leave days and leave allocation details in a single call"""
+	number_of_leave_days = get_number_of_leave_days(
+		employee, leave_type, from_date, to_date, half_day, half_day_date
+	)
+
+	details = get_leave_details(employee, from_date)
+
+	return {
+		"number_of_leave_days": number_of_leave_days,
+		"leave_allocation": details["leave_allocation"],
+	}
+
+
+@frappe.whitelist()
 def get_number_of_leave_days(
 	employee: str,
 	leave_type: str,
@@ -1519,3 +1541,14 @@ def get_leave_approver(employee: str) -> str:
 
 def on_doctype_update():
 	frappe.db.add_index("Leave Application", ["employee", "from_date", "to_date"])
+
+
+@frappe.whitelist()
+def get_leave_approver_and_mandatory(employee: str) -> dict:
+	"""Returns both leave approver and mandatory approval status in a single call"""
+	mandatory = frappe.db.get_single_value("HR Settings", "leave_approver_mandatory_in_leave_application")
+
+	return {
+		"is_mandatory": 1 if mandatory else 0,
+		"leave_approver": get_leave_approver(employee),
+	}
