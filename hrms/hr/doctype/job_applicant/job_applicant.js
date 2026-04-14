@@ -22,14 +22,14 @@ frappe.ui.form.on("Job Applicant", {
 	},
 
 	show_resume: function (frm) {
+		frm.toggle_display("resume_preview_html", false);
+		frm.toggle_display("open_resume_button", false);
 		if (frm.doc.resume_link) {
 			const src_url = frappe.utils.escape_html(frm.doc.resume_link);
 			if (src_url.endsWith(".pdf")) {
 				frm.toggle_display("resume_preview_html", true);
-				frm.toggle_display("open_resume_button", false);
 				frm.events.show_pdf_preview(frm, src_url);
 			} else {
-				frm.toggle_display("resume_preview_html", false);
 				frm.toggle_display("open_resume_button", true);
 			}
 		}
