@@ -1,13 +1,9 @@
 import frappe
+from frappe.model.rename_doc import rename_doc
 
 
 def execute():
-	InterviewType = frappe.qb.DocType("Interview Type")
-	InterviewRound = frappe.qb.DocType("Interview Round")
-
-	(
-		frappe.qb.update(InterviewRound)
-		.left_join(InterviewType)
-		.on(InterviewType.name == InterviewRound.interview_type)
-		.set(InterviewRound.description, InterviewType.description)
-	).run()
+	for interview_round, interview_type in frappe.get_all(
+		"Interview Round", fields=["name", "interview_type"], as_list=True
+	):
+		rename_doc("Interview Type", interview_type, interview_round)
