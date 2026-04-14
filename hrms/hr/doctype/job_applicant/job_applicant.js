@@ -35,7 +35,7 @@ frappe.ui.form.on("Job Applicant", {
 		}
 	},
 	show_pdf_preview: function (frm, src_url) {
-		$preview = $(`<div class="img_preview" style="padding-bottom:12px;">
+		let $preview = $(`<div class="img_preview" style="padding-bottom:12px;">
 			<object style="background:#323639;" width="100%">
 				<embed
 				style="background:#323639;"
