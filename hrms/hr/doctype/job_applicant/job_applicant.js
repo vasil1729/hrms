@@ -15,11 +15,41 @@ frappe.ui.form.on("Job Applicant", {
 				},
 			};
 		});
+		frm.events.show_resume(frm);
 		frm.events.create_custom_buttons(frm);
 		frm.events.get_interview_for_dashboard(frm);
 		frm.toolbar.make_navigation();
 	},
 
+	show_resume: function (frm) {
+		if (frm.doc.resume_link) {
+			const src_url = frappe.utils.escape_html(frm.doc.resume_link);
+			if (src_url.endsWith(".pdf")) {
+				frm.toggle_display("resume_preview_html", true);
+				frm.toggle_display("open_resume_button", false);
+				frm.events.show_pdf_preview(frm, src_url);
+			} else {
+				frm.toggle_display("resume_preview_html", false);
+				frm.toggle_display("open_resume_button", true);
+			}
+		}
+	},
+	show_pdf_preview: function (frm, src_url) {
+		$preview = $(`<div class="img_preview" style="padding-bottom:12px;">
+			<object style="background:#323639;" width="100%">
+				<embed
+				style="background:#323639;"
+				width="100%"
+				height="1190"
+				src="${src_url}" type="application/pdf"
+				>
+			</object>
+			</div>`);
+		frm.get_field("resume_preview_html").$wrapper.html($preview);
+	},
+	open_resume_button: function (frm) {
+		window.open(frm.doc.resume_link, "_blank");
+	},
 	create_custom_buttons: function (frm) {
 		if (!frm.doc.__islocal) {
 			if (frm.doc.status == "Open") {

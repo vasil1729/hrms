@@ -15,17 +15,19 @@
   "email_id",
   "phone_number",
   "column_break_3",
+  "job_title",
   "designation",
   "country",
-  "job_title",
   "column_break_enue",
   "status",
   "applicant_rating",
   "section_break_6",
   "resume_link",
+  "resume_preview_html",
+  "open_resume_button",
+  "cover_letter",
   "resume_attachment",
   "notes",
-  "cover_letter",
   "source_and_rating_section",
   "source",
   "source_name",
@@ -102,7 +104,7 @@
   {
    "fieldname": "resume_attachment",
    "fieldtype": "Attach",
-   "label": "Resume Attachment"
+   "label": "Attachment"
   },
   {
    "fieldname": "notes",
@@ -125,7 +127,7 @@
   {
    "fieldname": "resume_link",
    "fieldtype": "Data",
-   "label": "Resume Link"
+   "label": "Link"
   },
   {
    "fieldname": "applicant_rating",
@@ -194,13 +196,25 @@
    "fieldname": "salary_expectation_tab",
    "fieldtype": "Tab Break",
    "label": "Salary Expectation"
+  },
+  {
+   "fieldname": "resume_preview_html",
+   "fieldtype": "HTML",
+   "hidden": 1,
+   "label": "Preview"
+  },
+  {
+   "fieldname": "open_resume_button",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Open Resume in New Tab"
   }
  ],
  "icon": "fa fa-user",
  "idx": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-07 14:34:24.139833",
+ "modified": "2026-04-14 11:35:48.142348",
  "modified_by": "Administrator",
  "module": "HR",
  "name": "Job Applicant",
