@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2026-04-12 09:46+0000\n"
-"PO-Revision-Date: 2026-04-13 16:27\n"
+"PO-Revision-Date: 2026-04-15 16:20\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Serbian (Cyrillic)\n"
 "MIME-Version: 1.0\n"
@@ -2238,7 +2238,7 @@ msgstr "Креирај смене након"
 
 #: hrms/public/js/templates/hierarchy_empty_state.html:25
 msgid "Create {0}"
-msgstr ""
+msgstr "Креирај {0}"
 
 #: hrms/hr/doctype/appraisal_cycle/appraisal_cycle.py:217
 msgid "Creating Appraisals"
@@ -6958,7 +6958,7 @@ msgstr "Није пронађена евиденција присуства."
 
 #: hrms/hr/doctype/attendance_request/attendance_request.py:73
 msgid "No attendance records to create due to following reasons"
-msgstr ""
+msgstr "Нема евиденција присуства за креирање из следећих разлога"
 
 #: hrms/hr/doctype/interview/interview.py:116
 msgid "No changes found in timings."
@@ -9270,7 +9270,7 @@ msgstr "Изаберите запослено лице за исплату ак�
 #. Request'
 #: hrms/hr/doctype/attendance_request/attendance_request.json
 msgid "Select if any of the days selected for request are holidays"
-msgstr ""
+msgstr "Изаберите да ли је неки од изабраних дана у оквиру захтева празник"
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.js:237
 msgid "Select the Employee for which you want to allocate leaves."
@@ -9322,11 +9322,11 @@ msgstr "Изаберите одобраваоца одсуства, тј. осо
 
 #: hrms/hr/doctype/expense_claim/expense_claim.js:607
 msgid "Selected employee advance is not of employee {0}"
-msgstr ""
+msgstr "Изабрана аконтација запосленог лица не припада запосленом лицу {0}"
 
 #: hrms/hr/doctype/expense_claim/expense_claim.py:554
 msgid "Selected employee advance is not of employee {}"
-msgstr ""
+msgstr "Изабрана аконтација запосленог лица не припада запосленом лицу {}"
 
 #. Label of the self_appraisal_tab (Tab Break) field in DocType 'Appraisal'
 #: hrms/hr/doctype/appraisal/appraisal.json
@@ -10260,7 +10260,7 @@ msgstr "Овај месец има више празника него радни
 
 #: hrms/hr/doctype/attendance_request/attendance_request.py:87
 msgid "There are multiple shifts assigned to the employee for the same period. Please mention the shift"
-msgstr ""
+msgstr "Постоји више смена додељених запосленом лицу за исти период. Молимо Вас да наведете смену"
 
 #: hrms/payroll/doctype/arrear/arrear.py:410
 msgid "There are no arrear differences between existing and new salary structure components."
@@ -11517,7 +11517,7 @@ msgstr "Немате предстојеће смене"
 
 #: hrms/public/js/templates/hierarchy_empty_state.html:9
 msgid "You haven't created a {0} for {1} yet."
-msgstr ""
+msgstr "Још увек нисте креирали {0} за {1}."
 
 #: hrms/overrides/employee_master.py:83
 msgid "You may add additional details, if any, and submit the offer."
@@ -11618,7 +11618,7 @@ msgstr "поднето"
 
 #: hrms/hr/page/organizational_chart/organizational_chart.js:30
 msgid "the selected company"
-msgstr ""
+msgstr "изабрана компанија"
 
 #: hrms/payroll/doctype/salary_component/salary_component.py:187
 msgid "via Salary Component sync"
