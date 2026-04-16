@@ -19,6 +19,7 @@ def after_install():
 	update_hr_defaults()
 	add_non_standard_user_types()
 	set_single_defaults()
+	setup_repost_defaults()
 	create_default_role_profiles()
 	run_post_install_patches()
 	add_default_hr_permissions()
@@ -879,3 +880,10 @@ def add_default_hr_permissions():
 def make_people_workspace_standard():
 	if frappe.db.exists("Workspace Sidebar", "People"):
 		frappe.db.set_value("Workspace Sidebar", "People", "standard", 1)
+
+
+def setup_repost_defaults():
+	accounts_settings = frappe.get_doc("Accounts Settings")
+	for x in frappe.get_hooks("repost_allowed_doctypes"):
+		accounts_settings.append("repost_allowed_types", {"document_type": x})
+	accounts_settings.save()
