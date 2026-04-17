@@ -65,14 +65,6 @@ class TestLeaveApplication(HRMSTestSuite):
 			"Holiday List w/o Weekly Offs", from_date=from_date, to_date=to_date, add_weekly_offs=False
 		)
 
-		if not frappe.db.exists("Leave Type", "_Test Leave Type"):
-			frappe.get_doc(
-				leave_type_name="_Test Leave Type", doctype="Leave Type", include_holiday=True
-			).insert()
-
-	def tearDown(self):
-		frappe.set_user("Administrator")
-
 	def _clear_roles(self):
 		frappe.db.sql(
 			"""delete from `tabHas Role` where parent in
