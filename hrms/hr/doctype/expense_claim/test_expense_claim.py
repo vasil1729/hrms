@@ -589,6 +589,14 @@ class TestExpenseClaim(HRMSTestSuite):
 		self.assertEqual(expense_claim.status, "Unpaid")
 
 	def test_repost(self):
+		# Update repost settings
+		allowed_types = ["Expense Claim"]
+		accounts_settings = frappe.get_doc("Accounts Settings")
+		for doctype in allowed_types:
+			if doctype not in [x.document_type for x in accounts_settings.repost_allowed_types]:
+				accounts_settings.append("repost_allowed_types", {"document_type": doctype})
+		accounts_settings.save()
+
 		payable_account = get_payable_account(company_name)
 		taxes = generate_taxes(rate=10)
 		expense_claim = make_expense_claim(
