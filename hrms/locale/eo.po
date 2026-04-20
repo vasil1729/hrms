@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2026-04-05 09:45+0000\n"
-"PO-Revision-Date: 2026-04-06 14:50\n"
+"POT-Creation-Date: 2026-04-12 09:46+0000\n"
+"PO-Revision-Date: 2026-04-13 16:27\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Esperanto\n"
 "MIME-Version: 1.0\n"
@@ -323,7 +323,7 @@ msgstr "crwdns104808:0{0}crwdnd104808:0{1}crwdnd104808:0{2}crwdne104808:0"
 #: hrms/hr/doctype/attendance/attendance.json
 #: hrms/hr/doctype/employee_attendance_tool/employee_attendance_tool.json
 #: hrms/hr/doctype/training_event_employee/training_event_employee.json
-#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:732
+#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:736
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.json
 msgid "Absent"
 msgstr "crwdns140860:0crwdne140860:0"
@@ -626,11 +626,11 @@ msgstr "crwdns104988:0crwdne104988:0"
 msgid "Allocate Based On Leave Policy"
 msgstr "crwdns140916:0crwdne140916:0"
 
-#: hrms/hr/doctype/leave_control_panel/leave_control_panel.js:176
+#: hrms/hr/doctype/leave_control_panel/leave_control_panel.js:177
 msgid "Allocate Leave"
 msgstr "crwdns104992:0crwdne104992:0"
 
-#: hrms/hr/doctype/leave_control_panel/leave_control_panel.js:192
+#: hrms/hr/doctype/leave_control_panel/leave_control_panel.js:193
 msgid "Allocate leaves to {0} employee(s)?"
 msgstr "crwdns142904:0{0}crwdne142904:0"
 
@@ -656,7 +656,7 @@ msgstr "crwdns104998:0crwdne104998:0"
 msgid "Allocated Via"
 msgstr "crwdns160862:0crwdne160862:0"
 
-#: hrms/hr/doctype/leave_control_panel/leave_control_panel.js:205
+#: hrms/hr/doctype/leave_control_panel/leave_control_panel.js:206
 msgid "Allocating Leave"
 msgstr "crwdns105002:0crwdne105002:0"
 
@@ -1369,7 +1369,7 @@ msgstr "crwdns141042:0crwdne141042:0"
 msgid "Attendance To Date"
 msgstr "crwdns141044:0crwdne141044:0"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:144
+#: hrms/hr/doctype/attendance_request/attendance_request.py:187
 msgid "Attendance Updated"
 msgstr "crwdns105366:0crwdne105366:0"
 
@@ -1421,11 +1421,11 @@ msgstr "crwdns105386:0crwdne105386:0"
 msgid "Attendance marked successfully."
 msgstr "crwdns199170:0crwdne199170:0"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:163
+#: hrms/hr/doctype/attendance_request/attendance_request.py:206
 msgid "Attendance not submitted for {0} as it is a Holiday."
 msgstr "crwdns105388:0{0}crwdne105388:0"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:172
+#: hrms/hr/doctype/attendance_request/attendance_request.py:215
 msgid "Attendance not submitted for {0} as {1} is on leave."
 msgstr "crwdns105390:0{0}crwdnd105390:0{1}crwdne105390:0"
 
@@ -1537,7 +1537,7 @@ msgstr "crwdns141076:0crwdne141076:0"
 msgid "Backdated Leave Application is restricted. Please set the {} in {}"
 msgstr "crwdns105424:0crwdne105424:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:286
+#: hrms/hr/doctype/expense_claim/expense_claim.js:290
 msgid "Bank Entries"
 msgstr "crwdns105434:0crwdne105434:0"
 
@@ -1858,11 +1858,11 @@ msgstr "crwdns105582:0crwdne105582:0"
 msgid "Cause of Grievance"
 msgstr "crwdns141130:0crwdne141130:0"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:128
+#: hrms/hr/doctype/attendance_request/attendance_request.py:171
 msgid "Changed the status from {0} to {1} and Status for Other Half to {2} via Attendance Request"
 msgstr "crwdns159474:0{0}crwdnd159474:0{1}crwdnd159474:0{2}crwdne159474:0"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:132
+#: hrms/hr/doctype/attendance_request/attendance_request.py:175
 msgid "Changed the status from {0} to {1} via Attendance Request"
 msgstr "crwdns159476:0{0}crwdnd159476:0{1}crwdne159476:0"
 
@@ -2210,6 +2210,10 @@ msgstr "crwdns105926:0crwdne105926:0"
 msgid "Create Shifts After"
 msgstr "crwdns148520:0crwdne148520:0"
 
+#: hrms/public/js/templates/hierarchy_empty_state.html:25
+msgid "Create {0}"
+msgstr "crwdns200142:0{0}crwdne200142:0"
+
 #: hrms/hr/doctype/appraisal_cycle/appraisal_cycle.py:217
 msgid "Creating Appraisals"
 msgstr "crwdns105932:0crwdne105932:0"
@@ -2372,7 +2376,7 @@ msgstr "crwdns106040:0crwdne106040:0"
 msgid "Daily Work Summary Replies"
 msgstr "crwdns106042:0crwdne106042:0"
 
-#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:167
+#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:187
 msgid "Date Range Exceeded"
 msgstr "crwdns160440:0crwdne160440:0"
 
@@ -2777,11 +2781,11 @@ msgstr "crwdns141336:0crwdne141336:0"
 msgid "Earnings & Deductions"
 msgstr "crwdns141338:0crwdne141338:0"
 
-#: frontend/src/components/ExpensesTable.vue:213
+#: frontend/src/components/ExpensesTable.vue:218
 msgid "Edit Expense Item"
 msgstr "crwdns151198:0crwdne151198:0"
 
-#: frontend/src/components/ExpenseTaxesTable.vue:221
+#: frontend/src/components/ExpenseTaxesTable.vue:225
 msgid "Edit Expense Tax"
 msgstr "crwdns151200:0crwdne151200:0"
 
@@ -3357,7 +3361,7 @@ msgstr "crwdns155412:0crwdne155412:0"
 msgid "Employee {0} : {1}"
 msgstr "crwdns159516:0{0}crwdnd159516:0{1}crwdne159516:0"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:90
+#: hrms/hr/doctype/attendance_request/attendance_request.py:133
 msgid "Employee {0} already has an Attendance Request {1} that overlaps with this period"
 msgstr "crwdns106886:0{0}crwdnd106886:0{1}crwdne106886:0"
 
@@ -3594,7 +3598,8 @@ msgstr "crwdns107006:0crwdne107006:0"
 msgid "Enter yearly benefit amounts"
 msgstr "crwdns159530:0crwdne159530:0"
 
-#: frontend/src/components/FormField.vue:42
+#: frontend/src/components/FormField.vue:40
+#: frontend/src/components/FormField.vue:52
 msgid "Enter {0}"
 msgstr "crwdns151212:0{0}crwdne151212:0"
 
@@ -3602,7 +3607,7 @@ msgstr "crwdns151212:0{0}crwdne151212:0"
 msgid "Error creating {0}"
 msgstr "crwdns151214:0{0}crwdne151214:0"
 
-#: frontend/src/components/FormView.vue:592
+#: frontend/src/components/FormView.vue:591
 msgid "Error deleting {0}"
 msgstr "crwdns151216:0{0}crwdne151216:0"
 
@@ -3622,7 +3627,7 @@ msgstr "crwdns107016:0{0}crwdne107016:0"
 msgid "Error in some rows"
 msgstr "crwdns141420:0crwdne141420:0"
 
-#: frontend/src/components/FormView.vue:570
+#: frontend/src/components/FormView.vue:569
 msgid "Error updating {0}"
 msgstr "crwdns151218:0{0}crwdne151218:0"
 
@@ -3928,7 +3933,7 @@ msgstr "crwdns151220:0crwdne151220:0"
 #. Label of the expense_type (Data) field in DocType 'Expense Claim Type'
 #. Label of a Link in the Expenses Workspace
 #. Label of a Workspace Sidebar Item
-#: hrms/hr/doctype/expense_claim/expense_claim.py:743
+#: hrms/hr/doctype/expense_claim/expense_claim.py:747
 #: hrms/hr/doctype/expense_claim_detail/expense_claim_detail.json
 #: hrms/hr/doctype/expense_claim_type/expense_claim_type.json
 #: hrms/hr/workspace/expenses/expenses.json
@@ -3955,7 +3960,7 @@ msgstr "crwdns107150:0crwdne107150:0"
 msgid "Expense Date"
 msgstr "crwdns141466:0crwdne141466:0"
 
-#: frontend/src/components/ExpensesTable.vue:211
+#: frontend/src/components/ExpensesTable.vue:216
 msgid "Expense Item"
 msgstr "crwdns151222:0crwdne151222:0"
 
@@ -3965,7 +3970,7 @@ msgstr "crwdns151222:0crwdne151222:0"
 msgid "Expense Proof"
 msgstr "crwdns141468:0crwdne141468:0"
 
-#: frontend/src/components/ExpenseTaxesTable.vue:219
+#: frontend/src/components/ExpenseTaxesTable.vue:223
 msgid "Expense Tax"
 msgstr "crwdns151224:0crwdne151224:0"
 
@@ -4021,7 +4026,7 @@ msgstr "crwdns141480:0crwdne141480:0"
 msgid "Explanation"
 msgstr "crwdns141482:0crwdne141482:0"
 
-#: hrms/public/js/hierarchy_chart/hierarchy_chart_desktop.js:137
+#: hrms/public/js/hierarchy_chart/hierarchy_chart_desktop.js:136
 msgid "Exporting..."
 msgstr "crwdns107184:0crwdne107184:0"
 
@@ -4033,7 +4038,7 @@ msgstr "crwdns107188:0{0}crwdne107188:0"
 msgid "Failed to delete defaults for country {0}."
 msgstr "crwdns141486:0{0}crwdne141486:0"
 
-#: hrms/api/__init__.py:787
+#: hrms/api/__init__.py:783
 msgid "Failed to download PDF: {0}"
 msgstr "crwdns159538:0{0}crwdne159538:0"
 
@@ -4727,7 +4732,7 @@ msgstr "crwdns155416:0crwdne155416:0"
 msgid "Half Day Records"
 msgstr "crwdns107560:0crwdne107560:0"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:54
+#: hrms/hr/doctype/attendance_request/attendance_request.py:55
 msgid "Half day date should be in between from date and to date"
 msgstr "crwdns107564:0crwdne107564:0"
 
@@ -5028,7 +5033,7 @@ msgstr "crwdns141674:0crwdne141674:0"
 msgid "Incentive Amount"
 msgstr "crwdns141676:0crwdne141676:0"
 
-#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:102
+#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:122
 msgid "Include Company Descendants"
 msgstr "crwdns148752:0crwdne148752:0"
 
@@ -5397,7 +5402,7 @@ msgstr "crwdns107840:0{0}crwdnd107840:0{1}crwdne107840:0"
 msgid "Invalid Shift Times"
 msgstr "crwdns152551:0crwdne152551:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:991
+#: hrms/hr/doctype/expense_claim/expense_claim.py:995
 msgid "Invalid parameters provided. Please pass the required arguments."
 msgstr "crwdns152402:0crwdne152402:0"
 
@@ -5808,7 +5813,7 @@ msgstr "crwdns151248:0{0}crwdne151248:0"
 
 #. Option for the 'Calculate Payroll Working Days Based On' (Select) field in
 #. DocType 'Payroll Settings'
-#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:734
+#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:738
 #: hrms/overrides/dashboard_overrides.py:12
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.json
 msgid "Leave"
@@ -5947,7 +5952,7 @@ msgstr "crwdns141812:0crwdne141812:0"
 msgid "Leave Block List Name"
 msgstr "crwdns141814:0crwdne141814:0"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:1418
+#: hrms/hr/doctype/leave_application/leave_application.py:1423
 msgid "Leave Blocked"
 msgstr "crwdns108102:0crwdne108102:0"
 
@@ -6766,11 +6771,11 @@ msgstr "crwdns108494:0crwdne108494:0"
 msgid "New Employee ID"
 msgstr "crwdns141944:0crwdne141944:0"
 
-#: frontend/src/components/ExpensesTable.vue:213
+#: frontend/src/components/ExpensesTable.vue:218
 msgid "New Expense Item"
 msgstr "crwdns151278:0crwdne151278:0"
 
-#: frontend/src/components/ExpenseTaxesTable.vue:221
+#: frontend/src/components/ExpenseTaxesTable.vue:225
 msgid "New Expense Tax"
 msgstr "crwdns151280:0crwdne151280:0"
 
@@ -6925,9 +6930,9 @@ msgstr "crwdns108540:0crwdne108540:0"
 msgid "No attendance records found."
 msgstr "crwdns108542:0crwdne108542:0"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:63
-msgid "No attendance records to create"
-msgstr "crwdns154286:0crwdne154286:0"
+#: hrms/hr/doctype/attendance_request/attendance_request.py:73
+msgid "No attendance records to create due to following reasons"
+msgstr "crwdns200144:0crwdne200144:0"
 
 #: hrms/hr/doctype/interview/interview.py:116
 msgid "No changes found in timings."
@@ -7222,7 +7227,7 @@ msgstr "crwdns108656:0crwdne108656:0"
 msgid "Only Interviews with Cleared or Rejected status can be submitted."
 msgstr "crwdns108658:0crwdne108658:0"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:136
+#: hrms/hr/doctype/leave_application/leave_application.py:137
 msgid "Only Leave Applications with status 'Approved' and 'Rejected' can be submitted"
 msgstr "crwdns108660:0crwdne108660:0"
 
@@ -7273,7 +7278,7 @@ msgid "Optional Leaves are holidays that Employees can choose to avail from a li
 msgstr "crwdns108696:0crwdne108696:0"
 
 #. Label of a Workspace Sidebar Item
-#: hrms/hr/page/organizational_chart/organizational_chart.js:4
+#: hrms/hr/page/organizational_chart/organizational_chart.js:154
 #: hrms/workspace_sidebar/hr_setup.json
 msgid "Organizational Chart"
 msgstr "crwdns108698:0crwdne108698:0"
@@ -7303,7 +7308,7 @@ msgstr "crwdns108724:0crwdne108724:0"
 msgid "Overall Average Rating"
 msgstr "crwdns142038:0crwdne142038:0"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:95
+#: hrms/hr/doctype/attendance_request/attendance_request.py:138
 msgid "Overlapping Attendance Request"
 msgstr "crwdns108726:0crwdne108726:0"
 
@@ -7823,10 +7828,6 @@ msgstr "crwdns108940:0crwdne108940:0"
 msgid "Please assign a Salary Structure for Employee {0} applicable from or before {1} first"
 msgstr "crwdns108946:0{0}crwdnd108946:0{1}crwdne108946:0"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:64
-msgid "Please check if employee is on leave or attendance with the same status exists for selected day(s)."
-msgstr "crwdns154288:0crwdne154288:0"
-
 #: hrms/templates/emails/training_event.html:17
 msgid "Please confirm once you have completed your training"
 msgstr "crwdns108948:0crwdne108948:0"
@@ -7892,12 +7893,12 @@ msgstr "crwdns151990:0crwdne151990:0"
 msgid "Please select Shift Type and assignment date(s)."
 msgstr "crwdns142112:0crwdne142112:0"
 
-#: hrms/public/js/hierarchy_chart/hierarchy_chart_mobile.js:233
+#: hrms/public/js/hierarchy_chart/hierarchy_chart_mobile.js:240
 msgid "Please select a company first"
 msgstr "crwdns108966:0crwdne108966:0"
 
-#: hrms/public/js/hierarchy_chart/hierarchy_chart_desktop.js:103
-#: hrms/public/js/hierarchy_chart/hierarchy_chart_desktop.js:299
+#: hrms/public/js/hierarchy_chart/hierarchy_chart_desktop.js:93
+#: hrms/public/js/hierarchy_chart/hierarchy_chart_desktop.js:293
 msgid "Please select a company first."
 msgstr "crwdns108968:0crwdne108968:0"
 
@@ -7982,7 +7983,7 @@ msgstr "crwdns108998:0crwdne108998:0"
 msgid "Please set Relieving Date for employee: {0}"
 msgstr "crwdns109000:0{0}crwdne109000:0"
 
-#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:166
+#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:186
 #: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:52
 msgid "Please set a date range less than 90 days."
 msgstr "crwdns160444:0crwdne160444:0"
@@ -8007,7 +8008,7 @@ msgstr "crwdns194910:0{0}crwdnd194910:0{1}crwdne194910:0"
 msgid "Please set the Appraisal Template for all the {0} or select the template in the Employees table below."
 msgstr "crwdns109010:0{0}crwdne109010:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:523
+#: hrms/hr/doctype/expense_claim/expense_claim.js:527
 msgid "Please set the Company"
 msgstr "crwdns109012:0crwdne109012:0"
 
@@ -8103,7 +8104,7 @@ msgstr "crwdns142124:0crwdne142124:0"
 #: hrms/hr/doctype/attendance/attendance.json
 #: hrms/hr/doctype/employee_attendance_tool/employee_attendance_tool.json
 #: hrms/hr/doctype/training_event_employee/training_event_employee.json
-#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:733
+#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:737
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.json
 msgid "Present"
 msgstr "crwdns142126:0crwdne142126:0"
@@ -8764,11 +8765,11 @@ msgstr "crwdns109390:0#{0}crwdnd109390:0{1}crwdnd109390:0{2}crwdnd109390:0{3}crw
 msgid "Row #{0}: Timesheet amount will overwrite the Earning component amount for the Salary Component {1}"
 msgstr "crwdns109392:0#{0}crwdnd109392:0{1}crwdne109392:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:959
+#: hrms/hr/doctype/expense_claim/expense_claim.py:963
 msgid "Row No {0}: Amount cannot be greater than the Outstanding Amount against Expense Claim {1}. Outstanding Amount is {2}"
 msgstr "crwdns109394:0{0}crwdnd109394:0{1}crwdnd109394:0{2}crwdne109394:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:557
+#: hrms/hr/doctype/expense_claim/expense_claim.py:561
 msgid "Row {0}# Allocated amount {1} cannot be greater than unclaimed amount {2}"
 msgstr "crwdns109396:0{0}crwdnd109396:0{1}crwdnd109396:0{2}crwdne109396:0"
 
@@ -9159,7 +9160,7 @@ msgstr "crwdns109542:0crwdne109542:0"
 msgid "Sanctioned Amount (Company Currency)"
 msgstr "crwdns161230:0crwdne161230:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:581
+#: hrms/hr/doctype/expense_claim/expense_claim.py:585
 msgid "Sanctioned Amount cannot be greater than Claim Amount in Row {0}."
 msgstr "crwdns109546:0{0}crwdne109546:0"
 
@@ -9235,9 +9236,15 @@ msgstr "crwdns142362:0crwdne142362:0"
 msgid "Select Users"
 msgstr "crwdns142364:0crwdne142364:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:568
+#: hrms/hr/doctype/expense_claim/expense_claim.js:572
 msgid "Select an employee to get the employee advance."
 msgstr "crwdns109588:0crwdne109588:0"
+
+#. Description of the 'Include Holidays' (Check) field in DocType 'Attendance
+#. Request'
+#: hrms/hr/doctype/attendance_request/attendance_request.json
+msgid "Select if any of the days selected for request are holidays"
+msgstr "crwdns200146:0crwdne200146:0"
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.js:237
 msgid "Select the Employee for which you want to allocate leaves."
@@ -9287,6 +9294,14 @@ msgstr "crwdns109604:0crwdne109604:0"
 msgid "Select your Leave Approver i.e. the person who approves or rejects your leaves."
 msgstr "crwdns109606:0crwdne109606:0"
 
+#: hrms/hr/doctype/expense_claim/expense_claim.js:607
+msgid "Selected employee advance is not of employee {0}"
+msgstr "crwdns200148:0{0}crwdne200148:0"
+
+#: hrms/hr/doctype/expense_claim/expense_claim.py:554
+msgid "Selected employee advance is not of employee {}"
+msgstr "crwdns200150:0crwdne200150:0"
+
 #. Label of the self_appraisal_tab (Tab Break) field in DocType 'Appraisal'
 #: hrms/hr/doctype/appraisal/appraisal.json
 #: hrms/hr/doctype/employee_performance_feedback/employee_performance_feedback.py:61
@@ -9315,7 +9330,7 @@ msgstr "crwdns142368:0crwdne142368:0"
 msgid "Self-approval for Expense Claims is not allowed"
 msgstr "crwdns159704:0crwdne159704:0"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:909
+#: hrms/hr/doctype/leave_application/leave_application.py:910
 msgid "Self-approval for leaves is not allowed"
 msgstr "crwdns152410:0crwdne152410:0"
 
@@ -9433,7 +9448,7 @@ msgstr "crwdns149178:0crwdne149178:0"
 msgid "Set optional filters to fetch employees in the appraisee list"
 msgstr "crwdns142410:0crwdne142410:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:742
+#: hrms/hr/doctype/expense_claim/expense_claim.py:746
 msgid "Set the default account for the {0} {1}"
 msgstr "crwdns109690:0{0}crwdnd109690:0{1}crwdne109690:0"
 
@@ -9987,7 +10002,7 @@ msgstr "crwdns142486:0crwdne142486:0"
 msgid "Sum of benefit amounts {0} exceeds maximum limit of {1}"
 msgstr "crwdns159720:0{0}crwdnd159720:0{1}crwdne159720:0"
 
-#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:108
+#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:128
 msgid "Summarized View"
 msgstr "crwdns109978:0crwdne109978:0"
 
@@ -10216,6 +10231,10 @@ msgstr "crwdns142534:0crwdne142534:0"
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:577
 msgid "There are more holidays than working days this month."
 msgstr "crwdns110080:0crwdne110080:0"
+
+#: hrms/hr/doctype/attendance_request/attendance_request.py:87
+msgid "There are multiple shifts assigned to the employee for the same period. Please mention the shift"
+msgstr "crwdns200152:0crwdne200152:0"
 
 #: hrms/payroll/doctype/arrear/arrear.py:410
 msgid "There are no arrear differences between existing and new salary structure components."
@@ -10659,7 +10678,7 @@ msgstr "crwdns142616:0crwdne142616:0"
 msgid "Total Self Score"
 msgstr "crwdns142618:0crwdne142618:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:575
+#: hrms/hr/doctype/expense_claim/expense_claim.py:579
 msgid "Total advance amount cannot be greater than total sanctioned amount"
 msgstr "crwdns110302:0crwdne110302:0"
 
@@ -11048,7 +11067,7 @@ msgstr "crwdns110488:0crwdne110488:0"
 msgid "Update Tax"
 msgstr "crwdns151364:0crwdne151364:0"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:138
+#: hrms/hr/doctype/attendance_request/attendance_request.py:181
 msgid "Updated status from {0} to {1} for date {2} in the attendance record {3}"
 msgstr "crwdns110490:0{0}crwdnd110490:0{1}crwdnd110490:0{2}crwdnd110490:0{3}crwdne110490:0"
 
@@ -11433,7 +11452,7 @@ msgstr "crwdns110686:0{0}crwdnd110686:0{1}crwdnd110686:0{2}crwdnd110686:0{3}crwd
 msgid "You can only submit Leave Encashment for a valid encashment amount"
 msgstr "crwdns110688:0crwdne110688:0"
 
-#: hrms/api/__init__.py:744
+#: hrms/api/__init__.py:740
 msgid "You can only upload JPG, PNG, PDF, TXT or Microsoft documents."
 msgstr "crwdns110690:0crwdne110690:0"
 
@@ -11470,6 +11489,10 @@ msgstr "crwdns154572:0crwdne154572:0"
 msgid "You have no upcoming shifts"
 msgstr "crwdns151380:0crwdne151380:0"
 
+#: hrms/public/js/templates/hierarchy_empty_state.html:9
+msgid "You haven't created a {0} for {1} yet."
+msgstr "crwdns200154:0{0}crwdnd200154:0{1}crwdne200154:0"
+
 #: hrms/overrides/employee_master.py:83
 msgid "You may add additional details, if any, and submit the offer."
 msgstr "crwdns110692:0crwdne110692:0"
@@ -11489,6 +11512,10 @@ msgstr "crwdns110696:0{0}crwdnd110696:0{1}crwdnd110696:0{2}crwdnd110696:0{3}crwd
 #: frontend/src/views/Login.vue:63
 msgid "Your password has expired. Please reset your password to continue"
 msgstr "crwdns151382:0crwdne151382:0"
+
+#: hrms/hr/doctype/attendance_request/attendance_request.py:69
+msgid "action"
+msgstr "crwdns200156:0crwdne200156:0"
 
 #: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:121
 msgid "active"
@@ -11539,6 +11566,10 @@ msgstr "crwdns142764:0crwdne142764:0"
 msgid "processed"
 msgstr "crwdns142766:0crwdne142766:0"
 
+#: hrms/hr/doctype/attendance_request/attendance_request.py:68
+msgid "reason"
+msgstr "crwdns200158:0crwdne200158:0"
+
 #: hrms/www/jobs/index.html:122
 msgid "result"
 msgstr "crwdns110708:0crwdne110708:0"
@@ -11559,6 +11590,10 @@ msgstr "crwdns142770:0crwdne142770:0"
 msgid "submitted"
 msgstr "crwdns151388:0crwdne151388:0"
 
+#: hrms/hr/page/organizational_chart/organizational_chart.js:30
+msgid "the selected company"
+msgstr "crwdns200160:0crwdne200160:0"
+
 #: hrms/payroll/doctype/salary_component/salary_component.py:187
 msgid "via Salary Component sync"
 msgstr "crwdns142774:0crwdne142774:0"
@@ -11577,7 +11612,7 @@ msgstr "crwdns163916:0crwdne163916:0"
 msgid "{0} & {1}"
 msgstr "crwdns110716:0{0}crwdnd110716:0{1}crwdne110716:0"
 
-#: frontend/src/components/ExpenseClaimItem.vue:84
+#: frontend/src/components/ExpenseClaimItem.vue:83
 msgid "{0} & {1} more"
 msgstr "crwdns151392:0{0}crwdnd151392:0{1}crwdne151392:0"
 
@@ -11642,7 +11677,7 @@ msgstr "crwdns163918:0{0}crwdnd163918:0{1}crwdnd163918:0{2}crwdne163918:0"
 msgid "{0} created successfully!"
 msgstr "crwdns151396:0{0}crwdne151396:0"
 
-#: frontend/src/components/FormView.vue:583
+#: frontend/src/components/FormView.vue:582
 msgid "{0} deleted successfully!"
 msgstr "crwdns151398:0{0}crwdne151398:0"
 
@@ -11708,7 +11743,7 @@ msgstr "crwdns151404:0{0}crwdne151404:0"
 msgid "{0} to {1} employee(s)?"
 msgstr "crwdns152002:0{0}crwdnd152002:0{1}crwdne152002:0"
 
-#: frontend/src/components/FormView.vue:561
+#: frontend/src/components/FormView.vue:560
 msgid "{0} updated successfully!"
 msgstr "crwdns151406:0{0}crwdne151406:0"
 

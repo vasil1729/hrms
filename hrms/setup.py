@@ -6,6 +6,7 @@ from frappe.desk.page.setup_wizard.install_fixtures import (
 	_,  # NOTE: this is not the real translation function
 )
 from frappe.desk.page.setup_wizard.setup_wizard import make_records
+from frappe.permissions import add_permission, update_permission_property
 
 from hrms.overrides.company import delete_company_fixtures
 
@@ -18,8 +19,10 @@ def after_install():
 	update_hr_defaults()
 	add_non_standard_user_types()
 	set_single_defaults()
+	setup_repost_defaults()
 	create_default_role_profiles()
 	run_post_install_patches()
+	add_default_hr_permissions()
 
 
 def before_uninstall():
@@ -852,6 +855,35 @@ def get_salary_slip_loan_fields():
 	}
 
 
+# Add default permission for hr roles
+def add_default_hr_permissions():
+	role_permissions = {
+		"HR User": {
+			"Role": {"read": 1},
+			"Currency": {"read": 1},
+		},
+		"HR Manager": {
+			"Role": {"read": 1},
+			"Currency": {"read": 1},
+			"Email Account": {"read": 1},
+		},
+	}
+
+	for role, permissions in role_permissions.items():
+		for doctype, ptypes in permissions.items():
+			add_permission(doctype, role)
+
+			for ptype, value in ptypes.items():
+				update_permission_property(doctype, role, permlevel=0, ptype=ptype, value=value)
+
+
 def make_people_workspace_standard():
 	if frappe.db.exists("Workspace Sidebar", "People"):
 		frappe.db.set_value("Workspace Sidebar", "People", "standard", 1)
+
+
+def setup_repost_defaults():
+	accounts_settings = frappe.get_doc("Accounts Settings")
+	for x in frappe.get_hooks("repost_allowed_doctypes"):
+		accounts_settings.append("repost_allowed_types", {"document_type": x})
+	accounts_settings.save()

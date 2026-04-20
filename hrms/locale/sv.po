@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2026-04-05 09:45+0000\n"
-"PO-Revision-Date: 2026-04-06 14:49\n"
+"POT-Creation-Date: 2026-04-12 09:46+0000\n"
+"PO-Revision-Date: 2026-04-13 16:27\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
@@ -348,7 +348,7 @@ msgstr "{0} finns mellan {1} och {2} ("
 #: hrms/hr/doctype/attendance/attendance.json
 #: hrms/hr/doctype/employee_attendance_tool/employee_attendance_tool.json
 #: hrms/hr/doctype/training_event_employee/training_event_employee.json
-#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:732
+#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:736
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.json
 msgid "Absent"
 msgstr "Frånvarande"
@@ -651,11 +651,11 @@ msgstr "Alla erfodrade uppgifter för att skapa Personal är inte klara ännu."
 msgid "Allocate Based On Leave Policy"
 msgstr "Tilldela Baserat På Frånvaro Princip"
 
-#: hrms/hr/doctype/leave_control_panel/leave_control_panel.js:176
+#: hrms/hr/doctype/leave_control_panel/leave_control_panel.js:177
 msgid "Allocate Leave"
 msgstr "Tilldela Frånvaro"
 
-#: hrms/hr/doctype/leave_control_panel/leave_control_panel.js:192
+#: hrms/hr/doctype/leave_control_panel/leave_control_panel.js:193
 msgid "Allocate leaves to {0} employee(s)?"
 msgstr "Tilldela frånvaro till {0} personal?"
 
@@ -681,7 +681,7 @@ msgstr "Tilldelad Frånvaro"
 msgid "Allocated Via"
 msgstr "Tilldelat Via"
 
-#: hrms/hr/doctype/leave_control_panel/leave_control_panel.js:205
+#: hrms/hr/doctype/leave_control_panel/leave_control_panel.js:206
 msgid "Allocating Leave"
 msgstr "Tilldelar Frånvaro"
 
@@ -1394,7 +1394,7 @@ msgstr "Närvaro Inställningar"
 msgid "Attendance To Date"
 msgstr "Närvaro Till Datum"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:144
+#: hrms/hr/doctype/attendance_request/attendance_request.py:187
 msgid "Attendance Updated"
 msgstr "Närvaro Uppdaterad"
 
@@ -1446,11 +1446,11 @@ msgstr "Närvaro angiven"
 msgid "Attendance marked successfully."
 msgstr "Närvaro angiven."
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:163
+#: hrms/hr/doctype/attendance_request/attendance_request.py:206
 msgid "Attendance not submitted for {0} as it is a Holiday."
 msgstr "Närvaro ej angiven för {0} som är helgdag."
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:172
+#: hrms/hr/doctype/attendance_request/attendance_request.py:215
 msgid "Attendance not submitted for {0} as {1} is on leave."
 msgstr "Närvaro ej angiven för {0} eftersom {1} är ledig."
 
@@ -1562,7 +1562,7 @@ msgstr "Inväntar Svar"
 msgid "Backdated Leave Application is restricted. Please set the {} in {}"
 msgstr "Frånvaro Ansökan i efter hand är begränsad. Ange {} i {}"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:286
+#: hrms/hr/doctype/expense_claim/expense_claim.js:290
 msgid "Bank Entries"
 msgstr "Bank Poster"
 
@@ -1883,11 +1883,11 @@ msgstr "Oplanerad Frånvaro"
 msgid "Cause of Grievance"
 msgstr "Klagomål Orsak"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:128
+#: hrms/hr/doctype/attendance_request/attendance_request.py:171
 msgid "Changed the status from {0} to {1} and Status for Other Half to {2} via Attendance Request"
 msgstr "Ändrade status från {0} till {1} och status för andra halvan till {2} via Närvaro Begäran"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:132
+#: hrms/hr/doctype/attendance_request/attendance_request.py:175
 msgid "Changed the status from {0} to {1} via Attendance Request"
 msgstr "Ändrade status från {0} till {1} Närvaro Begäran"
 
@@ -2238,6 +2238,10 @@ msgstr "Skapa Lönespecifikationer"
 msgid "Create Shifts After"
 msgstr "Skapa Skift Efter"
 
+#: hrms/public/js/templates/hierarchy_empty_state.html:25
+msgid "Create {0}"
+msgstr "Skapa {0}"
+
 #: hrms/hr/doctype/appraisal_cycle/appraisal_cycle.py:217
 msgid "Creating Appraisals"
 msgstr "Skapa Utvärderingar"
@@ -2400,7 +2404,7 @@ msgstr "Daglig Arbete Översikt Grupp Användare"
 msgid "Daily Work Summary Replies"
 msgstr "Daglig Arbete Översikt Svar"
 
-#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:167
+#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:187
 msgid "Date Range Exceeded"
 msgstr "Datum Intervall Överskriden"
 
@@ -2805,11 +2809,11 @@ msgstr "Inkomst"
 msgid "Earnings & Deductions"
 msgstr "Inkomst & Avdrag"
 
-#: frontend/src/components/ExpensesTable.vue:213
+#: frontend/src/components/ExpensesTable.vue:218
 msgid "Edit Expense Item"
 msgstr "Redigera Kostnad Post"
 
-#: frontend/src/components/ExpenseTaxesTable.vue:221
+#: frontend/src/components/ExpenseTaxesTable.vue:225
 msgid "Edit Expense Tax"
 msgstr "Redigera Kostnad Moms"
 
@@ -2880,7 +2884,7 @@ msgstr "Förskott Översikt"
 #: hrms/hr/workspace/hr_setup/hr_setup.json
 #: hrms/hr/workspace/tenure/tenure.json hrms/workspace_sidebar/tenure.json
 msgid "Employee Analytics"
-msgstr "Analys"
+msgstr "Personal Statistik"
 
 #. Name of a DocType
 #. Label of a Link in the Shift & Attendance Workspace
@@ -3385,7 +3389,7 @@ msgstr "Personal angiven som Frånvarande för andra halvan på grund av utebliv
 msgid "Employee {0} : {1}"
 msgstr "Personal {0} : {1}"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:90
+#: hrms/hr/doctype/attendance_request/attendance_request.py:133
 msgid "Employee {0} already has an Attendance Request {1} that overlaps with this period"
 msgstr "Personal {0} har redan Närvaro Begäran {1} som överlappar med denna period"
 
@@ -3604,7 +3608,7 @@ msgstr "Ange ett värde som inte är noll för att justera."
 
 #: hrms/hr/doctype/hr_settings/hr_settings.js:34
 msgid "Enter the Standard Working Hours for a normal work day. These hours will be used in calculations of reports such as Employee Hours Utilization and Project Profitability analysis."
-msgstr "Ange Standard Arbetstid för arbetsdag. Dessa timmar kommer att användas i beräkningar av rapporter som t. ex. Personal Tid Användning och Projekt Resultat Analys."
+msgstr "Ange Standard Arbetstid för arbetsdag. Dessa timmar kommer att användas i beräkningar av rapporter som t. ex. Personal Tid Användning och Projekt Resultat Statistik."
 
 #. Description of the 'Days to Reverse' (Float) field in DocType 'Payroll
 #. Correction'
@@ -3622,7 +3626,8 @@ msgstr "Ange frånvaro antal du vill ta för period."
 msgid "Enter yearly benefit amounts"
 msgstr "Ange Årliga Förmånsbelopp"
 
-#: frontend/src/components/FormField.vue:42
+#: frontend/src/components/FormField.vue:40
+#: frontend/src/components/FormField.vue:52
 msgid "Enter {0}"
 msgstr "Ange {0}"
 
@@ -3630,7 +3635,7 @@ msgstr "Ange {0}"
 msgid "Error creating {0}"
 msgstr "Fel vid skapandet av {0}"
 
-#: frontend/src/components/FormView.vue:592
+#: frontend/src/components/FormView.vue:591
 msgid "Error deleting {0}"
 msgstr "Fel vid borttagning av {0}"
 
@@ -3650,7 +3655,7 @@ msgstr "Fel i formel eller villkor: {0} i Inkomst Skatt Tabell"
 msgid "Error in some rows"
 msgstr "Fel i vissa rader"
 
-#: frontend/src/components/FormView.vue:570
+#: frontend/src/components/FormView.vue:569
 msgid "Error updating {0}"
 msgstr "Fel vid uppdatering av {0}"
 
@@ -3956,7 +3961,7 @@ msgstr "Utlägg Sammanfattning"
 #. Label of the expense_type (Data) field in DocType 'Expense Claim Type'
 #. Label of a Link in the Expenses Workspace
 #. Label of a Workspace Sidebar Item
-#: hrms/hr/doctype/expense_claim/expense_claim.py:743
+#: hrms/hr/doctype/expense_claim/expense_claim.py:747
 #: hrms/hr/doctype/expense_claim_detail/expense_claim_detail.json
 #: hrms/hr/doctype/expense_claim_type/expense_claim_type.json
 #: hrms/hr/workspace/expenses/expenses.json
@@ -3983,7 +3988,7 @@ msgstr "Utlägg"
 msgid "Expense Date"
 msgstr "Kostnad Datum"
 
-#: frontend/src/components/ExpensesTable.vue:211
+#: frontend/src/components/ExpensesTable.vue:216
 msgid "Expense Item"
 msgstr "Kostnad Post"
 
@@ -3993,7 +3998,7 @@ msgstr "Kostnad Post"
 msgid "Expense Proof"
 msgstr "Kostnad Verifikat"
 
-#: frontend/src/components/ExpenseTaxesTable.vue:219
+#: frontend/src/components/ExpenseTaxesTable.vue:223
 msgid "Expense Tax"
 msgstr "Kostnad Moms"
 
@@ -4049,7 +4054,7 @@ msgstr "Utgången Frånvaro"
 msgid "Explanation"
 msgstr "Förklaring"
 
-#: hrms/public/js/hierarchy_chart/hierarchy_chart_desktop.js:137
+#: hrms/public/js/hierarchy_chart/hierarchy_chart_desktop.js:136
 msgid "Exporting..."
 msgstr "Exporterar..."
 
@@ -4061,7 +4066,7 @@ msgstr "Misslyckades med att skapa/godkänna {0} för personal:"
 msgid "Failed to delete defaults for country {0}."
 msgstr "Kunde inte ta bort standardinställningar för land {0}."
 
-#: hrms/api/__init__.py:787
+#: hrms/api/__init__.py:783
 msgid "Failed to download PDF: {0}"
 msgstr "Misslyckades med att ladda ner PDF: {0}"
 
@@ -4755,7 +4760,7 @@ msgstr "Halvdag Vald Personal Rubrik"
 msgid "Half Day Records"
 msgstr "Halv Dag"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:54
+#: hrms/hr/doctype/attendance_request/attendance_request.py:55
 msgid "Half day date should be in between from date and to date"
 msgstr "Halvdag datum ska vara mellan från datum och till datum"
 
@@ -5056,7 +5061,7 @@ msgstr "Motivation"
 msgid "Incentive Amount"
 msgstr "Motivation Belopp"
 
-#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:102
+#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:122
 msgid "Include Company Descendants"
 msgstr "Inkludera Dotterbolag"
 
@@ -5425,7 +5430,7 @@ msgstr "Ogiltig Löne Konto. Konto valuta måste vara {0} eller {1}"
 msgid "Invalid Shift Times"
 msgstr "Ogiltiga Skifttider"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:991
+#: hrms/hr/doctype/expense_claim/expense_claim.py:995
 msgid "Invalid parameters provided. Please pass the required arguments."
 msgstr "Ogiltiga parametrar angivna. Skicka erfordrade argument."
 
@@ -5836,7 +5841,7 @@ msgstr "Latitud: {0}°"
 
 #. Option for the 'Calculate Payroll Working Days Based On' (Select) field in
 #. DocType 'Payroll Settings'
-#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:734
+#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:738
 #: hrms/overrides/dashboard_overrides.py:12
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.json
 msgid "Leave"
@@ -5975,7 +5980,7 @@ msgstr "Frånvaro Spärr Lista Datum"
 msgid "Leave Block List Name"
 msgstr "Frånvaro Spärr Lista Namn"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:1418
+#: hrms/hr/doctype/leave_application/leave_application.py:1423
 msgid "Leave Blocked"
 msgstr "Frånvaro Spärrad"
 
@@ -6794,11 +6799,11 @@ msgstr "Netto Lön kan inte vara negativ"
 msgid "New Employee ID"
 msgstr "Ny Personal ID"
 
-#: frontend/src/components/ExpensesTable.vue:213
+#: frontend/src/components/ExpensesTable.vue:218
 msgid "New Expense Item"
 msgstr "Ny Kostnad Post"
 
-#: frontend/src/components/ExpenseTaxesTable.vue:221
+#: frontend/src/components/ExpenseTaxesTable.vue:225
 msgid "New Expense Tax"
 msgstr "Ny Kostnad Moms"
 
@@ -6953,9 +6958,9 @@ msgstr "Inga närvaro poster funna för dessa kriterier."
 msgid "No attendance records found."
 msgstr "Inga närvaro poster funna."
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:63
-msgid "No attendance records to create"
-msgstr "Inga närvaro poster att skapa"
+#: hrms/hr/doctype/attendance_request/attendance_request.py:73
+msgid "No attendance records to create due to following reasons"
+msgstr "Inga närvaro poster att skapa av följande skäl"
 
 #: hrms/hr/doctype/interview/interview.py:116
 msgid "No changes found in timings."
@@ -7250,7 +7255,7 @@ msgstr "Endast Intervjuare får lämna Intervju Återkoppling"
 msgid "Only Interviews with Cleared or Rejected status can be submitted."
 msgstr "Endast intervjuer med status Klar eller Avvisad kan godkännas."
 
-#: hrms/hr/doctype/leave_application/leave_application.py:136
+#: hrms/hr/doctype/leave_application/leave_application.py:137
 msgid "Only Leave Applications with status 'Approved' and 'Rejected' can be submitted"
 msgstr "Endast Frånvaro Ansökan med status 'Godkänd' och 'Avvisad' kan skickas in"
 
@@ -7301,7 +7306,7 @@ msgid "Optional Leaves are holidays that Employees can choose to avail from a li
 msgstr "Valfri frånvaro är helgdagar som personal kan välja att utnyttja från en lista över helgdagar som publiceras av bolag."
 
 #. Label of a Workspace Sidebar Item
-#: hrms/hr/page/organizational_chart/organizational_chart.js:4
+#: hrms/hr/page/organizational_chart/organizational_chart.js:154
 #: hrms/workspace_sidebar/hr_setup.json
 msgid "Organizational Chart"
 msgstr "Organisationsschema"
@@ -7331,7 +7336,7 @@ msgstr "Övertildelning"
 msgid "Overall Average Rating"
 msgstr "Övergripande Genomsnittlig Betyg"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:95
+#: hrms/hr/doctype/attendance_request/attendance_request.py:138
 msgid "Overlapping Attendance Request"
 msgstr "Överlappande Närvaro Begäran"
 
@@ -7851,10 +7856,6 @@ msgstr "Välj Bolag"
 msgid "Please assign a Salary Structure for Employee {0} applicable from or before {1} first"
 msgstr "Tilldela först Löneart för {0} som gäller från eller före {1}"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:64
-msgid "Please check if employee is on leave or attendance with the same status exists for selected day(s)."
-msgstr "Kontrollera om personal är frånvarande eller om närvaro med samma status finns för vald(a) dag(ar)."
-
 #: hrms/templates/emails/training_event.html:17
 msgid "Please confirm once you have completed your training"
 msgstr "Bekräfta när du har slutfört din utbildning"
@@ -7920,12 +7921,12 @@ msgstr "Välj Skift Schema och Tilldelning Datum."
 msgid "Please select Shift Type and assignment date(s)."
 msgstr "Vänligen välj Skift Typ och Tilldelning Datum."
 
-#: hrms/public/js/hierarchy_chart/hierarchy_chart_mobile.js:233
+#: hrms/public/js/hierarchy_chart/hierarchy_chart_mobile.js:240
 msgid "Please select a company first"
 msgstr "Välj Bolag"
 
-#: hrms/public/js/hierarchy_chart/hierarchy_chart_desktop.js:103
-#: hrms/public/js/hierarchy_chart/hierarchy_chart_desktop.js:299
+#: hrms/public/js/hierarchy_chart/hierarchy_chart_desktop.js:93
+#: hrms/public/js/hierarchy_chart/hierarchy_chart_desktop.js:293
 msgid "Please select a company first."
 msgstr "Välj Bolag"
 
@@ -8010,7 +8011,7 @@ msgstr "Ange Lön baserad på Löneinställningar"
 msgid "Please set Relieving Date for employee: {0}"
 msgstr "Ange avgång datum för: {0}"
 
-#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:166
+#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:186
 #: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:52
 msgid "Please set a date range less than 90 days."
 msgstr "Ange datum intervall som är kortare än 90 dagar."
@@ -8035,7 +8036,7 @@ msgstr "Ange Förskott Konto {0} eller i {1}"
 msgid "Please set the Appraisal Template for all the {0} or select the template in the Employees table below."
 msgstr "Ange Utvärdering Mall för alla {0} eller välj mall i Personal Inställningar"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:523
+#: hrms/hr/doctype/expense_claim/expense_claim.js:527
 msgid "Please set the Company"
 msgstr "Ange Bolag"
 
@@ -8131,7 +8132,7 @@ msgstr "Prioriterad Område för Logi"
 #: hrms/hr/doctype/attendance/attendance.json
 #: hrms/hr/doctype/employee_attendance_tool/employee_attendance_tool.json
 #: hrms/hr/doctype/training_event_employee/training_event_employee.json
-#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:733
+#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:737
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.json
 msgid "Present"
 msgstr "Närvarande"
@@ -8436,7 +8437,7 @@ msgstr "Rekrytering"
 #: hrms/hr/workspace/recruitment/recruitment.json
 #: hrms/workspace_sidebar/recruitment.json
 msgid "Recruitment Analytics"
-msgstr "Rekrytering Analys"
+msgstr "Rekrytering Statistik"
 
 #. Option for the 'Adjustment Type' (Select) field in DocType 'Leave
 #. Adjustment'
@@ -8792,11 +8793,11 @@ msgstr "Rad #{0}: Komponent {1} har alternativ {2} och {3} aktiverade."
 msgid "Row #{0}: Timesheet amount will overwrite the Earning component amount for the Salary Component {1}"
 msgstr "Rad #{0}: Tidrapport belopp kommer att skriva över Inkomst komponent belopp för löne komponent {1}"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:959
+#: hrms/hr/doctype/expense_claim/expense_claim.py:963
 msgid "Row No {0}: Amount cannot be greater than the Outstanding Amount against Expense Claim {1}. Outstanding Amount is {2}"
 msgstr "Rad #{0}: Belopp kan inte vara högre än Utestående Belopp mot Utlägg {1}. Utestående Belopp är {2}"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:557
+#: hrms/hr/doctype/expense_claim/expense_claim.py:561
 msgid "Row {0}# Allocated amount {1} cannot be greater than unclaimed amount {2}"
 msgstr "Rad #{0}: Tilldelad Belopp {1} kan inte vara högre än ofodrad belopp {2}"
 
@@ -9187,7 +9188,7 @@ msgstr "Godkänd Belopp"
 msgid "Sanctioned Amount (Company Currency)"
 msgstr "Sanktionerad Belopp (Bolag Valuta)"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:581
+#: hrms/hr/doctype/expense_claim/expense_claim.py:585
 msgid "Sanctioned Amount cannot be greater than Claim Amount in Row {0}."
 msgstr "Godkänd Belopp kan inte vara högre än Fordring Belopp på rad {0}."
 
@@ -9263,9 +9264,15 @@ msgstr "Välj Villkor"
 msgid "Select Users"
 msgstr "Välj Användare"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:568
+#: hrms/hr/doctype/expense_claim/expense_claim.js:572
 msgid "Select an employee to get the employee advance."
 msgstr "Välj Personal att hämta Förskott."
+
+#. Description of the 'Include Holidays' (Check) field in DocType 'Attendance
+#. Request'
+#: hrms/hr/doctype/attendance_request/attendance_request.json
+msgid "Select if any of the days selected for request are holidays"
+msgstr "Välj om någon av de valda dagarna för begäran är helgdagar"
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.js:237
 msgid "Select the Employee for which you want to allocate leaves."
@@ -9315,6 +9322,14 @@ msgstr "Välj typ av frånvaro personal kommer att ansöka om, t. ex. sjuk från
 msgid "Select your Leave Approver i.e. the person who approves or rejects your leaves."
 msgstr "Frånvaro beviljas av:"
 
+#: hrms/hr/doctype/expense_claim/expense_claim.js:607
+msgid "Selected employee advance is not of employee {0}"
+msgstr "Vald personal förskott är inte för {0}"
+
+#: hrms/hr/doctype/expense_claim/expense_claim.py:554
+msgid "Selected employee advance is not of employee {}"
+msgstr "Vald personal förskott är inte för {}"
+
 #. Label of the self_appraisal_tab (Tab Break) field in DocType 'Appraisal'
 #: hrms/hr/doctype/appraisal/appraisal.json
 #: hrms/hr/doctype/employee_performance_feedback/employee_performance_feedback.py:61
@@ -9343,7 +9358,7 @@ msgstr "Självlärd"
 msgid "Self-approval for Expense Claims is not allowed"
 msgstr "Självgodkännande för Utlägg Anspråk är inte tillåtet"
 
-#: hrms/hr/doctype/leave_application/leave_application.py:909
+#: hrms/hr/doctype/leave_application/leave_application.py:910
 msgid "Self-approval for leaves is not allowed"
 msgstr "Självgodkännande av frånvaro är inte tillåtet"
 
@@ -9461,7 +9476,7 @@ msgstr "Ange öppning saldo för inkomster och skatter från tidigare arbetsgiva
 msgid "Set optional filters to fetch employees in the appraisee list"
 msgstr "Ange filter (frivilligt) att söka personal för Bedömning."
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:742
+#: hrms/hr/doctype/expense_claim/expense_claim.py:746
 msgid "Set the default account for the {0} {1}"
 msgstr "Ange Standard Konto för {0} {1}"
 
@@ -10015,7 +10030,7 @@ msgstr "Summa av alla tidigare tabeller"
 msgid "Sum of benefit amounts {0} exceeds maximum limit of {1}"
 msgstr "Summan av förmånsbelopp {0} överskrider maxgräns för {1}"
 
-#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:108
+#: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:128
 msgid "Summarized View"
 msgstr "Översikt Vy"
 
@@ -10244,6 +10259,10 @@ msgstr "Teori"
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:577
 msgid "There are more holidays than working days this month."
 msgstr "Det finns mer helger än arbetsdagar denna månad."
+
+#: hrms/hr/doctype/attendance_request/attendance_request.py:87
+msgid "There are multiple shifts assigned to the employee for the same period. Please mention the shift"
+msgstr "Det finns flera skift tilldelade till personal för samma period. Ange skift"
 
 #: hrms/payroll/doctype/arrear/arrear.py:410
 msgid "There are no arrear differences between existing and new salary structure components."
@@ -10687,7 +10706,7 @@ msgstr "Totalt Resultat"
 msgid "Total Self Score"
 msgstr "Totalt Själv Resultat"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:575
+#: hrms/hr/doctype/expense_claim/expense_claim.py:579
 msgid "Total advance amount cannot be greater than total sanctioned amount"
 msgstr "Totalt Förskott Belopp får inte vara högre än Totalt Godkänd Belopp"
 
@@ -11076,7 +11095,7 @@ msgstr "Uppdatera Status"
 msgid "Update Tax"
 msgstr "Uppdatera Moms"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:138
+#: hrms/hr/doctype/attendance_request/attendance_request.py:181
 msgid "Updated status from {0} to {1} for date {2} in the attendance record {3}"
 msgstr "Uppdaterade status från {0} till {1} för datum {2} i närvaro post {3}"
 
@@ -11461,7 +11480,7 @@ msgstr "Du kan bara planera för upp till {0} lediga platser och budget {1} för
 msgid "You can only submit Leave Encashment for a valid encashment amount"
 msgstr "Du kan bara ansöka om Frånvaro Uttag för giltig Uttag Belopp"
 
-#: hrms/api/__init__.py:744
+#: hrms/api/__init__.py:740
 msgid "You can only upload JPG, PNG, PDF, TXT or Microsoft documents."
 msgstr "Du kan bara ladda upp JPG, PNG, PDF, TXT eller Microsoft Dokument."
 
@@ -11498,6 +11517,10 @@ msgstr "Du har inga kommande helgdagar"
 msgid "You have no upcoming shifts"
 msgstr "Du har inga kommande skift"
 
+#: hrms/public/js/templates/hierarchy_empty_state.html:9
+msgid "You haven't created a {0} for {1} yet."
+msgstr "Du har inte skapat {0} för {1} ännu."
+
 #: hrms/overrides/employee_master.py:83
 msgid "You may add additional details, if any, and submit the offer."
 msgstr "Du kan lägga till ytterligare detaljer, om någon, och skicka erbjudande."
@@ -11517,6 +11540,10 @@ msgstr "Din Intervju är ombokad från {0} {1} - {2} till {3} {4} - {5}"
 #: frontend/src/views/Login.vue:63
 msgid "Your password has expired. Please reset your password to continue"
 msgstr "Ditt lösenord har upphört att gälla. Återställ ditt lösenord för att fortsätta"
+
+#: hrms/hr/doctype/attendance_request/attendance_request.py:69
+msgid "action"
+msgstr "åtgärd"
 
 #: hrms/hr/doctype/compensatory_leave_request/compensatory_leave_request.py:121
 msgid "active"
@@ -11567,6 +11594,10 @@ msgstr "process"
 msgid "processed"
 msgstr "bearbetat"
 
+#: hrms/hr/doctype/attendance_request/attendance_request.py:68
+msgid "reason"
+msgstr "anledning"
+
 #: hrms/www/jobs/index.html:122
 msgid "result"
 msgstr "resultat"
@@ -11587,6 +11618,10 @@ msgstr "recensioner"
 msgid "submitted"
 msgstr "godkänd"
 
+#: hrms/hr/page/organizational_chart/organizational_chart.js:30
+msgid "the selected company"
+msgstr "vald bolag"
+
 #: hrms/payroll/doctype/salary_component/salary_component.py:187
 msgid "via Salary Component sync"
 msgstr "via Lönekomponent synk"
@@ -11605,7 +11640,7 @@ msgstr "år"
 msgid "{0} & {1}"
 msgstr "{0} & {1}"
 
-#: frontend/src/components/ExpenseClaimItem.vue:84
+#: frontend/src/components/ExpenseClaimItem.vue:83
 msgid "{0} & {1} more"
 msgstr "{0} & {1} mer"
 
@@ -11670,7 +11705,7 @@ msgstr "{0} fyller {1} {2}"
 msgid "{0} created successfully!"
 msgstr "{0} skapades!"
 
-#: frontend/src/components/FormView.vue:583
+#: frontend/src/components/FormView.vue:582
 msgid "{0} deleted successfully!"
 msgstr "{0} raderad!"
 
@@ -11736,7 +11771,7 @@ msgstr "{0} lyckad!"
 msgid "{0} to {1} employee(s)?"
 msgstr "{0} till {1} i personal?"
 
-#: frontend/src/components/FormView.vue:561
+#: frontend/src/components/FormView.vue:560
 msgid "{0} updated successfully!"
 msgstr "{0} uppdaterad!"
 
