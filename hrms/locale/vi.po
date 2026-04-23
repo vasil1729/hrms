@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2026-04-12 09:46+0000\n"
-"PO-Revision-Date: 2026-04-16 16:16\n"
+"POT-Creation-Date: 2026-04-19 09:46+0000\n"
+"PO-Revision-Date: 2026-04-21 18:13\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Vietnamese\n"
 "MIME-Version: 1.0\n"
@@ -525,7 +525,7 @@ msgstr "Cộng ngày nghỉ chưa sử dụng từ kỳ trước"
 msgid "Add unused leaves from previous leave period's allocation to this allocation"
 msgstr "Cộng ngày nghỉ chưa sử dụng từ kỳ phân bổ nghỉ phép trước vào kỳ phân bổ này"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:1680
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:1685
 msgid "Added tax components from the Salary Component master as the salary structure didn't have any tax component."
 msgstr "Đã thêm thành phần thuế từ danh mục Thành phần lương vì cấu trúc lương không có thành phần thuế nào."
 
@@ -709,11 +709,11 @@ msgstr "Phân bổ lớn hơn mức tối đa cho phép {0} cho loại nghỉ ph
 msgid "Allocation to Adjust"
 msgstr "Phân bổ cần điều chỉnh"
 
-#: hrms/hr/utils.py:440
+#: hrms/hr/utils.py:433
 msgid "Allocation was skipped due to exceeding annual allocation set in leave policy"
 msgstr "Phân bổ đã bị bỏ qua do vượt quá phân bổ hàng năm đặt trong chính sách nghỉ phép"
 
-#: hrms/hr/utils.py:430
+#: hrms/hr/utils.py:441
 msgid "Allocation was skipped due to maximum leave allocation limit set in leave type. Please increase the limit and retry failed allocation."
 msgstr "Phân bổ đã bị bỏ qua do giới hạn phân bổ nghỉ phép tối đa đặt trong loại nghỉ phép. Vui lòng tăng giới hạn và thử lại phân bổ thất bại."
 
@@ -868,7 +868,7 @@ msgstr "Phân bổ hàng năm"
 msgid "Annual Allocation Exceeded"
 msgstr "Phân bổ hàng năm đã vượt quá"
 
-#: hrms/setup.py:407
+#: hrms/setup.py:410
 msgid "Annual Salary"
 msgstr "Lương hàng năm"
 
@@ -911,11 +911,9 @@ msgid "Applicant Email Address"
 msgstr "Địa chỉ email ứng viên"
 
 #. Label of the applicant_name (Data) field in DocType 'Appointment Letter'
-#. Label of the applicant_name (Data) field in DocType 'Job Applicant'
 #. Label of the applicant_name (Data) field in DocType 'Job Offer'
 #. Label of a field in the job-application Web Form
 #: hrms/hr/doctype/appointment_letter/appointment_letter.json
-#: hrms/hr/doctype/job_applicant/job_applicant.json
 #: hrms/hr/doctype/job_offer/job_offer.json
 #: hrms/hr/web_form/job_application/job_application.json
 msgid "Applicant Name"
@@ -943,6 +941,11 @@ msgstr "Đơn"
 #: hrms/hr/report/recruitment_analytics/recruitment_analytics.py:46
 msgid "Application Status"
 msgstr "Trạng thái đơn"
+
+#. Label of the job_application_route (Data) field in DocType 'Job Opening'
+#: hrms/hr/doctype/job_opening/job_opening.json
+msgid "Application Web Form Route"
+msgstr ""
 
 #: hrms/hr/doctype/leave_application/leave_application.py:256
 msgid "Application period cannot be across two allocation records"
@@ -1076,7 +1079,7 @@ msgstr "Tổng quan đánh giá"
 #. Label of a Workspace Sidebar Item
 #: hrms/hr/doctype/appraisal/appraisal.json
 #: hrms/hr/doctype/appraisal_template/appraisal_template.json
-#: hrms/hr/doctype/appraisee/appraisee.json hrms/setup.py:161
+#: hrms/hr/doctype/appraisee/appraisee.json hrms/setup.py:164
 #: hrms/workspace_sidebar/performance.json
 msgid "Appraisal Template"
 msgstr "Mẫu đánh giá"
@@ -1120,13 +1123,13 @@ msgstr "Người được đánh giá"
 msgid "Appraisees: {0}"
 msgstr "Người được đánh giá: {0}"
 
-#: hrms/setup.py:399
+#: hrms/setup.py:402
 msgid "Apprentice"
 msgstr "Học việc"
 
 #. Label of the section_break_7 (Section Break) field in DocType 'Leave
 #. Application'
-#: frontend/src/components/RequestActionSheet.vue:290
+#: frontend/src/components/RequestActionSheet.vue:298
 #: hrms/hr/doctype/leave_application/leave_application.json
 msgid "Approval"
 msgstr "Phê duyệt"
@@ -1165,7 +1168,7 @@ msgstr "Đã được phê duyệt"
 msgid "Approver"
 msgstr "Người phê duyệt"
 
-#: hrms/setup.py:132 hrms/setup.py:235
+#: hrms/setup.py:135 hrms/setup.py:238
 msgid "Approvers"
 msgstr "Người phê duyệt"
 
@@ -1496,7 +1499,7 @@ msgstr "Tự động chi trả phép nghỉ"
 msgid "Automated Based on Goal Progress"
 msgstr "Tự động dựa trên tiến độ mục tiêu"
 
-#: hrms/hr/utils.py:484
+#: hrms/hr/utils.py:494
 msgid "Automatic Leave Allocation has failed for the following Earned Leaves: {0}. Please check {1} for more details."
 msgstr "Phân bổ phép nghỉ tự động đã thất bại cho các ngày nghỉ phép tích lũy sau: {0}. Vui lòng kiểm tra {1} để biết thêm chi tiết."
 
@@ -1783,7 +1786,7 @@ msgstr "Tính ngày làm việc lương dựa trên"
 msgid "Calculated in days"
 msgstr "Tính bằng ngày"
 
-#: hrms/setup.py:335
+#: hrms/setup.py:338
 msgid "Calls"
 msgstr "Cuộc gọi"
 
@@ -1874,7 +1877,7 @@ msgstr "Cộng dồn"
 msgid "Carry Forwarded Leaves"
 msgstr "Ngày nghỉ phép cộng dồn"
 
-#: hrms/setup.py:350 hrms/setup.py:351
+#: hrms/setup.py:353 hrms/setup.py:354
 msgid "Casual Leave"
 msgstr "Nghỉ phép ngẫu nhiên"
 
@@ -1907,11 +1910,11 @@ msgstr "Kiểm tra <a href='/app/List/Error Log?reference_doctype={0}'>{1}</a> �
 msgid "Check Error Log {0} for more details."
 msgstr "Kiểm tra Nhật ký lỗi {0} để biết thêm chi tiết."
 
-#: frontend/src/components/CheckInPanel.vue:123
+#: frontend/src/components/CheckInPanel.vue:120
 msgid "Check In"
 msgstr "Check in"
 
-#: frontend/src/components/CheckInPanel.vue:122
+#: frontend/src/components/CheckInPanel.vue:119
 msgid "Check Out"
 msgstr "Kiểm tra"
 
@@ -1921,11 +1924,11 @@ msgid "Check Vacancies On Job Offer Creation"
 msgstr "Kiểm tra vị trí trống khi tạo đề nghị tuyển dụng"
 
 #: hrms/hr/doctype/leave_policy_assignment/leave_policy_assignment.py:488
-#: hrms/hr/utils.py:937
+#: hrms/hr/utils.py:947
 msgid "Check {0} for more details"
 msgstr "Kiểm tra {0} để biết thêm chi tiết"
 
-#: frontend/src/components/CheckInPanel.vue:159
+#: frontend/src/components/CheckInPanel.vue:156
 msgid "Check-in"
 msgstr "Check-in"
 
@@ -1934,7 +1937,7 @@ msgstr "Check-in"
 msgid "Check-in Date"
 msgstr "Ngày check-in"
 
-#: frontend/src/components/CheckInPanel.vue:159
+#: frontend/src/components/CheckInPanel.vue:156
 msgid "Check-out"
 msgstr "Check-out"
 
@@ -1956,11 +1959,11 @@ msgstr "Nút con chỉ có thể được tạo dưới các nút loại 'Nhóm'
 #. 'Overtime Type'
 #: hrms/hr/doctype/overtime_type/overtime_type.json
 msgid "Choose how the hourly overtime amount is calculated:\n"
-"<ol style=\"padding-left:15px;\"><li>Fixed Hourly Rate: A fixed, manually entered hourly rate.</li>\n"
+"<ol style=\"padding-left:15px\"><li>Fixed Hourly Rate: A fixed, manually entered hourly rate.</li>\n"
 "<li>Salary Component-Based:\n\n"
 "(Sum of selected component amounts) ÷ (Payment Days) ÷ (Standard Daily Hours)</li></ol>"
 msgstr "Chọn cách tính số tiền tăng ca theo giờ:\n"
-"<ol style=\"padding-left:15px;\"><li>Mức lương theo giờ cố định: Một mức lương theo giờ cố định, được nhập thủ công.</li>\n"
+"<ol style=\"padding-left:15px\"><li>Mức lương theo giờ cố định: Một mức lương theo giờ cố định, được nhập thủ công.</li>\n"
 "<li>Dựa trên thành phần lương:\n\n"
 "(Tổng số tiền thành phần đã chọn) ÷ (Số ngày thanh toán) ÷ (Số giờ làm việc tiêu chuẩn hàng ngày)</li></ol>"
 
@@ -2060,7 +2063,7 @@ msgstr "Thông tin công ty"
 msgid "Compensatory Leave Request"
 msgstr "Yêu cầu nghỉ bù"
 
-#: hrms/setup.py:359 hrms/setup.py:360
+#: hrms/setup.py:362 hrms/setup.py:363
 msgid "Compensatory Off"
 msgstr "Nghỉ bù"
 
@@ -2194,8 +2197,9 @@ msgstr "Tạo lương bổ sung"
 msgid "Create Appraisals"
 msgstr "Tạo đánh giá"
 
-#: hrms/hr/doctype/interview_round/interview_round.js:7
-#: hrms/hr/doctype/job_applicant/job_applicant.js:95
+#: hrms/hr/doctype/interview_type/interview_type.js:7
+#: hrms/hr/doctype/job_applicant/job_applicant.js:68
+#: hrms/hr/doctype/job_applicant/job_applicant.js:137
 msgid "Create Interview"
 msgstr "Tạo phỏng vấn"
 
@@ -2203,6 +2207,11 @@ msgstr "Tạo phỏng vấn"
 msgid "Create Job Applicant"
 msgstr "Tạo ứng viên"
 
+#: hrms/hr/doctype/job_applicant/job_applicant.js:84
+msgid "Create Job Offer"
+msgstr ""
+
+#: hrms/hr/doctype/job_opening_template/job_opening_template.js:7
 #: hrms/hr/doctype/job_requisition/job_requisition.js:39
 msgid "Create Job Opening"
 msgstr "Tạo vị trí tuyển dụng"
@@ -2262,7 +2271,7 @@ msgstr "Đang tạo {0}..."
 msgid "Creation Date"
 msgstr "Ngày tạo"
 
-#: hrms/hr/utils.py:946
+#: hrms/hr/utils.py:956
 msgid "Creation Failed"
 msgstr "Tạo thất bại"
 
@@ -2427,7 +2436,7 @@ msgstr "Ngày & Lý do"
 msgid "Dates Based On"
 msgstr "Ngày dựa trên"
 
-#: hrms/setup.py:120
+#: hrms/setup.py:123
 msgid "Days for which Holidays are blocked for this department."
 msgstr "Số ngày nghỉ lễ bị chặn cho phòng ban này."
 
@@ -2538,15 +2547,15 @@ msgstr "Tài khoản Ngân hàng / Tiền mặt mặc định sẽ được tự
 msgid "Default Base Pay"
 msgstr "Lương cơ bản mặc định"
 
-#: hrms/setup.py:80
+#: hrms/setup.py:83
 msgid "Default Employee Advance Account"
 msgstr "Tài khoản tạm ứng nhân viên mặc định"
 
-#: hrms/setup.py:72
+#: hrms/setup.py:75
 msgid "Default Expense Claim Payable Account"
 msgstr "Tài khoản phải trả yêu cầu chi phí mặc định"
 
-#: hrms/overrides/company.py:133 hrms/setup.py:95
+#: hrms/overrides/company.py:133 hrms/setup.py:98
 msgid "Default Payroll Payable Account"
 msgstr "Tài khoản phải trả lương mặc định"
 
@@ -2557,7 +2566,7 @@ msgid "Default Salary Structure"
 msgstr "Cấu trúc lương mặc định"
 
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:204
-#: hrms/setup.py:207
+#: hrms/setup.py:210
 msgid "Default Shift"
 msgstr "Shift mặc định"
 
@@ -2668,7 +2677,7 @@ msgstr "Không bao gồm trong tổng"
 msgid "Do you want to update the Job Applicant {0} as {1} based on this interview result?"
 msgstr "Bạn có muốn cập nhật Ứng viên {0} thành {1} dựa trên kết quả phỏng vấn này không?"
 
-#: frontend/src/components/RequestActionSheet.vue:292
+#: frontend/src/components/RequestActionSheet.vue:300
 msgid "Document {0} failed!"
 msgstr "Tài liệu {0} thất bại!"
 
@@ -2859,7 +2868,7 @@ msgid "Employee A/C Number"
 msgstr "Số tài khoản nhân viên"
 
 #: hrms/patches/v16_0/create_custom_field_for_employee_advance_in_employee_master.py:11
-#: hrms/setup.py:270
+#: hrms/setup.py:273
 msgid "Employee Advance Account"
 msgstr "Tài khoản tạm ứng nhân viên"
 
@@ -2927,7 +2936,7 @@ msgstr "Sổ phúc lợi nhân viên"
 #. Label of the employee_benefits_section (Section Break) field in DocType
 #. 'Salary Structure Assignment'
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
-#: hrms/setup.py:409
+#: hrms/setup.py:412
 msgid "Employee Benefits"
 msgstr "Phúc lợi nhân viên"
 
@@ -3141,7 +3150,7 @@ msgstr "Số dư nghỉ phép nhân viên"
 msgid "Employee Leave Balance Summary"
 msgstr "Tóm tắt số dư nghỉ phép nhân viên"
 
-#: hrms/setup.py:771
+#: hrms/setup.py:774
 msgid "Employee Loan"
 msgstr "Khoản vay nhân viên"
 
@@ -3209,10 +3218,12 @@ msgstr "Lịch sử tài sản nhân viên"
 #. Name of a DocType
 #. Label of the employee_referral (Link) field in DocType 'Job Applicant'
 #. Label of a Link in the Recruitment Workspace
+#. Label of a Workspace Sidebar Item
 #: hrms/hr/doctype/employee_referral/employee_referral.json
 #: hrms/hr/doctype/job_applicant/job_applicant.json
 #: hrms/hr/doctype/job_requisition/job_requisition.js:18
-#: hrms/hr/workspace/recruitment/recruitment.json hrms/setup.py:403
+#: hrms/hr/workspace/recruitment/recruitment.json hrms/setup.py:406
+#: hrms/workspace_sidebar/recruitment.json
 msgid "Employee Referral"
 msgstr "Giới thiệu nhân viên"
 
@@ -3511,7 +3522,7 @@ msgstr "Nhân viên làm việc vào ngày lễ"
 #: hrms/hr/doctype/leave_control_panel/leave_control_panel.json
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.json
 #: hrms/payroll/doctype/bulk_salary_structure_assignment/bulk_salary_structure_assignment.json
-#: hrms/setup.py:185 hrms/templates/generators/job_opening.html:141
+#: hrms/setup.py:188 hrms/templates/generators/job_opening.html:141
 msgid "Employment Type"
 msgstr "Loại việc làm"
 
@@ -3598,9 +3609,9 @@ msgstr "Ngày kết thúc: {0}"
 msgid "End time cannot be before start time"
 msgstr "Giờ kết thúc không thể trước giờ bắt đầu"
 
-#: hrms/hr/doctype/job_applicant/job_applicant.js:86
-msgid "Enter Interview Round"
-msgstr "Nhập vòng phỏng vấn"
+#: hrms/hr/doctype/job_applicant/job_applicant.js:123
+msgid "Enter Interview Type"
+msgstr ""
 
 #: hrms/hr/doctype/leave_adjustment/leave_adjustment.py:74
 msgid "Enter a non-zero value to adjust."
@@ -3647,7 +3658,7 @@ msgstr "Lỗi khi tải PDF"
 msgid "Error in formula or condition"
 msgstr "Lỗi trong công thức hoặc điều kiện"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:2623
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:2628
 msgid "Error in formula or condition: {0} in Income Tax Slab"
 msgstr "Lỗi trong công thức hoặc điều kiện: {0} trong Bậc thuế thu nhập"
 
@@ -3659,7 +3670,7 @@ msgstr "Lỗi trong một số hàng"
 msgid "Error updating {0}"
 msgstr "Lỗi khi cập nhật {0}"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:2702
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:2707
 msgid "Error while evaluating the {doctype} {doclink} at row {row_id}. <br><br> <b>Error:</b> {error} <br><br> <b>Hint:</b> {description}"
 msgstr "Lỗi khi đánh giá {doctype} {doclink} tại hàng {row_id}. <br><br> <b>Lỗi:</b> {error} <br><br> <b>Gợi ý:</b> {description}"
 
@@ -3861,8 +3872,8 @@ msgstr "Bảng câu hỏi nghỉ việc"
 
 #: hrms/hr/doctype/exit_interview/test_exit_interview.py:110
 #: hrms/hr/doctype/exit_interview/test_exit_interview.py:120
-#: hrms/hr/doctype/exit_interview/test_exit_interview.py:122 hrms/setup.py:484
-#: hrms/setup.py:486 hrms/setup.py:507
+#: hrms/hr/doctype/exit_interview/test_exit_interview.py:122 hrms/setup.py:487
+#: hrms/setup.py:489 hrms/setup.py:510
 msgid "Exit Questionnaire Notification"
 msgstr "Thông báo bảng câu hỏi nghỉ việc"
 
@@ -3890,9 +3901,9 @@ msgstr "Nghỉ việc (Tháng này)"
 
 #. Label of the expected_average_rating (Rating) field in DocType 'Interview'
 #. Label of the expected_average_rating (Rating) field in DocType 'Interview
-#. Round'
+#. Type'
 #: hrms/hr/doctype/interview/interview.json
-#: hrms/hr/doctype/interview_round/interview_round.json
+#: hrms/hr/doctype/interview_type/interview_type.json
 msgid "Expected Average Rating"
 msgstr "Đánh giá trung bình dự kiến"
 
@@ -3917,8 +3928,8 @@ msgstr "Mức lương dự kiến hàng tháng"
 msgid "Expected Skill Set"
 msgstr "Bộ kỹ năng dự kiến"
 
-#. Label of the expected_skill_set (Table) field in DocType 'Interview Round'
-#: hrms/hr/doctype/interview_round/interview_round.json
+#. Label of the expected_skill_set (Table) field in DocType 'Interview Type'
+#: hrms/hr/doctype/interview_type/interview_type.json
 msgid "Expected Skillset"
 msgstr "Bộ kỹ năng dự kiến"
 
@@ -3926,8 +3937,8 @@ msgstr "Bộ kỹ năng dự kiến"
 #. Label of the expense_approver (Link) field in DocType 'Expense Claim'
 #: hrms/hr/doctype/employee_advance/employee_advance.json
 #: hrms/hr/doctype/expense_claim/expense_claim.json
-#: hrms/patches/v15_0/update_approver_custom_fields.py:11 hrms/setup.py:152
-#: hrms/setup.py:241
+#: hrms/patches/v15_0/update_approver_custom_fields.py:11 hrms/setup.py:155
+#: hrms/setup.py:244
 msgid "Expense Approver"
 msgstr "Người phê duyệt chi phí"
 
@@ -4058,7 +4069,7 @@ msgstr "Giải thích"
 msgid "Exporting..."
 msgstr "Đang xuất..."
 
-#: hrms/hr/utils.py:934
+#: hrms/hr/utils.py:944
 msgid "Failed to create/submit {0} for employees:"
 msgstr "Không thể tạo/gửi {0} cho nhân viên:"
 
@@ -4066,7 +4077,7 @@ msgstr "Không thể tạo/gửi {0} cho nhân viên:"
 msgid "Failed to delete defaults for country {0}."
 msgstr "Không thể xóa mặc định cho quốc gia {0}."
 
-#: hrms/api/__init__.py:783
+#: hrms/api/__init__.py:784
 msgid "Failed to download PDF: {0}"
 msgstr "Không thể tải PDF: {0}"
 
@@ -4102,7 +4113,7 @@ msgstr "Chi tiết lỗi"
 msgid "Failure Reason"
 msgstr "Lý do lỗi"
 
-#: hrms/hr/utils.py:483
+#: hrms/hr/utils.py:493
 msgid "Failure of Automatic Allocation of Earned Leaves"
 msgstr "Lỗi phân bổ tự động nghỉ phép tích lũy"
 
@@ -4306,7 +4317,7 @@ msgstr "Đang chờ thanh toán cuối"
 msgid "Follow via Email"
 msgstr "Theo dõi qua email"
 
-#: hrms/setup.py:336
+#: hrms/setup.py:339
 msgid "Food"
 msgstr "Đồ ăn"
 
@@ -4448,7 +4459,7 @@ msgstr "Tài sản thanh toán cuối cùng"
 msgid "Full and Final Outstanding Statement"
 msgstr "Bảng sao kê công nợ thanh toán cuối cùng"
 
-#: hrms/setup.py:392
+#: hrms/setup.py:395
 msgid "Full-time"
 msgstr "Toàn thời gian"
 
@@ -4482,7 +4493,7 @@ msgstr "Tài khoản lãi/lỗ"
 msgid "Geolocation Error"
 msgstr "Lỗi vị trí địa lý"
 
-#: frontend/src/components/CheckInPanel.vue:143
+#: frontend/src/components/CheckInPanel.vue:140
 #: hrms/public/js/utils/index.js:185
 msgid "Geolocation is not supported by your current browser"
 msgstr "Vị trí địa lý không được hỗ trợ bởi trình duyệt hiện tại của bạn"
@@ -4585,7 +4596,7 @@ msgstr "Các mục tiêu đã cập nhật thành công"
 #: hrms/payroll/doctype/bulk_salary_structure_assignment/bulk_salary_structure_assignment.js:173
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.json
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
-#: hrms/setup.py:200
+#: hrms/setup.py:203
 msgid "Grade"
 msgstr "Cấp bậc"
 
@@ -4682,15 +4693,15 @@ msgstr "Tổng lương năm đến nay (Tiền tệ công ty)"
 msgid "Group goal's progress is auto-calculated based on the child goals."
 msgstr "Tiến độ của mục tiêu nhóm được tự động tính dựa trên các mục tiêu con."
 
-#: hrms/setup.py:325
+#: hrms/setup.py:328
 msgid "HR"
 msgstr "nhân sự"
 
-#: hrms/setup.py:58
+#: hrms/setup.py:61
 msgid "HR & Payroll"
 msgstr "Nhân sự & Lương"
 
-#: hrms/setup.py:64
+#: hrms/setup.py:67
 msgid "HR & Payroll Settings"
 msgstr "Cài đặt Nhân sự & Lương"
 
@@ -4769,7 +4780,7 @@ msgstr "Ngày nửa ngày phải nằm giữa từ ngày và đến ngày"
 msgid "Has Certificate"
 msgstr "Có chứng chỉ"
 
-#: hrms/setup.py:215
+#: hrms/setup.py:218
 msgid "Health Insurance"
 msgstr "Bảo hiểm y tế"
 
@@ -4779,11 +4790,11 @@ msgstr "Bảo hiểm y tế"
 msgid "Health Insurance Name"
 msgstr "Tên bảo hiểm sức khỏe"
 
-#: hrms/setup.py:229
+#: hrms/setup.py:232
 msgid "Health Insurance No"
 msgstr "Số bảo hiểm sức khỏe"
 
-#: hrms/setup.py:221
+#: hrms/setup.py:224
 msgid "Health Insurance Provider"
 msgstr "Nhà cung cấp bảo hiểm sức khỏe"
 
@@ -5162,15 +5173,15 @@ msgstr "Phí khác bậc thuế thu nhập"
 msgid "Income Tax Slab is mandatory since the Salary Structure {0} has a tax component {1}"
 msgstr "Bậc thuế thu nhập là bắt buộc vì Cấu trúc lương {0} có thành phần thuế {1}"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:1957
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:1962
 msgid "Income Tax Slab must be effective on or before Payroll Period Start Date: {0}"
 msgstr "Bậc thuế thu nhập phải có hiệu lực vào hoặc trước Ngày bắt đầu Kỳ lương: {0}"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:1945
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:1950
 msgid "Income Tax Slab not set in Salary Structure Assignment: {0}"
 msgstr "Bậc thuế thu nhập chưa được đặt trong Phân bổ cấu trúc lương: {0}"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:1953
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:1958
 msgid "Income Tax Slab: {0} is disabled"
 msgstr "Bậc thuế thu nhập: {0} bị vô hiệu hóa"
 
@@ -5223,7 +5234,7 @@ msgstr "Số tiền lãi"
 msgid "Interest Income Account"
 msgstr "Tài khoản thu nhập lãi"
 
-#: hrms/setup.py:398
+#: hrms/setup.py:401
 msgid "Intern"
 msgstr "Thực tập sinh"
 
@@ -5243,7 +5254,6 @@ msgstr "Internet"
 #. Label of a Workspace Sidebar Item
 #: hrms/hr/doctype/interview/interview.json
 #: hrms/hr/doctype/interview_feedback/interview_feedback.json
-#: hrms/hr/doctype/job_applicant/job_applicant.js:25
 #: hrms/hr/doctype/job_applicant/job_applicant_dashboard.html:7
 #: hrms/hr/workspace/recruitment/recruitment.json
 #: hrms/workspace_sidebar/recruitment.json
@@ -5269,11 +5279,11 @@ msgstr "Chi tiết phỏng vấn"
 msgid "Interview Feedback"
 msgstr "Phản hồi phỏng vấn"
 
-#: hrms/hr/doctype/interview/test_interview.py:309
-#: hrms/hr/doctype/interview/test_interview.py:318
-#: hrms/hr/doctype/interview/test_interview.py:320
-#: hrms/hr/doctype/interview/test_interview.py:327 hrms/setup.py:470
-#: hrms/setup.py:472 hrms/setup.py:505
+#: hrms/hr/doctype/interview/test_interview.py:296
+#: hrms/hr/doctype/interview/test_interview.py:305
+#: hrms/hr/doctype/interview/test_interview.py:307
+#: hrms/hr/doctype/interview/test_interview.py:314 hrms/setup.py:473
+#: hrms/setup.py:475 hrms/setup.py:508
 msgid "Interview Feedback Reminder"
 msgstr "Nhắc nhở phản hồi phỏng vấn"
 
@@ -5285,11 +5295,11 @@ msgstr "Phản hồi phỏng vấn {0} đã gửi thành công"
 msgid "Interview Not Rescheduled"
 msgstr "Phỏng vấn không được đổi lịch"
 
-#: hrms/hr/doctype/interview/test_interview.py:293
-#: hrms/hr/doctype/interview/test_interview.py:302
-#: hrms/hr/doctype/interview/test_interview.py:304
-#: hrms/hr/doctype/interview/test_interview.py:326 hrms/setup.py:458
-#: hrms/setup.py:460 hrms/setup.py:501
+#: hrms/hr/doctype/interview/test_interview.py:280
+#: hrms/hr/doctype/interview/test_interview.py:289
+#: hrms/hr/doctype/interview/test_interview.py:291
+#: hrms/hr/doctype/interview/test_interview.py:313 hrms/setup.py:461
+#: hrms/setup.py:463 hrms/setup.py:504
 msgid "Interview Reminder"
 msgstr "Nhắc nhở phỏng vấn"
 
@@ -5302,28 +5312,6 @@ msgstr "Mẫu thông báo nhắc phỏng vấn"
 #: hrms/hr/doctype/interview/interview.py:151
 msgid "Interview Rescheduled successfully"
 msgstr "Phỏng vấn đã được đổi lịch thành công"
-
-#. Label of the interview_round (Link) field in DocType 'Interview'
-#. Label of the interview_round (Link) field in DocType 'Interview Feedback'
-#. Name of a DocType
-#. Label of a Link in the Recruitment Workspace
-#. Label of a Workspace Sidebar Item
-#: hrms/hr/doctype/interview/interview.json
-#: hrms/hr/doctype/interview_feedback/interview_feedback.json
-#: hrms/hr/doctype/interview_round/interview_round.json
-#: hrms/hr/doctype/job_applicant/job_applicant_dashboard.html:8
-#: hrms/hr/workspace/recruitment/recruitment.json
-#: hrms/workspace_sidebar/recruitment.json
-msgid "Interview Round"
-msgstr "Vòng phỏng vấn"
-
-#: hrms/hr/doctype/job_applicant/job_applicant.py:96
-msgid "Interview Round {0} is only applicable for the Designation {1}"
-msgstr "Vòng phỏng vấn {0} chỉ áp dụng cho chức danh {1}"
-
-#: hrms/hr/doctype/interview/interview.py:79
-msgid "Interview Round {0} is only for Designation {1}. Job Applicant has applied for the role {2}"
-msgstr "Vòng phỏng vấn {0} chỉ dành cho chức danh {1}. Ứng viên đã nộp đơn cho vị trí {2}"
 
 #: hrms/hr/doctype/interview_feedback/interview_feedback.py:61
 msgid "Interview Scheduled Date"
@@ -5339,20 +5327,36 @@ msgstr "Trạng thái phỏng vấn"
 #. Label of the section_break_13 (Section Break) field in DocType 'Interview'
 #: hrms/hr/doctype/exit_interview/exit_interview.json
 #: hrms/hr/doctype/interview/interview.json
-#: hrms/hr/doctype/job_applicant/job_applicant.js:77
+#: hrms/hr/doctype/job_applicant/job_applicant.js:117
 msgid "Interview Summary"
 msgstr "Tóm tắt phỏng vấn"
 
-#. Label of the interview_type (Link) field in DocType 'Interview Round'
+#. Label of the interview_type (Link) field in DocType 'Interview'
+#. Label of the interview_type (Link) field in DocType 'Interview Feedback'
 #. Name of a DocType
 #. Label of a Link in the Recruitment Workspace
 #. Label of a Workspace Sidebar Item
-#: hrms/hr/doctype/interview_round/interview_round.json
+#: hrms/hr/doctype/interview/interview.json
+#: hrms/hr/doctype/interview_feedback/interview_feedback.json
 #: hrms/hr/doctype/interview_type/interview_type.json
+#: hrms/hr/doctype/job_applicant/job_applicant_dashboard.html:8
 #: hrms/hr/workspace/recruitment/recruitment.json
 #: hrms/workspace_sidebar/recruitment.json
 msgid "Interview Type"
 msgstr "Loại phỏng vấn"
+
+#. Label of the interview_type_name (Data) field in DocType 'Interview Type'
+#: hrms/hr/doctype/interview_type/interview_type.json
+msgid "Interview Type Name"
+msgstr ""
+
+#: hrms/hr/doctype/job_applicant/job_applicant.py:96
+msgid "Interview Type {0} is only applicable for the Designation {1}"
+msgstr ""
+
+#: hrms/hr/doctype/interview/interview.py:79
+msgid "Interview Type {0} is only for Designation {1}. Job Applicant has applied for the role {2}"
+msgstr ""
 
 #: hrms/hr/doctype/interview/interview.py:132
 msgid "Interview: {0} Rescheduled"
@@ -5365,7 +5369,7 @@ msgstr "Phỏng vấn: {0} đã được đổi lịch"
 #: hrms/hr/doctype/interview/interview.json
 #: hrms/hr/doctype/interview_detail/interview_detail.json
 #: hrms/hr/doctype/interview_feedback/interview_feedback.json
-#: hrms/hr/doctype/interview_round/interview_round.json
+#: hrms/hr/doctype/interview_type/interview_type.json
 #: hrms/hr/doctype/interviewer/interviewer.json
 msgid "Interviewer"
 msgstr "Người phỏng vấn"
@@ -5374,10 +5378,10 @@ msgstr "Người phỏng vấn"
 #. Interview'
 #. Label of the interview_details (Table) field in DocType 'Interview'
 #. Label of the interviewers (Table MultiSelect) field in DocType 'Interview
-#. Round'
+#. Type'
 #: hrms/hr/doctype/exit_interview/exit_interview.json
 #: hrms/hr/doctype/interview/interview.json
-#: hrms/hr/doctype/interview_round/interview_round.json
+#: hrms/hr/doctype/interview_type/interview_type.json
 msgid "Interviewers"
 msgstr "Người phỏng vấn"
 
@@ -5413,7 +5417,7 @@ msgstr "Số tiền phúc lợi không hợp lệ"
 msgid "Invalid Dates"
 msgstr "Ngày không hợp lệ"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:2734
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:2739
 msgid "Invalid LWP Days Reversed"
 msgstr "Ngày LWP được đảo ngược không hợp lệ"
 
@@ -5569,7 +5573,7 @@ msgstr "Th1"
 #: hrms/hr/doctype/job_applicant/job_applicant.json
 #: hrms/hr/doctype/job_offer/job_offer.json
 #: hrms/hr/report/recruitment_analytics/recruitment_analytics.py:38
-#: hrms/hr/workspace/recruitment/recruitment.json hrms/setup.py:193
+#: hrms/hr/workspace/recruitment/recruitment.json hrms/setup.py:196
 #: hrms/workspace_sidebar/recruitment.json
 msgid "Job Applicant"
 msgstr "Ứng viên"
@@ -5584,23 +5588,18 @@ msgid "Job Applicant {0} created successfully."
 msgstr "Ứng viên {0} đã được tạo thành công."
 
 #: hrms/hr/doctype/interview/interview.py:66
-msgid "Job Applicants are not allowed to appear twice for the same Interview round. Interview {0} already scheduled for Job Applicant {1}"
-msgstr "Ứng viên không được phép xuất hiện hai lần trong cùng một vòng phỏng vấn. Phỏng vấn {0} đã được lên lịch cho ứng viên {1}"
+msgid "Job Applicants are not allowed to appear twice for the same Interview Type. Interview {0} already scheduled for Job Applicant {1}"
+msgstr ""
 
 #. Title of the job-application Web Form
 #: hrms/hr/web_form/job_application/job_application.json
 msgid "Job Application"
 msgstr "Đơn ứng tuyển"
 
-#. Label of the job_application_route (Data) field in DocType 'Job Opening'
-#: hrms/hr/doctype/job_opening/job_opening.json
-msgid "Job Application Route"
-msgstr "Tuyến đường đơn ứng tuyển"
-
 #. Label of the job_description_tab (Tab Break) field in DocType 'Job
 #. Requisition'
 #. Label of the description (Text Editor) field in DocType 'Job Requisition'
-#: hrms/hr/doctype/job_requisition/job_requisition.json hrms/setup.py:413
+#: hrms/hr/doctype/job_requisition/job_requisition.json hrms/setup.py:416
 msgid "Job Description"
 msgstr "Mô tả công việc"
 
@@ -5609,8 +5608,6 @@ msgstr "Mô tả công việc"
 #. Label of a Link in the Recruitment Workspace
 #. Label of a Workspace Sidebar Item
 #: hrms/hr/doctype/employee_onboarding/employee_onboarding.json
-#: hrms/hr/doctype/job_applicant/job_applicant.js:38
-#: hrms/hr/doctype/job_applicant/job_applicant.js:48
 #: hrms/hr/doctype/job_offer/job_offer.json
 #: hrms/hr/report/recruitment_analytics/recruitment_analytics.py:52
 #: hrms/hr/workspace/recruitment/recruitment.json
@@ -5625,8 +5622,10 @@ msgstr "Điều khoản đề nghị tuyển dụng"
 
 #. Label of the job_offer_term_template (Link) field in DocType 'Job Offer'
 #. Name of a DocType
+#. Label of a Workspace Sidebar Item
 #: hrms/hr/doctype/job_offer/job_offer.json
 #: hrms/hr/doctype/job_offer_term_template/job_offer_term_template.json
+#: hrms/workspace_sidebar/recruitment.json
 msgid "Job Offer Term Template"
 msgstr "Mẫu điều khoản đề nghị tuyển dụng"
 
@@ -5666,8 +5665,10 @@ msgstr "Vị trí tuyển dụng liên kết"
 
 #. Label of the job_opening_template (Link) field in DocType 'Job Opening'
 #. Name of a DocType
+#. Label of a Workspace Sidebar Item
 #: hrms/hr/doctype/job_opening/job_opening.json
 #: hrms/hr/doctype/job_opening_template/job_opening_template.json
+#: hrms/workspace_sidebar/recruitment.json
 msgid "Job Opening Template"
 msgstr "Mẫu vị trí tuyển dụng"
 
@@ -5678,6 +5679,11 @@ msgstr "Các vị trí tuyển dụng"
 #: hrms/hr/doctype/job_opening/job_opening.py:118
 msgid "Job Openings for the designation {0} are already open or the hiring is complete as per the Staffing Plan {1}"
 msgstr "Vị trí tuyển dụng cho chức danh {0} đã mở hoặc tuyển dụng đã hoàn tất theo Kế hoạch nhân sự {1}"
+
+#. Label of a Workspace Sidebar Item
+#: hrms/workspace_sidebar/recruitment.json
+msgid "Job Portal"
+msgstr ""
 
 #. Label of the job_requisition (Link) field in DocType 'Job Opening'
 #. Name of a DocType
@@ -5775,7 +5781,7 @@ msgstr "Lĩnh vực trách nhiệm chính"
 msgid "Key Result Area"
 msgstr "Lĩnh vực kết quả chính"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:2731
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:2736
 msgid "LWP Days Reversed ({0}) does not match actual Payroll Corrections total ({1}) for employee {2} from {3} to {4}"
 msgstr "Ngày LWP đảo ngược ({0}) không khớp với tổng Điều chỉnh lương thực tế ({1}) cho nhân viên {2} từ {3} đến {4}"
 
@@ -5835,7 +5841,7 @@ msgstr "Thời gian ân hạn đi muộn"
 msgid "Latitude and longitude values are required for checking in."
 msgstr "Giá trị vĩ độ và kinh độ là bắt buộc để checkin."
 
-#: frontend/src/components/CheckInPanel.vue:131
+#: frontend/src/components/CheckInPanel.vue:128
 msgid "Latitude: {0}°"
 msgstr "Vĩ độ: {0}°"
 
@@ -5895,7 +5901,7 @@ msgstr "Đơn xin nghỉ phép"
 msgid "Leave Application period cannot be across two non-consecutive leave allocations {0} and {1}."
 msgstr "Thời gian Đơn nghỉ phép không thể trải qua hai phân bổ nghỉ phép không liên tục {0} và {1}."
 
-#: hrms/setup.py:435 hrms/setup.py:437 hrms/setup.py:497
+#: hrms/setup.py:438 hrms/setup.py:440 hrms/setup.py:500
 msgid "Leave Approval Notification"
 msgstr "Thông báo phê duyệt nghỉ phép"
 
@@ -5909,8 +5915,8 @@ msgstr "Mẫu thông báo phê duyệt nghỉ phép"
 #. Name of a role
 #: hrms/hr/doctype/leave_application/leave_application.json
 #: hrms/hr/doctype/overtime_slip/overtime_slip.json
-#: hrms/patches/v15_0/update_approver_custom_fields.py:19 hrms/setup.py:145
-#: hrms/setup.py:249
+#: hrms/patches/v15_0/update_approver_custom_fields.py:19 hrms/setup.py:148
+#: hrms/setup.py:252
 msgid "Leave Approver"
 msgstr "Người phê duyệt nghỉ phép"
 
@@ -5947,7 +5953,7 @@ msgstr "Tóm tắt số dư nghỉ phép"
 #. Label of a Link in the Leaves Workspace
 #. Label of a Workspace Sidebar Item
 #: hrms/hr/doctype/leave_block_list/leave_block_list.json
-#: hrms/hr/workspace/leaves/leaves.json hrms/setup.py:124
+#: hrms/hr/workspace/leaves/leaves.json hrms/setup.py:127
 #: hrms/workspace_sidebar/leaves.json
 msgid "Leave Block List"
 msgstr "Danh sách ngày nghỉ chặn"
@@ -6105,7 +6111,7 @@ msgstr "Chính sách nghỉ phép: {0} đã được phân bổ cho Nhân viên 
 msgid "Leave Settings"
 msgstr "Cài đặt nghỉ phép"
 
-#: hrms/setup.py:444 hrms/setup.py:446 hrms/setup.py:498
+#: hrms/setup.py:447 hrms/setup.py:449 hrms/setup.py:501
 msgid "Leave Status Notification"
 msgstr "Thông báo trạng thái nghỉ phép"
 
@@ -6183,8 +6189,8 @@ msgstr "Loại nghỉ phép {0} không thể thanh toán"
 
 #. Label of the leave_without_pay (Float) field in DocType 'Salary Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
-#: hrms/payroll/report/salary_register/salary_register.py:179 hrms/setup.py:384
-#: hrms/setup.py:385
+#: hrms/payroll/report/salary_register/salary_register.py:179 hrms/setup.py:387
+#: hrms/setup.py:388
 msgid "Leave Without Pay"
 msgstr "Nghỉ phép không lương"
 
@@ -6287,7 +6293,7 @@ msgstr "Ngày nghỉ phép đang chờ phê duyệt"
 msgid "Leaves for the Leave Type {0} won't be carry-forwarded since carry-forwarding is disabled."
 msgstr "Ngày nghỉ phép cho Loại nghỉ phép {0} sẽ không được cộng dồn vì cộng dồn bị vô hiệu hóa."
 
-#: hrms/setup.py:415
+#: hrms/setup.py:418
 msgid "Leaves per Year"
 msgstr "Ngày nghỉ mỗi năm"
 
@@ -6341,7 +6347,7 @@ msgstr "Tài khoản vay"
 msgid "Loan Product"
 msgstr "Sản phẩm vay"
 
-#: hrms/payroll/report/salary_register/salary_register.py:233 hrms/setup.py:764
+#: hrms/payroll/report/salary_register/salary_register.py:233 hrms/setup.py:767
 msgid "Loan Repayment"
 msgstr "Trả góp"
 
@@ -6350,11 +6356,11 @@ msgstr "Trả góp"
 msgid "Loan Repayment Entry"
 msgstr "Bút toán trả góp"
 
-#: hrms/hr/utils.py:821
+#: hrms/hr/utils.py:831
 msgid "Loan cannot be repayed from salary for Employee {0} because salary is processed in currency {1}"
 msgstr "Khoản vay không thể được trả từ lương cho Nhân viên {0} vì lương được xử lý bằng tiền tệ {1}"
 
-#: frontend/src/components/CheckInPanel.vue:145
+#: frontend/src/components/CheckInPanel.vue:142
 msgid "Locating..."
 msgstr "Đang xác định vị trí..."
 
@@ -6390,15 +6396,17 @@ msgstr "Đăng nhập thất bại"
 msgid "Login to Frappe HR"
 msgstr "Đăng nhập vào Frappe HR"
 
-#: frontend/src/components/CheckInPanel.vue:132
+#: frontend/src/components/CheckInPanel.vue:129
 msgid "Longitude: {0}°"
 msgstr "Kinh độ: {0}°"
 
 #. Label of the lower_range (Currency) field in DocType 'Job Applicant'
 #. Label of the lower_range (Currency) field in DocType 'Job Opening'
+#. Label of the lower_range (Currency) field in DocType 'Job Opening Template'
 #. Label of a field in the job-application Web Form
 #: hrms/hr/doctype/job_applicant/job_applicant.json
 #: hrms/hr/doctype/job_opening/job_opening.json
+#: hrms/hr/doctype/job_opening_template/job_opening_template.json
 #: hrms/hr/web_form/job_application/job_application.json
 msgid "Lower Range"
 msgstr "Ngưỡng dưới"
@@ -6638,7 +6646,7 @@ msgstr "Th5"
 msgid "Meal Preference"
 msgstr "Sở thích ăn uống"
 
-#: hrms/setup.py:337
+#: hrms/setup.py:340
 msgid "Medical"
 msgstr "Y tế"
 
@@ -6685,7 +6693,7 @@ msgstr "Thiếu ngày thôi việc"
 msgid "Missing Salary Components"
 msgstr "Thiếu thành phần lương"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:1948
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:1953
 msgid "Missing Tax Slab"
 msgstr "Thiếu bậc thuế"
 
@@ -6754,7 +6762,7 @@ msgid "My Requests"
 msgstr "Yêu cầu của tôi"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1393
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:2618
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:2623
 msgid "Name error"
 msgstr "Lỗi tên"
 
@@ -6849,7 +6857,7 @@ msgstr "Không Tìm Thấy Nhân Viên"
 msgid "No Employee found for the given employee field value. '{}': {}"
 msgstr "Không tìm thấy nhân viên cho giá trị trường nhân viên đã cho. '{}': {}"
 
-#: hrms/hr/doctype/appraisal_cycle/appraisal_cycle.py:136 hrms/hr/utils.py:924
+#: hrms/hr/doctype/appraisal_cycle/appraisal_cycle.py:136 hrms/hr/utils.py:934
 msgid "No Employees Selected"
 msgstr "Chưa Chọn Nhân Viên"
 
@@ -6897,7 +6905,7 @@ msgstr "Không Có Cấu Trúc Lương"
 msgid "No Shift Requests Selected"
 msgstr "Chưa Chọn Yêu Cầu Ca"
 
-#: hrms/hr/doctype/job_opening/job_opening.js:32
+#: hrms/hr/doctype/job_opening/job_opening.js:35
 msgid "No Staffing Plans found for this Designation"
 msgstr "Không Tìm Thấy Kế Hoạch Nhân Sự Cho Chức Danh Này"
 
@@ -7090,7 +7098,7 @@ msgstr "Lưu Ý: Ca Sẽ Không Bị Ghi Đè Trong Các Bản Ghi Chấm Công 
 msgid "Note: Total allocated leaves {0} shouldn't be less than already approved leaves {1} for the period"
 msgstr "Lưu Ý: Tổng Số Ngày Nghỉ Được Phân Bổ {0} Không Nên Ít Hơn Số Ngày Nghỉ Đã Duyệt {1} Trong Kỳ"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:2257
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:2262
 msgid "Note: Your salary slip is password protected, the password to unlock the PDF is of the format {0}."
 msgstr "Lưu Ý: Phiếu Lương Của Bạn Được Bảo Vệ Bằng Mật Khẩu, Mật Khẩu Để Mở File PDF Có Định Dạng {0}."
 
@@ -7098,7 +7106,7 @@ msgstr "Lưu Ý: Phiếu Lương Của Bạn Được Bảo Vệ Bằng Mật Kh
 msgid "Nothing to change"
 msgstr "Không Có Gì Thay Đổi"
 
-#: hrms/setup.py:416
+#: hrms/setup.py:419
 msgid "Notice Period"
 msgstr "Thời Gian Thông Báo"
 
@@ -7291,6 +7299,11 @@ msgstr "Phản Hồi Đang Mở"
 #: hrms/hr/doctype/leave_application/leave_application_email_template.html:30
 msgid "Open Now"
 msgstr "Mở Ngay"
+
+#. Label of the open_resume_button (Button) field in DocType 'Job Applicant'
+#: hrms/hr/doctype/job_applicant/job_applicant.json
+msgid "Open Resume in New Tab"
+msgstr ""
 
 #: hrms/templates/generators/job_opening.html:38
 #: hrms/templates/generators/job_opening.html:218
@@ -7520,7 +7533,7 @@ msgstr "Thanh Toán Qua Phiếu Lương"
 msgid "Parent Goal"
 msgstr "Mục Tiêu Cha"
 
-#: hrms/setup.py:393
+#: hrms/setup.py:396
 msgid "Part-time"
 msgstr "Bán Thời Gian"
 
@@ -7547,6 +7560,14 @@ msgstr "Chính sách mật khẩu không được chứa dấu cách hoặc dấ
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.py:50
 msgid "Password policy for Salary Slips is not set"
 msgstr "Chính sách mật khẩu cho Phiếu Lương chưa được đặt"
+
+#. Label of the pay_details_tab (Tab Break) field in DocType 'Job Opening'
+#. Label of the pay_details_section (Section Break) field in DocType 'Job
+#. Opening Template'
+#: hrms/hr/doctype/job_opening/job_opening.json
+#: hrms/hr/doctype/job_opening_template/job_opening_template.json
+msgid "Pay Details"
+msgstr ""
 
 #. Label of the pay_rate_multipliers_section (Section Break) field in DocType
 #. 'Overtime Type'
@@ -7654,7 +7675,7 @@ msgstr "Điều Chỉnh Lương"
 msgid "Payroll Correction Child"
 msgstr "Chi Tiết Điều Chỉnh Lương"
 
-#: hrms/setup.py:110 hrms/setup.py:284
+#: hrms/setup.py:113 hrms/setup.py:287
 msgid "Payroll Cost Center"
 msgstr "Trung Tâm Chi Phí Lương"
 
@@ -7718,7 +7739,7 @@ msgstr "Số Bảng Lương"
 #: hrms/payroll/doctype/bulk_salary_structure_assignment/bulk_salary_structure_assignment.json
 #: hrms/payroll/doctype/payroll_entry/payroll_entry.json
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
-#: hrms/setup.py:837
+#: hrms/setup.py:840
 msgid "Payroll Payable Account"
 msgstr "Tài Khoản Phải Trả Lương"
 
@@ -7835,7 +7856,7 @@ msgstr "Hủy Vĩnh Viễn {0}"
 msgid "Permanently submit {0}"
 msgstr "Xác Nhận Vĩnh Viễn {0}"
 
-#: hrms/setup.py:397
+#: hrms/setup.py:400
 msgid "Piecework"
 msgstr "Lương Sản Phẩm"
 
@@ -7884,7 +7905,7 @@ msgstr "Vui Lòng Điền Nhân Viên, Ngày Đăng, Và Công Ty Trước Khi L
 msgid "Please reduce {0} to avoid shift time overlapping with itself"
 msgstr "Vui Lòng Giảm {0} Để Tránh Thời Gian Ca Trùng Lặp Với Chính Nó"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:2246
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:2251
 msgid "Please see attachment"
 msgstr "Vui Lòng Xem Tệp Đính Kèm"
 
@@ -7938,7 +7959,7 @@ msgstr "Vui Lòng Chọn Một File CSV"
 msgid "Please select a date."
 msgstr "Vui Lòng Chọn Một Ngày."
 
-#: hrms/hr/utils.py:812
+#: hrms/hr/utils.py:822
 msgid "Please select an Applicant"
 msgstr "Vui Lòng Chọn Một Ứng Viên"
 
@@ -7946,7 +7967,7 @@ msgstr "Vui Lòng Chọn Một Ứng Viên"
 msgid "Please select at least one Shift Request to perform this action."
 msgstr "Vui Lòng Chọn Ít Nhất Một Yêu Cầu Ca Để Thực Hiện Hành Động Này."
 
-#: hrms/hr/utils.py:923
+#: hrms/hr/utils.py:933
 msgid "Please select at least one employee to perform this action."
 msgstr "Vui Lòng Chọn Ít Nhất Một Nhân Viên Để Thực Hiện Hành Động Này."
 
@@ -8168,15 +8189,15 @@ msgstr "Số Tiền Gốc"
 msgid "Printed On {0}"
 msgstr "In Ngày {0}"
 
-#: hrms/setup.py:376 hrms/setup.py:377
+#: hrms/setup.py:379 hrms/setup.py:380
 msgid "Privilege Leave"
 msgstr "Nghỉ phép đặc quyền"
 
-#: hrms/setup.py:394
+#: hrms/setup.py:397
 msgid "Probation"
 msgstr "Thử việc"
 
-#: hrms/setup.py:408
+#: hrms/setup.py:411
 msgid "Probationary Period"
 msgstr "Kỳ thử việc"
 
@@ -8188,7 +8209,7 @@ msgstr "Xử lý chấm công sau"
 #. Label of the process_payroll_accounting_entry_based_on_employee (Check)
 #. field in DocType 'Payroll Settings'
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.json
-#: hrms/setup.py:848
+#: hrms/setup.py:851
 msgid "Process Payroll Accounting Entry based on Employee"
 msgstr "Xử Lý Bút Toán Kế Toán Lương Dựa Trên Nhân Viên"
 
@@ -8281,7 +8302,10 @@ msgid "Publish Applications Received"
 msgstr "Nhận đơn ứng tuyển đã đăng"
 
 #. Label of the publish_salary_range (Check) field in DocType 'Job Opening'
+#. Label of the publish_salary_range (Check) field in DocType 'Job Opening
+#. Template'
 #: hrms/hr/doctype/job_opening/job_opening.json
+#: hrms/hr/doctype/job_opening_template/job_opening_template.json
 msgid "Publish Salary Range"
 msgstr "Đăng mức lương"
 
@@ -8496,6 +8520,7 @@ msgid "Refuelling Details"
 msgstr "Chi tiết đổ nhiên liệu"
 
 #: frontend/src/components/RequestActionSheet.vue:96
+#: hrms/hr/doctype/job_applicant/job_applicant.js:61
 #: hrms/hr/doctype/shift_assignment_tool/shift_assignment_tool.js:126
 msgid "Reject"
 msgstr "Từ chối"
@@ -8504,7 +8529,7 @@ msgstr "Từ chối"
 msgid "Reject Employee Referral"
 msgstr "Từ chối giới thiệu nhân viên"
 
-#: frontend/src/components/RequestActionSheet.vue:290
+#: frontend/src/components/RequestActionSheet.vue:298
 msgid "Rejection"
 msgstr "Từ chối"
 
@@ -8561,11 +8586,11 @@ msgstr "Xóa nếu giá trị bằng không"
 msgid "Rented Car"
 msgstr "Thuê xe"
 
-#: hrms/setup.py:821 hrms/setup.py:830
+#: hrms/setup.py:824 hrms/setup.py:833
 msgid "Repay From Salary"
 msgstr "Hoàn trả từ lương"
 
-#: hrms/hr/utils.py:827
+#: hrms/hr/utils.py:837
 msgid "Repay From Salary can be selected only for term loans"
 msgstr "Hoàn trả từ lương chỉ có thể chọn cho vay trả góp"
 
@@ -8632,7 +8657,7 @@ msgstr "Yêu cầu bởi (Tên)"
 msgid "Require Full Funding"
 msgstr "Yêu cầu tài trợ đầy đủ"
 
-#: hrms/setup.py:169
+#: hrms/setup.py:172
 msgid "Required Skills"
 msgstr "Kỹ năng cần thiết"
 
@@ -8646,7 +8671,7 @@ msgstr "Bắt buộc để tạo nhân viên"
 msgid "Reschedule Interview"
 msgstr "Đổi lịch phỏng vấn"
 
-#: hrms/setup.py:414
+#: hrms/setup.py:417
 msgid "Responsibilities"
 msgstr "Trách nhiệm"
 
@@ -8656,16 +8681,9 @@ msgstr "Trách nhiệm"
 msgid "Restrict Backdated Leave Application"
 msgstr "Hạn chế đơn nghỉ phép có ngày quá khứ"
 
-#. Label of the resume_attachment (Attach) field in DocType 'Job Applicant'
-#: hrms/hr/doctype/job_applicant/job_applicant.json
-msgid "Resume Attachment"
-msgstr "Đính kèm sơ yếu lý lịch"
-
 #. Label of the resume_link (Data) field in DocType 'Employee Referral'
-#. Label of the resume_link (Data) field in DocType 'Job Applicant'
 #. Label of a field in the job-application Web Form
 #: hrms/hr/doctype/employee_referral/employee_referral.json
-#: hrms/hr/doctype/job_applicant/job_applicant.json
 #: hrms/hr/web_form/job_application/job_application.json
 msgid "Resume Link"
 msgstr "Liên kết sơ yếu lý lịch"
@@ -8753,11 +8771,6 @@ msgstr "Lịch trực"
 msgid "Roster Color"
 msgstr "Màu lịch trực"
 
-#. Label of the round_name (Data) field in DocType 'Interview Round'
-#: hrms/hr/doctype/interview_round/interview_round.json
-msgid "Round Name"
-msgstr "Tên vòng"
-
 #. Option for the 'Work Experience Calculation Method' (Select) field in
 #. DocType 'Gratuity Rule'
 #: hrms/payroll/doctype/gratuity_rule/gratuity_rule.json
@@ -8775,7 +8788,7 @@ msgstr "Làm tròn đến số nguyên gần nhất"
 msgid "Rounding"
 msgstr "Làm tròn"
 
-#. Description of the 'Job Application Route' (Data) field in DocType 'Job
+#. Description of the 'Application Web Form Route' (Data) field in DocType 'Job
 #. Opening'
 #: hrms/hr/doctype/job_opening/job_opening.json
 msgid "Route to the custom Job Application Webform"
@@ -8914,7 +8927,7 @@ msgstr "Chi tiết lương"
 msgid "Salary Details"
 msgstr "Chi tiết lương"
 
-#. Label of the section_break_16 (Section Break) field in DocType 'Job
+#. Label of the salary_expectation_tab (Tab Break) field in DocType 'Job
 #. Applicant'
 #: hrms/hr/doctype/job_applicant/job_applicant.json
 msgid "Salary Expectation"
@@ -8925,7 +8938,9 @@ msgid "Salary Information"
 msgstr "Thông tin lương"
 
 #. Label of the salary_per (Select) field in DocType 'Job Opening'
+#. Label of the salary_per (Select) field in DocType 'Job Opening Template'
 #: hrms/hr/doctype/job_opening/job_opening.json
+#: hrms/hr/doctype/job_opening_template/job_opening_template.json
 msgid "Salary Paid Per"
 msgstr "Lương trả theo"
 
@@ -8969,7 +8984,7 @@ msgstr "Sổ lương"
 #: hrms/payroll/doctype/employee_benefit_ledger/employee_benefit_ledger.json
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.json
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
-#: hrms/payroll/workspace/payroll/payroll.json hrms/setup.py:312
+#: hrms/payroll/workspace/payroll/payroll.json hrms/setup.py:315
 #: hrms/workspace_sidebar/payroll.json
 msgid "Salary Slip"
 msgstr "Phiếu lương"
@@ -9171,7 +9186,7 @@ msgstr "Các thành phần lương loại Quỹ Tổ Quốc, Quỹ Tổ Quốc B
 msgid "Salary components should be part of the Salary Structure."
 msgstr "Các thành phần lương phải là một phần của Cấu trúc lương."
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:2798
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:2803
 msgid "Salary slip emails have been enqueued for sending. Check {0} for status."
 msgstr "Email phiếu lương đã được xếp hàng để gửi. Kiểm tra {0} để biết trạng thái."
 
@@ -9219,8 +9234,8 @@ msgid "Select Applicable Components for Overtime Type"
 msgstr "Chọn các thành phần áp dụng cho loại tăng ca"
 
 #: hrms/hr/doctype/interview/interview.js:209
-msgid "Select Interview Round First"
-msgstr "Trước tiên hãy chọn vòng phỏng vấn"
+msgid "Select Interview Type First"
+msgstr ""
 
 #: hrms/hr/doctype/interview_feedback/interview_feedback.js:49
 msgid "Select Interview first"
@@ -9511,7 +9526,7 @@ msgstr "Thanh toán với tạm ứng"
 msgid "Settle all Payables and Receivables before submission"
 msgstr "Thanh toán tất cả phải trả và phải thu trước khi nộp"
 
-#: hrms/hr/utils.py:775
+#: hrms/hr/utils.py:785
 msgid "Shared document with the user {0} with 'Submit' permission"
 msgstr "Chia sẻ tài liệu với người dùng {0} với quyền 'Nộp'"
 
@@ -9631,8 +9646,8 @@ msgstr "Địa điểm ca"
 msgid "Shift Request"
 msgstr "Yêu cầu ca"
 
-#: hrms/patches/v15_0/update_approver_custom_fields.py:27 hrms/setup.py:138
-#: hrms/setup.py:262
+#: hrms/patches/v15_0/update_approver_custom_fields.py:27 hrms/setup.py:141
+#: hrms/setup.py:265
 msgid "Shift Request Approver"
 msgstr "Người phê duyệt yêu cầu thay đổi"
 
@@ -9751,6 +9766,15 @@ msgstr "Ca đã được cập nhật thành công thành {0}."
 msgid "Shifts"
 msgstr "Ca làm"
 
+#: hrms/hr/doctype/job_applicant/job_applicant.js:56
+msgid "Shortlist"
+msgstr ""
+
+#. Option for the 'Status' (Select) field in DocType 'Job Applicant'
+#: hrms/hr/doctype/job_applicant/job_applicant.json
+msgid "Shortlisted"
+msgstr ""
+
 #: hrms/hr/doctype/job_offer/job_offer.js:51
 msgid "Show Employee"
 msgstr "Hiển thị nhân viên"
@@ -9775,7 +9799,7 @@ msgstr "Hiển thị phiếu lương"
 msgid "Showing"
 msgstr "Hiển thị"
 
-#: hrms/setup.py:368 hrms/setup.py:369
+#: hrms/setup.py:371 hrms/setup.py:372
 msgid "Sick Leave"
 msgstr "Nghỉ ốm"
 
@@ -9812,7 +9836,7 @@ msgstr "Tên kỹ năng"
 
 #. Label of the skills_section (Section Break) field in DocType 'Employee Skill
 #. Map'
-#: hrms/hr/doctype/employee_skill_map/employee_skill_map.json hrms/setup.py:175
+#: hrms/hr/doctype/employee_skill_map/employee_skill_map.json hrms/setup.py:178
 msgid "Skills"
 msgstr "Kỹ năng"
 
@@ -9825,12 +9849,6 @@ msgstr "Bỏ qua chấm công tự động"
 #: hrms/payroll/doctype/salary_structure/salary_structure.py:360
 msgid "Skipping Salary Structure Assignment for the following employees, as Salary Structure Assignment records already exists against them. {0}"
 msgstr "Bỏ qua phân bổ cấu trúc lương cho các nhân viên sau vì hồ sơ phân bổ cấu trúc lương đã tồn tại. {0}"
-
-#. Label of the source_and_rating_section (Section Break) field in DocType 'Job
-#. Applicant'
-#: hrms/hr/doctype/job_applicant/job_applicant.json
-msgid "Source and Rating"
-msgstr "Nguồn và đánh giá"
 
 #: hrms/api/roster.py:95
 msgid "Source and target shifts cannot be the same"
@@ -9894,7 +9912,7 @@ msgstr "Số tiền miễn thuế tiêu chuẩn"
 msgid "Standard Working Hours"
 msgstr "Giờ làm việc tiêu chuẩn"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:1884
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:1889
 msgid "Start and end dates not in a valid Payroll Period, cannot calculate {0}."
 msgstr "Ngày bắt đầu và kết thúc không nằm trong kỳ lương hợp lệ, không thể tính {0}."
 
@@ -9930,7 +9948,7 @@ msgstr "Thành phần thống kê"
 msgid "Status for Other Half"
 msgstr "Trạng thái cho nửa còn lại"
 
-#: hrms/setup.py:411
+#: hrms/setup.py:414
 msgid "Stock Options"
 msgstr "Quyền chọn cổ phần"
 
@@ -10012,7 +10030,7 @@ msgstr "Đang nộp phiếu lương..."
 msgid "Subsidiary companies have already planned for {1} vacancies at a budget of {2}. Staffing Plan for {0} should allocate more vacancies and budget for {3} than planned for its subsidiary companies"
 msgstr "Các công ty con đã lên kế hoạch {1} vị trí với ngân sách {2}. Kế hoạch nhân sự cho {0} nên phân bổ nhiều vị trí và ngân sách hơn cho {3} so với kế hoạch của công ty con"
 
-#: hrms/hr/utils.py:951
+#: hrms/hr/utils.py:961
 msgid "Successfully created {0} for employees:"
 msgstr "Đã tạo thành công {0} cho nhân viên:"
 
@@ -10042,7 +10060,7 @@ msgstr "Đồng bộ {0}"
 msgid "Syntax error"
 msgstr "Lỗi cú pháp"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:2621
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:2626
 msgid "Syntax error in condition: {0} in Income Tax Slab"
 msgstr "Lỗi cú pháp trong điều kiện: {0} trong Bậc thuế thu nhập"
 
@@ -10205,7 +10223,7 @@ msgstr "Ngày bạn xin nghỉ là ngày lễ. Bạn không cần đăng ký ngh
 msgid "The days between {0} to {1} are not valid holidays."
 msgstr "Các ngày giữa {0} đến {1} không phải là ngày lễ hợp lệ."
 
-#: hrms/setup.py:129
+#: hrms/setup.py:132
 msgid "The first Approver in the list will be set as the default Approver."
 msgstr "Người phê duyệt đầu tiên trong danh sách sẽ được đặt làm Người phê duyệt mặc định."
 
@@ -10572,11 +10590,11 @@ msgstr "Tổng lãi/lỗ tỷ giá"
 msgid "Total Exemption Amount"
 msgstr "Tổng số tiền miễn thuế"
 
-#: hrms/setup.py:302
+#: hrms/setup.py:305
 msgid "Total Expense Claim (via Expense Claim)"
 msgstr "Tổng claim chi phí (qua Claim chi phí)"
 
-#: hrms/setup.py:293
+#: hrms/setup.py:296
 msgid "Total Expense Claim (via Expense Claims)"
 msgstr "Tổng claim chi phí (qua Claims chi phí)"
 
@@ -10599,7 +10617,7 @@ msgstr "Tổng giờ (T)"
 msgid "Total Income Tax"
 msgstr "Tổng thuế thu nhập"
 
-#: hrms/setup.py:794
+#: hrms/setup.py:797
 msgid "Total Interest Amount"
 msgstr "Tổng số tiền lãi"
 
@@ -10632,7 +10650,7 @@ msgstr "Tổng ngày nghỉ được phân bổ"
 msgid "Total Leaves Encashed"
 msgstr "Tổng ngày nghỉ đã thanh toán"
 
-#: hrms/setup.py:808
+#: hrms/setup.py:811
 msgid "Total Loan Repayment"
 msgstr "Tổng số tiền trả góp"
 
@@ -10669,7 +10687,7 @@ msgstr "Tổng chi trả"
 msgid "Total Present"
 msgstr "Tổng có mặt"
 
-#: hrms/setup.py:785
+#: hrms/setup.py:788
 msgid "Total Principal Amount"
 msgstr "Tổng số tiền gốc"
 
@@ -10879,7 +10897,7 @@ msgstr "Đào tạo"
 msgid "Trainings (This Week)"
 msgstr "Đào tạo (Tuần này)"
 
-#: hrms/hr/utils.py:798
+#: hrms/hr/utils.py:808
 msgid "Transactions cannot be created for an Inactive Employee {0}."
 msgstr "Không thể tạo giao dịch cho nhân viên không hoạt động {0}."
 
@@ -10890,7 +10908,7 @@ msgstr "Ngày chuyển"
 
 #. Label of a Card Break in the Expenses Workspace
 #. Label of a Workspace Sidebar Item
-#: hrms/hr/workspace/expenses/expenses.json hrms/setup.py:339
+#: hrms/hr/workspace/expenses/expenses.json hrms/setup.py:342
 #: hrms/workspace_sidebar/expenses.json
 msgid "Travel"
 msgstr "Công tác"
@@ -11134,9 +11152,11 @@ msgstr "Đang tải lên..."
 
 #. Label of the upper_range (Currency) field in DocType 'Job Applicant'
 #. Label of the upper_range (Currency) field in DocType 'Job Opening'
+#. Label of the upper_range (Currency) field in DocType 'Job Opening Template'
 #. Label of a field in the job-application Web Form
 #: hrms/hr/doctype/job_applicant/job_applicant.json
 #: hrms/hr/doctype/job_opening/job_opening.json
+#: hrms/hr/doctype/job_opening_template/job_opening_template.json
 #: hrms/hr/web_form/job_application/job_application.json
 msgid "Upper Range"
 msgstr "Khoảng trên"
@@ -11245,6 +11265,10 @@ msgstr "Mục dịch vụ phương tiện"
 msgid "View Goals"
 msgstr "Xem mục tiêu"
 
+#: hrms/hr/doctype/job_applicant/job_applicant.js:78
+msgid "View Job Offer"
+msgstr ""
+
 #: frontend/src/components/LeaveBalance.vue:14
 msgid "View Leave History"
 msgstr "Xem lịch sử nghỉ phép"
@@ -11278,7 +11302,7 @@ msgstr "Cảnh báo: Đơn nghỉ phép chứa các ngày bị chặn sau"
 msgid "Warning: {0} already has an active Shift Assignment {1} for some/all of these dates."
 msgstr "Cảnh báo: {0} đã có phân ca đang hoạt động {1} cho một số/tất cả các ngày này."
 
-#: hrms/setup.py:401
+#: hrms/setup.py:404
 msgid "Website Listing"
 msgstr "Danh sách website"
 
@@ -11480,7 +11504,7 @@ msgstr "Bạn chỉ có thể lên kế hoạch cho tối đa {0} vị trí và 
 msgid "You can only submit Leave Encashment for a valid encashment amount"
 msgstr "Bạn chỉ có thể nộp thanh toán nghỉ phép cho số tiền hợp lệ"
 
-#: hrms/api/__init__.py:740
+#: hrms/api/__init__.py:741
 msgid "You can only upload JPG, PNG, PDF, TXT or Microsoft documents."
 msgstr "Bạn chỉ có thể tải lên tài liệu JPG, PNG, PDF, TXT hoặc Microsoft."
 
@@ -11553,11 +11577,11 @@ msgstr "hoạt động"
 msgid "based on"
 msgstr "dựa trên"
 
-#: frontend/src/components/RequestActionSheet.vue:292
+#: frontend/src/components/RequestActionSheet.vue:300
 msgid "cancellation"
 msgstr "hủy"
 
-#: frontend/src/components/RequestActionSheet.vue:283
+#: frontend/src/components/RequestActionSheet.vue:291
 msgid "cancelled"
 msgstr "đã hủy"
 
@@ -11614,7 +11638,7 @@ msgstr "đánh giá"
 msgid "reviews"
 msgstr "đánh giá"
 
-#: frontend/src/components/RequestActionSheet.vue:283
+#: frontend/src/components/RequestActionSheet.vue:291
 msgid "submitted"
 msgstr "đã nộp"
 
@@ -11648,7 +11672,7 @@ msgstr "{0} & {1} khác"
 msgid "{0} : {1}"
 msgstr "{0} : {1}"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:2617
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:2622
 msgid "{0} <br> This error can be due to missing or deleted field."
 msgstr "{0} <br> Lỗi này có thể do trường bị thiếu hoặc đã xóa."
 
@@ -11709,8 +11733,8 @@ msgstr "{0} Đã Tạo Thành Công!"
 msgid "{0} deleted successfully!"
 msgstr "{0} Đã Xóa Thành Công!"
 
-#: frontend/src/components/CheckInPanel.vue:186
-#: frontend/src/components/RequestActionSheet.vue:290
+#: frontend/src/components/CheckInPanel.vue:183
+#: frontend/src/components/RequestActionSheet.vue:298
 msgid "{0} failed!"
 msgstr "{0} Thất Bại!"
 
@@ -11759,11 +11783,11 @@ msgstr "{0} Phải Được Xác Nhận"
 msgid "{0} of {1} Completed"
 msgstr "{0} Của {1} Đã Hoàn Thành"
 
-#: frontend/src/components/CheckInPanel.vue:174
+#: frontend/src/components/CheckInPanel.vue:171
 msgid "{0} successful!"
 msgstr "{0} Thành Công!"
 
-#: frontend/src/components/RequestActionSheet.vue:280
+#: frontend/src/components/RequestActionSheet.vue:288
 msgid "{0} successfully!"
 msgstr "{0} Thành Công!"
 
@@ -11787,11 +11811,11 @@ msgstr "{0} Sẽ Được Cập Nhật Cho Các Cấu Trúc Lương Sau: {1}."
 msgid "{0} {1} {2}?"
 msgstr "{0} {1} {2}?"
 
-#: hrms/hr/utils.py:456
+#: hrms/hr/utils.py:466
 msgid "{0}. Check error log for more details."
 msgstr "{0}. Kiểm Tra Nhật Ký Lỗi Để Biết Thêm Chi Tiết."
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:2278
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:2283
 msgid "{0}: Employee email not found, hence email not sent"
 msgstr "{0}: Không Tìm Thấy Email Nhân Viên, Do Đó Email Không Được Gửi"
 

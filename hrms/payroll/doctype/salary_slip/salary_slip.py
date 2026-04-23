@@ -2264,6 +2264,7 @@ class SalarySlip(TransactionBase):
 				).format(payroll_settings.password_policy)
 
 		if receiver:
+			posting_date = getdate(self.posting_date)
 			email_args = {
 				"sender": payroll_settings.sender_email,
 				"recipients": [receiver],
@@ -2274,6 +2275,7 @@ class SalarySlip(TransactionBase):
 				],
 				"reference_doctype": self.doctype,
 				"reference_name": self.name,
+				"send_after": posting_date if posting_date > getdate() else None,
 			}
 			if not frappe.flags.in_test:
 				enqueue(method=frappe.sendmail, queue="short", timeout=300, is_async=True, **email_args)
