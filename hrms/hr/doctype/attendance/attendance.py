@@ -502,4 +502,8 @@ def get_employee_shift(employee: str, for_date: str | date | None = None) -> str
 	if shifts:
 		return shifts[0].shift_type
 
+	default_shift = frappe.db.get_value("Employee", employee, "default_shift")
+	if default_shift:
+		return default_shift
+
 	return None
