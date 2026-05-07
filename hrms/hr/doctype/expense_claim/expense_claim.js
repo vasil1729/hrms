@@ -486,8 +486,8 @@ frappe.ui.form.on("Expense Claim", {
 							row.return_amount = flt(d.return_amount);
 							row.allocated_amount = d.allocated_amount;
 							row.exchange_rate = d.exchange_rate;
-							row.payment_entry = d.payment_entry;
-							row.payment_entry_reference = d.payment_entry_reference;
+							row.reference_type = d.reference_type;
+							row.reference_name = d.reference_name;
 						});
 						refresh_field("advances");
 					}
@@ -589,8 +589,8 @@ frappe.ui.form.on("Expense Claim Advance", {
 						child.return_amount = flt(r.message[0].return_amount);
 						child.allocated_amount = flt(r.message[0].allocated_amount);
 						child.exchange_rate = r.message[0].exchange_rate;
-						child.payment_entry = r.message[0].payment_entry;
-						child.payment_entry_reference = r.message[0].payment_entry_reference;
+						child.reference_type = r.message[0].reference_type;
+						child.reference_name = r.message[0].reference_name;
 						set_in_company_currency(
 							frm,
 							child,
