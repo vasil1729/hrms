@@ -4,6 +4,7 @@
 import frappe
 from frappe.utils import flt, nowdate, random_string, today
 
+import erpnext
 from erpnext import get_company_currency
 from erpnext.accounts.doctype.account.test_account import create_account
 from erpnext.accounts.doctype.payment_entry.test_payment_entry import get_payment_entry
@@ -13,7 +14,6 @@ from erpnext.setup.utils import get_exchange_rate
 from hrms.hr.doctype.expense_claim.expense_claim import (
 	MismatchError,
 	get_outstanding_amount_for_claim,
-	make_bank_entry,
 	make_expense_claim_for_delivery_trip,
 )
 from hrms.tests.utils import HRMSTestSuite
@@ -135,7 +135,7 @@ class TestExpenseClaim(HRMSTestSuite):
 				employee1 = entry.party
 
 			if not entry.party_type:
-				entry.credit += 200
+				entry.credit = flt(entry.credit) + 200
 				entry.credit_in_account_currency += 200
 
 		je.append(
@@ -1056,15 +1056,51 @@ def make_claim_payment_entry(expense_claim, amount):
 
 
 def make_journal_entry(expense_claim, do_not_submit=False):
-	je_dict = make_bank_entry("Expense Claim", expense_claim.name)
-	je = frappe.get_doc(je_dict)
+	from erpnext.accounts.doctype.journal_entry.journal_entry import get_default_bank_cash_account
+
+	expense_claim = frappe.get_doc("Expense Claim", expense_claim.name)
+	default_bank_cash_account = get_default_bank_cash_account(expense_claim.company, "Bank")
+	if not default_bank_cash_account:
+		default_bank_cash_account = get_default_bank_cash_account(expense_claim.company, "Cash")
+
+	payable_amount = get_outstanding_amount_for_claim(expense_claim)
+
+	je = frappe.new_doc("Journal Entry")
+	je.voucher_type = "Bank Entry"
+	je.company = expense_claim.company
+	je.remark = "Payment against Expense Claim: " + expense_claim.name
+
+	je.append(
+		"accounts",
+		{
+			"account": expense_claim.payable_account,
+			"debit_in_account_currency": payable_amount,
+			"reference_type": "Expense Claim",
+			"party_type": "Employee",
+			"party": expense_claim.employee,
+			"cost_center": erpnext.get_default_cost_center(expense_claim.company),
+			"reference_name": expense_claim.name,
+		},
+	)
+
+	je.append(
+		"accounts",
+		{
+			"account": default_bank_cash_account.account,
+			"credit_in_account_currency": payable_amount,
+			"balance": default_bank_cash_account.balance,
+			"account_currency": default_bank_cash_account.account_currency,
+			"cost_center": erpnext.get_default_cost_center(expense_claim.company),
+			"account_type": default_bank_cash_account.account_type,
+		},
+	)
+
 	je.posting_date = nowdate()
 	je.cheque_no = random_string(5)
 	je.cheque_date = nowdate()
 
 	if not do_not_submit:
 		je.submit()
-
 	return je
 
 

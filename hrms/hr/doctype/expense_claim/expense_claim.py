@@ -644,50 +644,6 @@ def get_outstanding_amount_for_claim(claim):
 
 
 @frappe.whitelist()
-def make_bank_entry(dt: str, dn: str) -> dict:
-	from erpnext.accounts.doctype.journal_entry.journal_entry import get_default_bank_cash_account
-
-	expense_claim = frappe.get_doc(dt, dn)
-	default_bank_cash_account = get_default_bank_cash_account(expense_claim.company, "Bank")
-	if not default_bank_cash_account:
-		default_bank_cash_account = get_default_bank_cash_account(expense_claim.company, "Cash")
-
-	payable_amount = get_outstanding_amount_for_claim(expense_claim)
-
-	je = frappe.new_doc("Journal Entry")
-	je.voucher_type = "Bank Entry"
-	je.company = expense_claim.company
-	je.remark = "Payment against Expense Claim: " + dn
-
-	je.append(
-		"accounts",
-		{
-			"account": expense_claim.payable_account,
-			"debit_in_account_currency": payable_amount,
-			"reference_type": "Expense Claim",
-			"party_type": "Employee",
-			"party": expense_claim.employee,
-			"cost_center": erpnext.get_default_cost_center(expense_claim.company),
-			"reference_name": expense_claim.name,
-		},
-	)
-
-	je.append(
-		"accounts",
-		{
-			"account": default_bank_cash_account.account,
-			"credit_in_account_currency": payable_amount,
-			"balance": default_bank_cash_account.balance,
-			"account_currency": default_bank_cash_account.account_currency,
-			"cost_center": erpnext.get_default_cost_center(expense_claim.company),
-			"account_type": default_bank_cash_account.account_type,
-		},
-	)
-
-	return je.as_dict()
-
-
-@frappe.whitelist()
 def get_expense_claim_account_and_cost_center(expense_claim_type: str, company: str) -> dict:
 	data = get_expense_claim_account(expense_claim_type, company)
 	cost_center = erpnext.get_default_cost_center(company)
