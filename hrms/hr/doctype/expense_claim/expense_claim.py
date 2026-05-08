@@ -94,9 +94,6 @@ class ExpenseClaim(AccountsController, PWANotificationsMixin):
 	# end: auto-generated types
 
 	def onload(self):
-		self.get("__onload").make_payment_via_journal_entry = frappe.db.get_single_value(
-			"Accounts Settings", "make_payment_via_journal_entry"
-		)
 		self.set_onload(
 			"self_expense_approval_not_allowed",
 			frappe.db.get_single_value("HR Settings", "prevent_self_expense_approval"),
@@ -753,7 +750,7 @@ def get_advances(expense_claim: str | dict | Document, advance_id: str | None = 
 
 
 @frappe.whitelist()
-def get_expense_claim(employee_advance: str | dict, payment_via_journal_entry: str | int | bool) -> Document:
+def get_expense_claim(employee_advance: str | dict) -> Document:
 	if isinstance(employee_advance, str):
 		employee_advance = frappe.get_doc("Employee Advance", employee_advance)
 
@@ -774,13 +771,6 @@ def get_expense_claim(employee_advance: str | dict, payment_via_journal_entry: s
 	)
 	expense_claim.cost_center = default_cost_center
 	expense_claim.is_paid = 1 if flt(employee_advance.paid_amount) else 0
-
-	employee_advance.update(
-		{
-			"payment_via_journal_entry": payment_via_journal_entry,
-		}
-	)
-
 	get_expense_claim_advances(expense_claim, employee_advance)
 	return expense_claim
 

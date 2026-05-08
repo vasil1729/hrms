@@ -51,11 +51,6 @@ class EmployeeAdvance(Document):
 		]
 	# end: auto-generated types
 
-	def onload(self):
-		self.get("__onload").make_payment_via_journal_entry = frappe.db.get_single_value(
-			"Accounts Settings", "make_payment_via_journal_entry"
-		)
-
 	def validate(self):
 		validate_active_employee(self.employee)
 		self.validate_advance_account_currency()

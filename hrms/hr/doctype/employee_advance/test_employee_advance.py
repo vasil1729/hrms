@@ -376,7 +376,6 @@ class TestEmployeeAdvance(HRMSTestSuite):
 
 
 def make_journal_entry_for_advance(advance):
-	frappe.db.set_single_value("Accounts Settings", "make_payment_via_journal_entry", True)
 	journal_entry = frappe.get_doc(make_bank_entry("Employee Advance", advance.name))
 	journal_entry.cheque_no = "123123"
 	journal_entry.cheque_date = nowdate()
@@ -386,7 +385,6 @@ def make_journal_entry_for_advance(advance):
 
 
 def make_payment_entry(advance, amount=None):
-	frappe.db.set_single_value("Accounts Settings", "make_payment_via_journal_entry", False)
 	from hrms.overrides.employee_payment_entry import get_payment_entry_for_employee
 
 	payment_entry = get_payment_entry_for_employee(advance.doctype, advance.name)

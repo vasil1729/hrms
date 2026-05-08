@@ -270,16 +270,7 @@ frappe.ui.form.on("Expense Claim", {
 		}
 
 		if (!frm.doc.__islocal && frm.doc.docstatus === 1) {
-			let entry_doctype, entry_reference_doctype, entry_reference_name;
-			if (frm.doc.__onload.make_payment_via_journal_entry) {
-				entry_doctype = "Journal Entry";
-				entry_reference_doctype = "Journal Entry Account.reference_type";
-				entry_reference_name = "Journal Entry.reference_name";
-			} else {
-				entry_doctype = "Payment Entry";
-				entry_reference_doctype = "Payment Entry Reference.reference_doctype";
-				entry_reference_name = "Payment Entry Reference.reference_name";
-			}
+			const entry_doctype = "Payment Entry";
 
 			if (
 				cint(frm.doc.total_amount_reimbursed) > 0 &&
@@ -366,12 +357,8 @@ frappe.ui.form.on("Expense Claim", {
 		});
 	},
 	make_payment_entry: function (frm) {
-		let method = "hrms.overrides.employee_payment_entry.get_payment_entry_for_employee";
-		if (frm.doc.__onload && frm.doc.__onload.make_payment_via_journal_entry) {
-			method = "hrms.hr.doctype.expense_claim.expense_claim.make_bank_entry";
-		}
 		return frappe.call({
-			method: method,
+			method: "hrms.overrides.employee_payment_entry.get_payment_entry_for_employee",
 			args: {
 				dt: frm.doc.doctype,
 				dn: frm.doc.name,
