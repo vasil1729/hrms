@@ -964,7 +964,7 @@ class TestExpenseClaim(HRMSTestSuite):
 		expense_claim.reload()
 		self.assertEqual(expense_claim.status, "Cancelled")
 
-	def test_expense_claim_advance_payment_via_journal_entrry(self):
+	def test_expense_claim_advance_payment_via_journal_entry(self):
 		from hrms.hr.doctype.employee_advance.test_employee_advance import (
 			get_advances_for_claim,
 			make_employee_advance,
