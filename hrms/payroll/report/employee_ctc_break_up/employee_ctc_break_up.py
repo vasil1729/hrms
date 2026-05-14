@@ -13,14 +13,16 @@ from hrms.payroll.doctype.salary_structure.salary_structure import make_salary_s
 class SalaryBreakupReport:
 	def __init__(self, employee, salary_structure_assignment):
 		self.employee = employee
-		self.ctc = frappe.db.get_value("Employee", employee, "ctc")
-		self.validate_ctc()
+		self.salary_structure_assignment = salary_structure_assignment
 
-		self.salary_structure, self.currency, self.assignment_date, self.income_tax_slab = frappe.get_value(
-			"Salary Structure Assignment",
-			salary_structure_assignment,
-			["salary_structure", "currency", "from_date", "income_tax_slab"],
+		self.salary_structure, self.currency, self.assignment_date, self.income_tax_slab, self.ctc = (
+			frappe.get_value(
+				"Salary Structure Assignment",
+				salary_structure_assignment,
+				["salary_structure", "currency", "from_date", "income_tax_slab", "ctc"],
+			)
 		)
+		self.validate_ctc()
 		self.salary_slip = make_salary_slip(
 			self.salary_structure, employee=self.employee, for_preview=1, as_print=False
 		)
@@ -46,7 +48,11 @@ class SalaryBreakupReport:
 			frappe.throw(
 				_("Please set cost to company(CTC) for employee {0} in the {1}").format(
 					frappe.bold(self.employee),
-					get_link_to_form("Employee", self.employee + "#salary_information", "employee master."),
+					get_link_to_form(
+						"Salary Structure Assignment",
+						self.salary_structure_assignment,
+						"Salary Structure Assignment",
+					),
 				),
 				title=_("CTC Missing for Employee"),
 			)
@@ -189,30 +195,6 @@ class SalaryBreakupReport:
 
 	def format_currency(self, amount):
 		return format_value(amount, currency=self.currency)
-
-	def get_summary(self):
-		per_cycle_ctc = flt(self.ctc / self.cycle_multiplier, 2)
-		return [
-			{"value": self.ctc, "label": _("Annual CTC"), "datatype": "Currency", "currency": self.currency},
-			{
-				"value": per_cycle_ctc,
-				"label": _(f"{self.payroll_frequency} CTC"),
-				"datatype": "Currency",
-				"currency": self.currency,
-			},
-			{
-				"value": self.gross_pay,
-				"label": _(f"{self.payroll_frequency} Gross Pay"),
-				"datatype": "Currency",
-				"currency": self.currency,
-			},
-			{
-				"value": self.net_pay,
-				"label": _(f"{self.payroll_frequency} Net Pay"),
-				"datatype": "Currency",
-				"currency": self.currency,
-			},
-		]
 
 	def get_columns(self) -> list[dict]:
 		"""Return columns for the report.
