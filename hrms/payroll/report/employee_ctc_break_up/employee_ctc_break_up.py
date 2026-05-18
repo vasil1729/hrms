@@ -24,7 +24,11 @@ class SalaryBreakupReport:
 		)
 		self.validate_ctc()
 		self.salary_slip = make_salary_slip(
-			self.salary_structure, employee=self.employee, for_preview=1, as_print=False
+			self.salary_structure,
+			employee=self.employee,
+			for_preview=1,
+			as_print=False,
+			posting_date=frappe.flags.posting_date if frappe.flags.in_test else None,
 		)
 		self.net_pay = self.salary_slip.net_pay
 		self.gross_pay = self.salary_slip.gross_pay
@@ -189,6 +193,9 @@ class SalaryBreakupReport:
 	def calculate_percent_of_ctc(self, amount):
 		return flt(amount * 100 / self.ctc, 2)
 
+	def get_per_cycle_ctc(self):
+		return flt(self.ctc / self.cycle_multiplier, 2)
+
 	def indent_salary_components(self):
 		for component in self.salary_components:
 			component["indent"] = 1
@@ -258,13 +265,14 @@ class SalaryBreakupReport:
 
 	def get_message(self):
 		path = "hrms/payroll/report/employee_ctc_break_up/employee_profile_card.html"
-		context = frappe.get_doc("Employee", self.employee).as_dict()
-		context.update(
+		context = dict(
 			{
+				"employee_name": frappe.get_value("Employee", self.employee, "employee_name"),
+				"designation": frappe.get_value("Employee", self.employee, "designation"),
 				"salary_structure": self.salary_structure,
 				"per_cycle": self.payroll_frequency,
 				"annual_ctc": self.format_currency(self.ctc),
-				"per_cycle_ctc": self.format_currency(flt(self.ctc / self.cycle_multiplier, 2)),
+				"per_cycle_ctc": self.format_currency(self.get_per_cycle_ctc()),
 				"per_cycle_gross_pay": self.format_currency(self.gross_pay),
 				"per_cycle_net_pay": self.format_currency(self.net_pay),
 				"assignment_date": frappe.utils.global_date_format(self.assignment_date, "long"),
