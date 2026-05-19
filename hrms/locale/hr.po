@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2026-05-17 10:03+0000\n"
-"PO-Revision-Date: 2026-05-18 11:19\n"
+"PO-Revision-Date: 2026-05-19 11:18\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Croatian\n"
 "MIME-Version: 1.0\n"
@@ -737,7 +737,7 @@ msgstr "Dozvoli Praćenje Geolokacije"
 #. Label of the applicable_after (Int) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
 msgid "Allow Leave Application After (Calendar Days)"
-msgstr ""
+msgstr "Dopusti Zahtjev za Odsustvo Nakon (Kalendarskih Dana)"
 
 #. Label of the allow_multiple_shift_assignments (Check) field in DocType 'HR
 #. Settings'
@@ -6676,7 +6676,7 @@ msgstr "Minimalni broj godina za Nagradu"
 #. field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
 msgid "Minimum calendar days required since Date of Joining to apply for this leave"
-msgstr ""
+msgstr "Minimalni broj kalendarskih dana obaveznih od datuma pridruživanja da biste mogli da zatražite ovo odsustvo"
 
 #: hrms/hr/doctype/employee_advance/employee_advance.py:90
 msgid "Missing Advance Account"
@@ -11718,7 +11718,7 @@ msgstr "{0} već ima aktivnu Dodjelu Smjene {1} za neke/sve ove datume."
 
 #: hrms/hr/doctype/leave_application/leave_application.py:194
 msgid "{0} applicable after {1} calendar days"
-msgstr ""
+msgstr "{0} primjenjivo nakon {1} kalendarskih dana"
 
 #: frontend/src/components/LeaveBalance.vue:37
 msgctxt "Leave Type"
