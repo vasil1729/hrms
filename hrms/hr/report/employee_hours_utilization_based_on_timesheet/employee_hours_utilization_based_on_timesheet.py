@@ -34,7 +34,7 @@ class EmployeeHoursReport:
 		if not self.standard_working_hours:
 			msg = _("The metrics for this report are calculated based on {0}. Please set {0} in {1}.").format(
 				frappe.bold(_("Standard Working Hours")),
-				frappe.utils.get_link_to_form("HR Settings", "HR Settings"),
+				frappe.utils.get_link_to_form("HR Settings", "HR Settings", _("HR Settings")),
 			)
 
 			frappe.throw(msg)
