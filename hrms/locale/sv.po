@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2026-05-24 10:09+0000\n"
-"PO-Revision-Date: 2026-05-25 11:49\n"
+"PO-Revision-Date: 2026-05-26 11:53\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
@@ -4723,7 +4723,7 @@ msgstr "Personal & Lön"
 
 #: hrms/setup.py:67
 msgid "HR & Payroll Settings"
-msgstr "Personal & Lön Inställningar"
+msgstr "Personal & Löneinställningar"
 
 #. Name of a DocType
 #. Label of a Link in the HR Setup Workspace
@@ -7833,7 +7833,7 @@ msgstr "Lönerapporter"
 #: hrms/hr/workspace/hr_setup/hr_setup.json
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.json
 msgid "Payroll Settings"
-msgstr "Lön Inställningar"
+msgstr "Löneinställningar"
 
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:158
 msgid "Payroll date can not be greater than employee's relieving date."
