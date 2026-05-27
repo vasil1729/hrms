@@ -4,7 +4,7 @@
 import frappe
 from frappe import _
 from frappe.utils import flt, get_link_to_form
-from frappe.utils.formatters import format_value
+from frappe.utils.formatters import fmt_money
 from frappe.utils.jinja import render_template
 
 from hrms.payroll.doctype.salary_structure.salary_structure import make_salary_slip
@@ -201,7 +201,7 @@ class SalaryBreakupReport:
 			component["indent"] = 1
 
 	def format_currency(self, amount):
-		return format_value(amount, currency=self.currency)
+		return fmt_money(amount, precision=2, currency=self.currency)
 
 	def get_columns(self) -> list[dict]:
 		"""Return columns for the report.
