@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2026-05-24 10:09+0000\n"
-"PO-Revision-Date: 2026-05-25 11:50\n"
+"PO-Revision-Date: 2026-05-28 12:59\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Slovenian\n"
 "MIME-Version: 1.0\n"
@@ -11682,7 +11682,7 @@ msgstr ""
 
 #: hrms/hr/doctype/attendance_request/attendance_request.py:68
 msgid "reason"
-msgstr ""
+msgstr "razlog"
 
 #: hrms/www/jobs/index.html:122
 msgid "result"
@@ -11714,7 +11714,7 @@ msgstr ""
 
 #: hrms/controllers/employee_reminders.py:265
 msgid "year"
-msgstr ""
+msgstr "leto"
 
 #: hrms/controllers/employee_reminders.py:265
 msgid "years"

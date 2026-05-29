@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2026-05-24 10:09+0000\n"
-"PO-Revision-Date: 2026-05-25 11:50\n"
+"PO-Revision-Date: 2026-05-28 12:59\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Norwegian Bokmal\n"
 "MIME-Version: 1.0\n"
@@ -289,7 +289,7 @@ msgstr ""
 #. Header text in the Shift & Attendance Workspace
 #: hrms/hr/workspace/shift_&_attendance/shift_&_attendance.json
 msgid "<span style=\"font-size: 18px;\"><b>Masters &amp; Reports</b></span>"
-msgstr ""
+msgstr "<span style=\"font-size: 18px;\"><b>Masterdata og rapporter</b></span>"
 
 #: hrms/public/js/utils/index.js:166
 msgid "<table class='table table-bordered'><tr><th>{0}</th><th>{1}</th></tr>"
