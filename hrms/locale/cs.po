@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2026-05-24 10:09+0000\n"
-"PO-Revision-Date: 2026-05-28 12:58\n"
+"PO-Revision-Date: 2026-05-31 13:29\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -11632,7 +11632,7 @@ msgstr ""
 
 #: hrms/hr/doctype/employee_advance/employee_advance.py:75
 msgid "here"
-msgstr ""
+msgstr "zde"
 
 #: frontend/src/views/Login.vue:16
 msgid "johndoe@mail.com"
