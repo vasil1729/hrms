@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2026-06-14 10:34+0000\n"
-"PO-Revision-Date: 2026-06-15 18:54\n"
+"PO-Revision-Date: 2026-06-19 20:20\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
@@ -3180,7 +3180,7 @@ msgstr "Personal Lån"
 #. Label of the emp_created_by (Select) field in DocType 'HR Settings'
 #: hrms/hr/doctype/hr_settings/hr_settings.json
 msgid "Employee Naming By"
-msgstr "Namngivning Efter"
+msgstr "Personal Namngivning Efter"
 
 #. Name of a DocType
 #. Label of a Link in the Tenure Workspace
@@ -3394,7 +3394,7 @@ msgstr "Personal Förskott Konto {0} ska vara av typ {1}."
 
 #: hrms/hr/doctype/hr_settings/hr_settings.js:27
 msgid "Employee can be named by Employee ID if you assign one, or via Naming Series. Select your preference here."
-msgstr "Personal kan namnges med Personal ID, om det finns, eller via Namngivning Serie. Välj preferens här."
+msgstr "Personal kan namnges efter Personal ID, om det finns, eller via Namngivning Serie. Välj preferens här."
 
 #. Label of the employee_name (Data) field in DocType 'Leave Policy Assignment'
 #: hrms/hr/doctype/leave_policy_assignment/leave_policy_assignment.json
@@ -5820,7 +5820,7 @@ msgstr "Nyckel Resultat Område"
 #. Cycle'
 #: hrms/hr/doctype/appraisal_cycle/appraisal_cycle.json
 msgid "KRA Evaluation Method"
-msgstr "Nyckel Resultat Område Evaluering Sätt"
+msgstr "Nyckel Resultat Område Utvärdering Sätt"
 
 #: hrms/hr/doctype/goal/goal.py:126
 msgid "KRA updated for all child goals."
@@ -8231,7 +8231,7 @@ msgstr "Obs: Ange {0}."
 
 #: hrms/overrides/employee_master.py:16
 msgid "Please setup Employee Naming System in Human Resource > HR Settings"
-msgstr "Ange Personal Namngivning Serie i Personal > Personal Inställningar"
+msgstr "Ange Personal Namngivning Serie för Personal > Personal Inställningar"
 
 #: hrms/hr/doctype/upload_attendance/upload_attendance.py:171
 msgid "Please setup numbering series for Attendance via Setup > Numbering Series"
@@ -9087,7 +9087,7 @@ msgstr "Löneintervall"
 #: hrms/payroll/report/salary_payments_based_on_payment_mode/salary_payments_based_on_payment_mode.json
 #: hrms/payroll/workspace/payroll/payroll.json
 msgid "Salary Payments Based On Payment Mode"
-msgstr "Lön Betalningar Baserat på Betalning Sätt"
+msgstr "Löneutbetalningar Baserade på Betalning Sätt"
 
 #. Name of a report
 #. Label of a Link in the Payroll Workspace
