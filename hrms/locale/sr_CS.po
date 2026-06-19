@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2026-05-31 10:16+0000\n"
-"PO-Revision-Date: 2026-06-01 14:01\n"
+"POT-Creation-Date: 2026-06-14 10:34+0000\n"
+"PO-Revision-Date: 2026-06-15 18:55\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Serbian (Latin)\n"
 "MIME-Version: 1.0\n"
@@ -525,7 +525,7 @@ msgstr "Dodaj neiskorišćene dane odsustva iz prethodnih raspodela"
 msgid "Add unused leaves from previous leave period's allocation to this allocation"
 msgstr "Dodaj neiskorišćene dane odsustva iz prethodnog perioda u ovu raspodelu"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:1686
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:1675
 msgid "Added tax components from the Salary Component master as the salary structure didn't have any tax component."
 msgstr "Dodate poreske komponente iz master podataka komponente zarade jer struktura zarade nije imala nijednu poresku komponentu."
 
@@ -870,6 +870,12 @@ msgstr "Godišnja raspodela je premašena"
 
 #: hrms/payroll/report/employee_ctc_break_up/employee_profile_card.html:123
 msgid "Annual CTC"
+msgstr ""
+
+#. Label of the annual_gross_earning (Currency) field in DocType 'Salary
+#. Structure Assignment'
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
+msgid "Annual Gross Earning"
 msgstr ""
 
 #: hrms/setup.py:410
@@ -1405,8 +1411,8 @@ msgstr "Podešavanje prisustva"
 msgid "Attendance To Date"
 msgstr "Datum završetka prisustva"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:187
-#: hrms/hr/doctype/attendance_request/attendance_request.py:206
+#: hrms/hr/doctype/attendance_request/attendance_request.py:189
+#: hrms/hr/doctype/attendance_request/attendance_request.py:208
 msgid "Attendance Updated"
 msgstr "Prisustvo je ažurirano"
 
@@ -1458,11 +1464,11 @@ msgstr "Prisustvo je uspešno evidentirano"
 msgid "Attendance marked successfully."
 msgstr "Prisustvo je uspešno evidentirano."
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:225
+#: hrms/hr/doctype/attendance_request/attendance_request.py:227
 msgid "Attendance not submitted for {0} as it is a Holiday."
 msgstr "Prisustvo nije podneto za {0} jer je u pitanju praznik."
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:234
+#: hrms/hr/doctype/attendance_request/attendance_request.py:236
 msgid "Attendance not submitted for {0} as {1} is on leave."
 msgstr "Prisustvo nije podneto za {0} jer je {1} na odsustvu."
 
@@ -1557,11 +1563,11 @@ msgstr "Prosečna ocena prikazanih veština"
 msgid "Avg Feedback Score"
 msgstr "Prosečna ocena povratnih informacija"
 
-#: hrms/hr/report/employee_hours_utilization_based_on_timesheet/employee_hours_utilization_based_on_timesheet.py:218
+#: hrms/hr/report/employee_hours_utilization_based_on_timesheet/employee_hours_utilization_based_on_timesheet.py:220
 msgid "Avg Utilization"
 msgstr "Prosečna iskorišćenost"
 
-#: hrms/hr/report/employee_hours_utilization_based_on_timesheet/employee_hours_utilization_based_on_timesheet.py:224
+#: hrms/hr/report/employee_hours_utilization_based_on_timesheet/employee_hours_utilization_based_on_timesheet.py:226
 msgid "Avg Utilization (Billed Only)"
 msgstr "Prosečna iskorišćenost (samo fakturisano)"
 
@@ -1659,7 +1665,7 @@ msgstr "Pogodnosti"
 msgid "Bill Amount"
 msgstr "Iznos fakture"
 
-#: hrms/hr/report/employee_hours_utilization_based_on_timesheet/employee_hours_utilization_based_on_timesheet.py:249
+#: hrms/hr/report/employee_hours_utilization_based_on_timesheet/employee_hours_utilization_based_on_timesheet.py:251
 msgid "Billed Hours"
 msgstr "Fakturisani časovi"
 
@@ -1737,7 +1743,7 @@ msgstr "Datum isplate bonusa ne može biti u prošlosti"
 msgid "Branch: {0}"
 msgstr "Filijala: {0}"
 
-#: hrms/payroll/doctype/salary_structure/salary_structure.js:131
+#: hrms/payroll/doctype/salary_structure/salary_structure.js:137
 msgid "Bulk Assignments"
 msgstr "Masovna dodela"
 
@@ -1772,7 +1778,7 @@ msgstr "Podrazumevano, konačna ocena se izračunava kao prosek ocene cilja, oce
 msgid "CTC"
 msgstr "Ukupni trošak po zaposlenom licu"
 
-#: hrms/payroll/report/employee_ctc_break_up/employee_ctc_break_up.py:61
+#: hrms/payroll/report/employee_ctc_break_up/employee_ctc_break_up.py:62
 msgid "CTC Missing for Employee"
 msgstr ""
 
@@ -1839,11 +1845,11 @@ msgstr "Nije moguće otkazati dodelu smene: {0} jer je povezana sa prisustvom: {
 msgid "Cannot cancel Shift Assignment: {0} as it is linked to Employee Checkin: {1}"
 msgstr "Ne može se otkazati dodela smene: {0} jer je povezana sa zapisom o prisustvu: {1}"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:390
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:380
 msgid "Cannot create Salary Slip for Employee joining after Payroll Period"
 msgstr "Nije moguće kreirati obračunski listić za zaposleno lice koje se zaposlilo nakon obračunskog perioda"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:393
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:383
 msgid "Cannot create Salary Slip for Employee who has left before Payroll Period"
 msgstr "Nije moguće kreirati obračunski listić za zaposleno lice koje je otišlo pre obračunskog perioda"
 
@@ -1899,15 +1905,15 @@ msgstr "Slobodan dan"
 msgid "Cause of Grievance"
 msgstr "Uzrok pritužbe"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:192
+#: hrms/hr/doctype/attendance_request/attendance_request.py:194
 msgid "Changed the Status for Other Half from {0} to {1} via Attendance Request as the status is Half Day"
 msgstr ""
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:171
+#: hrms/hr/doctype/attendance_request/attendance_request.py:173
 msgid "Changed the status from {0} to {1} and Status for Other Half to {2} via Attendance Request"
 msgstr "Status je promenjen iz {0} u {1}, a status za drugu polovinu u {2}, putem zahteva za evidenciju prisustva"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:175
+#: hrms/hr/doctype/attendance_request/attendance_request.py:177
 msgid "Changed the status from {0} to {1} via Attendance Request"
 msgstr "Je promenio status sa {0} na {1} putem zahteva za evidentiranJe prisustva"
 
@@ -2056,7 +2062,7 @@ msgstr "Zatvara se:"
 msgid "Closing Notes"
 msgstr "Završne napomene"
 
-#: frontend/src/views/Profile.vue:177
+#: frontend/src/views/Profile.vue:178
 msgid "Company Information"
 msgstr "Informacije o kompaniji"
 
@@ -2303,7 +2309,7 @@ msgstr "Kriterijumi na osnovu kojih zaposlena lica treba da budu ocenjena u povr
 msgid "Currency "
 msgstr "Valuta "
 
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:128
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:163
 msgid "Currency of selected Income Tax Slab should be {0} instead of {1}"
 msgstr "Valuta izabranog poreskog razreda poreza na dohodak treba da bude {0} umesto {1}"
 
@@ -2346,6 +2352,10 @@ msgstr "Trenutna vrednost odometra "
 #: hrms/hr/doctype/staffing_plan_detail/staffing_plan_detail.json
 msgid "Current Openings"
 msgstr "Trenutno otvorena radna mesta"
+
+#: frontend/src/views/ChangePassword.vue:22
+msgid "Current Password"
+msgstr "Trenutna lozinka"
 
 #. Label of the current_payroll_period (Link) field in DocType 'Salary Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
@@ -2656,7 +2666,7 @@ msgstr "Onemogući {0} za komponentu {1} kako bi se sprečilo dvostruko odbijanj
 msgid "Disable {0} or {1} to proceed."
 msgstr "Onemogućite {0} ili {1} da biste nastavili."
 
-#: frontend/src/views/AppSettings.vue:40
+#: frontend/src/views/AppSettings.vue:65
 msgid "Disabling Push Notifications..."
 msgstr "Onemogućavanje obaveštenja..."
 
@@ -3010,7 +3020,7 @@ msgstr "Troškovni centar zaposlenog lica"
 #. Other Income'
 #. Label of the section_break_24 (Section Break) field in DocType 'Payroll
 #. Entry'
-#: frontend/src/views/Profile.vue:165
+#: frontend/src/views/Profile.vue:166
 #: hrms/hr/doctype/employee_onboarding/employee_onboarding.json
 #: hrms/hr/doctype/employee_performance_feedback/employee_performance_feedback.json
 #: hrms/hr/doctype/exit_interview/exit_interview.json
@@ -3411,11 +3421,11 @@ msgstr "Zaposlenom licu je označen izostanak zbog neispunjavanja minimalnog bro
 msgid "Employee was marked Absent for other half due to missing Employee Checkins."
 msgstr "Zaposlenom licu je označen izostanak za drugi deo radnog vremena zbog nedostajućih zapisa o prisustvu."
 
-#: hrms/hr/doctype/overtime_slip/overtime_slip.py:480
+#: hrms/hr/doctype/overtime_slip/overtime_slip.py:479
 msgid "Employee {0} : {1}"
 msgstr "Zaposleno lice {0} : {1}"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:133
+#: hrms/hr/doctype/attendance_request/attendance_request.py:135
 msgid "Employee {0} already has an Attendance Request {1} that overlaps with this period"
 msgstr "Zaposleno lice {0} već ima zahtev za evidentiranje prisustva {1} koji se preklapa sa ovim periodom"
 
@@ -3427,7 +3437,7 @@ msgstr "Zaposleno lice {0} već ima aktivnu smenu {1}: {2} koja se preklapa u ov
 msgid "Employee {0} already submitted an application {1} for the payroll period {2}"
 msgstr "Zaposleno lice {0} je već podnelo zahtev {1} za obračunski period {2}"
 
-#: hrms/hr/doctype/shift_request/shift_request.py:148
+#: hrms/hr/doctype/shift_request/shift_request.py:149
 msgid "Employee {0} has already applied for Shift {1}: {2} that overlaps within this period"
 msgstr "Zaposleno lice {0} je već podnelo zahtev za smenu {1}: {2} koja se preklapa u ovom periodu"
 
@@ -3455,7 +3465,7 @@ msgstr "Zaposleno lice {0} nije pronađeno među učesnicima događaja obuke."
 msgid "Employee {0} on Half day on {1}"
 msgstr "Zaposleno lice {0} je na polovini radnog dana {1}"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:732
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:738
 msgid "Employee {0} relieved on {1} must be set as 'Left'"
 msgstr "Zaposleno lice {0} razrešeno na {1} mora biti označeno kao 'Prekinut radni odnos'"
 
@@ -3520,6 +3530,17 @@ msgstr "Zaposlena lica bez ciljeva: {0}"
 msgid "Employees working on a holiday"
 msgstr "Zaposlena lica koja rade tokom praznika"
 
+#. Option for the 'Type' (Select) field in DocType 'Salary Component'
+#: hrms/payroll/doctype/salary_component/salary_component.json
+msgid "Employer Contribution"
+msgstr ""
+
+#. Label of the employer_contributions (Table) field in DocType 'Salary
+#. Structure'
+#: hrms/payroll/doctype/salary_structure/salary_structure.json
+msgid "Employer Contributions"
+msgstr ""
+
 #. Label of the employment_type (Link) field in DocType 'Employee Attendance
 #. Tool'
 #. Name of a DocType
@@ -3556,7 +3577,7 @@ msgstr "Omogući označavanje ranog odlaska"
 msgid "Enable Late Entry Marking"
 msgstr "Omogući označavanje kasnog dolaska"
 
-#: frontend/src/views/AppSettings.vue:25
+#: frontend/src/views/AppSettings.vue:50
 msgid "Enable Push Notifications"
 msgstr "Omogući obaveštenja"
 
@@ -3578,7 +3599,7 @@ msgstr "Omogućite ovo kako bi koristili poseban koeficijent za vikende. Ukoliko
 msgid "Enabled only for Employee Benefit components from Salary Structure Assignment"
 msgstr "Omogućeno samo za beneficije zaposlenih lica iz dodele strukture zarade"
 
-#: frontend/src/views/AppSettings.vue:40
+#: frontend/src/views/AppSettings.vue:65
 msgid "Enabling Push Notifications..."
 msgstr "Omogućavanje obaveštenja..."
 
@@ -3652,6 +3673,10 @@ msgstr "Unesite broj dana odsustva koji želite da dodelite za ovaj period."
 msgid "Enter yearly benefit amounts"
 msgstr "Unesite godišnje iznose beneficija"
 
+#: frontend/src/views/ForgotPassword.vue:22
+msgid "Enter your email address and we'll send you a link to reset your password."
+msgstr ""
+
 #: frontend/src/components/FormField.vue:40
 #: frontend/src/components/FormField.vue:52
 msgid "Enter {0}"
@@ -3669,7 +3694,8 @@ msgstr "Greška prilikom brisanja {0}"
 msgid "Error downloading PDF"
 msgstr "Greška prilikom preuzimanja PDF"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:1408
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:1397
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:400
 msgid "Error in formula or condition"
 msgstr "Greška u formuli ili uslovu"
 
@@ -3685,7 +3711,7 @@ msgstr "Greška u nekim redovima"
 msgid "Error updating {0}"
 msgstr "Greška prilikom ažuriranja {0}"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:2640
+#: hrms/payroll/utils.py:134
 msgid "Error while evaluating the {doctype} {doclink} at row {row_id}. <br><br> <b>Error:</b> {error} <br><br> <b>Hint:</b> {description}"
 msgstr "Greška prilikom obrade {doctype} {doclink} u redu {row_id}. <br><br> <b>Greška:</b> {error} <br><br> <b>Savet:</b> {description}"
 
@@ -4092,9 +4118,13 @@ msgstr "Neuspešno kreiranje/podnošenje {0} za zaposlena lica:"
 msgid "Failed to delete defaults for country {0}."
 msgstr "Neuspešno brisanje podrazumevanih vrednosti za državu {0}."
 
-#: hrms/api/__init__.py:784
+#: hrms/api/__init__.py:796
 msgid "Failed to download PDF: {0}"
 msgstr "Neuspešno preuzimanje PDF: {0}"
+
+#: frontend/src/views/ForgotPassword.vue:83
+msgid "Failed to send reset link"
+msgstr ""
 
 #: hrms/hr/doctype/interview/interview.py:146
 msgid "Failed to send the Interview Reschedule notification. Please configure your email account."
@@ -4107,6 +4137,10 @@ msgstr "Neuspešne postavke podrazumevanih vrednosti za državu {0}."
 #: hrms/hr/doctype/leave_policy_assignment/leave_policy_assignment.py:489
 msgid "Failed to submit some leave policy assignments:"
 msgstr "Neke dodele politike odsustva nije bilo moguće podneti:"
+
+#: frontend/src/views/ChangePassword.vue:94
+msgid "Failed to update password"
+msgstr "Neuspešno ažuriranje lozinke"
 
 #: hrms/hr/doctype/interview/interview.py:239
 msgid "Failed to update the Job Applicant status"
@@ -4362,7 +4396,7 @@ msgstr "Za jedan dan odsustva, ukoliko se ipak isplaćuje (na primer) 50% dnevne
 msgid "Formula"
 msgstr "Formula"
 
-#: hrms/payroll/report/employee_ctc_break_up/employee_ctc_break_up.py:227
+#: hrms/payroll/report/employee_ctc_break_up/employee_ctc_break_up.py:229
 msgid "Formula/Amount"
 msgstr ""
 
@@ -4406,7 +4440,7 @@ msgstr "Datum početka mora biti ispred datuma završetka"
 msgid "From Date {0} cannot be after Payroll Period end date {1}"
 msgstr "Datum početka {0} ne može biti nakon datuma završetka obračunskog perioda {1}"
 
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:93
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:128
 msgid "From Date {0} cannot be after employee's relieving Date {1}"
 msgstr "Datum početka {0} ne može biti posle datuma prestanka radnog odnosa {1}"
 
@@ -4414,7 +4448,7 @@ msgstr "Datum početka {0} ne može biti posle datuma prestanka radnog odnosa {1
 msgid "From Date {0} cannot be before Payroll Period start date {1}"
 msgstr "Datum početka {0} ne može biti pre datuma početka obračunskog perioda {1}"
 
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:85
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:120
 msgid "From Date {0} cannot be before employee's joining Date {1}"
 msgstr "Datum početka {0} ne može biti pre datuma zaposlenja {1}"
 
@@ -4560,7 +4594,7 @@ msgstr "Bez glutena"
 msgid "Go to Login"
 msgstr "Idi na prijavu"
 
-#: frontend/src/views/Login.vue:72
+#: frontend/src/views/Login.vue:29
 msgid "Go to Reset Password page"
 msgstr "Idi na stranicu za resetovanje lozinke"
 
@@ -4898,15 +4932,15 @@ msgstr "Zarada po času (valuta kompanije)"
 msgid "Hourly Rate"
 msgstr "Satnica"
 
-#: hrms/regional/india/utils.py:184
+#: hrms/regional/india/utils.py:183
 msgid "House rent paid days overlapping with {0}"
 msgstr "Dani plaćenog zakupa preklapaju se sa {0}"
 
-#: hrms/regional/india/utils.py:162
+#: hrms/regional/india/utils.py:161
 msgid "House rented dates required for exemption calculation"
 msgstr "Datumi zakupa su obavezni za obračun poreskog oslobođenja"
 
-#: hrms/regional/india/utils.py:165
+#: hrms/regional/india/utils.py:164
 msgid "House rented dates should be atleast 15 days apart"
 msgstr "Datumi zakupa moraju biti u razmaku od najmanje 15 dana"
 
@@ -5180,7 +5214,7 @@ msgstr "Odbici poreza na dohodak"
 #. Label of a Workspace Sidebar Item
 #: hrms/payroll/doctype/bulk_salary_structure_assignment/bulk_salary_structure_assignment.json
 #: hrms/payroll/doctype/income_tax_slab/income_tax_slab.json
-#: hrms/payroll/doctype/salary_structure/salary_structure.js:142
+#: hrms/payroll/doctype/salary_structure/salary_structure.js:148
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 #: hrms/payroll/report/income_tax_computation/income_tax_computation.py:623
 #: hrms/payroll/workspace/payroll/payroll.json
@@ -5194,15 +5228,15 @@ msgstr "Poreski razred poreza na dohodak"
 msgid "Income Tax Slab Other Charges"
 msgstr "Ostali nameti u poreskom razredu poreza na dohodak"
 
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:113
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:148
 msgid "Income Tax Slab is mandatory since the Salary Structure {0} has a tax component {1}"
 msgstr "Poreski razred poreza na dohodak je obavezan s obzirom da struktura zarade {0} sadrži poresku komponentu {1}"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:1963
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:1952
 msgid "Income Tax Slab must be effective on or before Payroll Period Start Date: {0}"
 msgstr "Poreski razred poreza na dohodak mora biti važeći na ili pre početka obračunskog perioda: {0}"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:1951
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:1940
 msgid "Income Tax Slab not set in Salary Structure Assignment: {0}"
 msgstr "Poreski razred poreza na dohodak nije postavljen u dodeli strukture zarade: {0}"
 
@@ -5210,7 +5244,7 @@ msgstr "Poreski razred poreza na dohodak nije postavljen u dodeli strukture zara
 msgid "Income Tax Slab: "
 msgstr "Poreski razred poreza na dohodak: "
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:1959
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:1948
 msgid "Income Tax Slab: {0} is disabled"
 msgstr "Poreski razred poreza na dohodak: {0} je onemogućen"
 
@@ -5446,7 +5480,7 @@ msgstr "Nevažeći iznosi beneficija"
 msgid "Invalid Dates"
 msgstr "Nevažeći datumi"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:2672
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:2642
 msgid "Invalid LWP Days Reversed"
 msgstr "Nevažeći broj storniranih dana odsustva bez naknade"
 
@@ -5818,7 +5852,7 @@ msgstr "Ključna oblast odgovornosti"
 msgid "Key Result Area"
 msgstr "Ključna oblast rezultata"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:2669
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:2639
 msgid "LWP Days Reversed ({0}) does not match actual Payroll Corrections total ({1}) for employee {2} from {3} to {4}"
 msgstr "Broj storniranih dana odsustva bez naknade ({0}) se ne poklapa sa ukupnim iznosom korekcije obračuna zarade ({1}) za zaposleno lice {2} u periodu od {3} do {4}"
 
@@ -6235,7 +6269,7 @@ msgstr "Vrsta odsustva {0} nije predmet isplate"
 msgid "Leave Without Pay"
 msgstr "Odsustvo bez naknade"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:597
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:603
 msgid "Leave Without Pay does not match with approved {} records"
 msgstr "Odsustvo bez naknade ne odgovara odobrenim {} zapisima"
 
@@ -6415,7 +6449,7 @@ msgstr "Lokacija / ID uređaja"
 msgid "Lodging Required"
 msgstr "Neophodna noćenja"
 
-#: frontend/src/views/Profile.vue:107
+#: frontend/src/views/Profile.vue:106
 msgid "Log Out"
 msgstr "Odjavi se"
 
@@ -6433,7 +6467,7 @@ msgstr "Vrsta evidencije je neophodna za prijave koje padaju u smenu: {0}."
 msgid "Login Failed"
 msgstr "Neuspešna prijava"
 
-#: frontend/src/views/Login.vue:8
+#: frontend/src/views/Login.vue:38
 msgid "Login to Frappe HR"
 msgstr "Prijavljivanje na Frappe HR"
 
@@ -6469,6 +6503,10 @@ msgstr "Obavezan zahtev za beneficiju"
 #: hrms/public/js/utils/index.js:37
 msgid "Mandatory fields required for this action:"
 msgstr "Obavezna polja su neophodna za ovu radnju:"
+
+#: hrms/payroll/doctype/payroll_entry/payroll_entry.js:213
+msgid "Mandatory fields required in {0}"
+msgstr "Obavezna polja su neophodna u {0}"
 
 #. Option for the 'KRA Evaluation Method' (Select) field in DocType 'Appraisal
 #. Cycle'
@@ -6718,11 +6756,11 @@ msgstr ""
 msgid "Missing Advance Account"
 msgstr "Nedostaje akontacioni račun"
 
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:119
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:154
 msgid "Missing Mandatory Field"
 msgstr "Nedostaje obavezno polje"
 
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:201
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:236
 msgid "Missing Opening Entries"
 msgstr "Nedostaju unosi početnog stanja"
 
@@ -6734,11 +6772,11 @@ msgstr "Nedostaje datum prestanka radnog odnosa"
 msgid "Missing Salary Components"
 msgstr "Nedostaje komponenta zarade"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:1954
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:1943
 msgid "Missing Tax Slab"
 msgstr "Nedostaje poreski razred"
 
-#: hrms/payroll/report/employee_ctc_break_up/employee_ctc_break_up.py:311
+#: hrms/payroll/report/employee_ctc_break_up/employee_ctc_break_up.py:313
 msgid "Missing value for filters"
 msgstr ""
 
@@ -6807,7 +6845,8 @@ msgid "My Requests"
 msgstr "Moji zahtevi"
 
 #: hrms/payroll/doctype/income_tax_slab/income_tax_slab.py:123
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:1394
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:1383
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:386
 msgid "Name error"
 msgstr "Naziv greške"
 
@@ -6835,7 +6874,7 @@ msgstr "Neto zarada (valuta kompanije)"
 msgid "Net Pay Info"
 msgstr "Informacije o neto zaradi"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:293
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:283
 msgid "Net Pay cannot be less than 0"
 msgstr "Neto zarada ne može biti manja od 0"
 
@@ -6883,6 +6922,10 @@ msgstr "Nova dodeljena odsustva"
 #: hrms/hr/doctype/leave_control_panel/leave_control_panel.json
 msgid "New Leaves Allocated (In Days)"
 msgstr "Nova dodeljena odsustva (u danima)"
+
+#: frontend/src/views/ChangePassword.vue:112
+msgid "New passwords do not match"
+msgstr ""
 
 #. Description of the 'Create Shifts After' (Date) field in DocType 'Shift
 #. Schedule Assignment'
@@ -6962,7 +7005,7 @@ msgstr "Nije pronađena aktivna dodela strukture zarade za zaposleno lice {0} sa
 msgid "No active employee found associated with the email ID {0}. Try logging in with your employee email ID or contact your HR manager for access."
 msgstr "Nema aktivnog zaposlenog lica povezanog sa imejl ID {0}. Pokušajte da se prijavite sa poslovnim imejlom ili kontaktirajte HR menadžera za pristup."
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:523
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:516
 msgid "No active or default Salary Structure found for employee {0} for the given dates"
 msgstr "Nije pronađena aktivna ili podrazumevana struktura zarade za zaposleno lice {0} za navedene datume"
 
@@ -7059,7 +7102,7 @@ msgstr "Nema evidencije odsustva za zaposleno lice {0} na {1}"
 msgid "No leaves have been allocated."
 msgstr "Dani odsustva nisu dodeljeni."
 
-#: frontend/src/views/Login.vue:53
+#: frontend/src/views/Login.vue:91
 msgid "No login methods are available. Please contact your administrator."
 msgstr "Nema dostupnih metoda prijavljivanja. Molimo Vas da se obratite administratoru."
 
@@ -7115,7 +7158,7 @@ msgstr "Bez mlečnih proizvoda"
 msgid "Non Taxable Earnings"
 msgstr "Prihodi koji nisu predmet oporezivanja"
 
-#: hrms/hr/report/employee_hours_utilization_based_on_timesheet/employee_hours_utilization_based_on_timesheet.py:250
+#: hrms/hr/report/employee_hours_utilization_based_on_timesheet/employee_hours_utilization_based_on_timesheet.py:252
 msgid "Non-Billed Hours"
 msgstr "Nefakturisani časovi"
 
@@ -7143,7 +7186,7 @@ msgstr "Napomena: Smena neće biti prepisana u postojećim evidencijama prisustv
 msgid "Note: Total allocated leaves {0} shouldn't be less than already approved leaves {1} for the period"
 msgstr "Napomena: Ukupno dodeljenih odsustva {0} ne može biti manje od već odobrenih odsustva {1} za period"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:2263
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:2252
 msgid "Note: Your salary slip is password protected, the password to unlock the PDF is of the format {0}."
 msgstr "Napomena: Vaš obračunski listić je zaštićen lozinkom, lozinka za otključavanje PDF-a ima format {0}."
 
@@ -7202,11 +7245,11 @@ msgstr "Broj ciklusa zadržavanja zarade"
 msgid "Number of leaves eligible for encashment based on leave type settings"
 msgstr "Broj dana odsustva koji se mogu isplatiti, u skladu sa podešavanjima vrste odsustva"
 
-#: frontend/src/views/Login.vue:88
+#: frontend/src/views/Login.vue:105
 msgid "OTP Code"
 msgstr "Jednokratna lozinka"
 
-#: frontend/src/views/Login.vue:79
+#: frontend/src/views/Login.vue:96
 msgid "OTP Verification"
 msgstr "Verifikacija jednokratnom lozinkom"
 
@@ -7288,7 +7331,7 @@ msgstr "Aktivnosti uvođenja"
 msgid "Onboarding Begins On"
 msgstr "Uvođenje počinje na"
 
-#: hrms/hr/doctype/shift_request/shift_request.py:115
+#: hrms/hr/doctype/shift_request/shift_request.py:116
 msgid "Only Approvers can Approve this Request."
 msgstr "Isključivo odobravaoci mogu da odobre ovaj zahtev."
 
@@ -7312,7 +7355,7 @@ msgstr "Isključivo intervjui sa statusom uspešno ili odbijeno mogu biti podnet
 msgid "Only Leave Applications with status 'Approved' and 'Rejected' can be submitted"
 msgstr "Isključivo zahtev za odsustvom sa statusom 'Odobreno' ili 'Odbijeno' može biti podnet"
 
-#: hrms/hr/doctype/shift_request/shift_request.py:66
+#: hrms/hr/doctype/shift_request/shift_request.py:67
 msgid "Only Shift Request with status 'Approved' and 'Rejected' can be submitted"
 msgstr "Isključivo zahtev za radnu smenu sa statusom 'Odobreno' ili 'Odbijeno' može biti podnet"
 
@@ -7398,7 +7441,7 @@ msgstr "Prekoračena dodela"
 msgid "Overall Average Rating"
 msgstr "Ukupna prosečna ocena"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:138
+#: hrms/hr/doctype/attendance_request/attendance_request.py:140
 msgid "Overlapping Attendance Request"
 msgstr "Preklapajući zahtev za evidentiranje prisustva"
 
@@ -7406,7 +7449,7 @@ msgstr "Preklapajući zahtev za evidentiranje prisustva"
 msgid "Overlapping Shift Attendance"
 msgstr "Preklapajuće prisustvo u smenama"
 
-#: hrms/hr/doctype/shift_request/shift_request.py:156
+#: hrms/hr/doctype/shift_request/shift_request.py:157
 msgid "Overlapping Shift Requests"
 msgstr "Preklapajući zahtevi za radne smene"
 
@@ -7464,11 +7507,11 @@ msgstr "Komponenta zarade za prekovremeni rad"
 msgid "Overtime Slip"
 msgstr "Obračun prekovremenog rada"
 
-#: hrms/hr/doctype/overtime_slip/overtime_slip.py:481
+#: hrms/hr/doctype/overtime_slip/overtime_slip.py:480
 msgid "Overtime Slip Creation Error for {0}"
 msgstr "Greška pri kreiranju obračuna prekovremenog rada za {0}"
 
-#: hrms/hr/doctype/overtime_slip/overtime_slip.py:492
+#: hrms/hr/doctype/overtime_slip/overtime_slip.py:491
 msgid "Overtime Slip Creation Failed"
 msgstr "Kreiranje obračuna prekovremenog rada je neuspešno"
 
@@ -7477,19 +7520,19 @@ msgstr "Kreiranje obračuna prekovremenog rada je neuspešno"
 msgid "Overtime Slip Step"
 msgstr "Korak obračuna prekovremenog rada"
 
-#: hrms/hr/doctype/overtime_slip/overtime_slip.py:515
+#: hrms/hr/doctype/overtime_slip/overtime_slip.py:514
 msgid "Overtime Slip Submission Error for {0}"
 msgstr "Greška pri podnošenju obračuna prekovremenog rada za {0}"
 
-#: hrms/hr/doctype/overtime_slip/overtime_slip.py:526
+#: hrms/hr/doctype/overtime_slip/overtime_slip.py:525
 msgid "Overtime Slip Submission Failed"
 msgstr "Kreiranje obračuna prekovremenog rada je neuspešno"
 
-#: hrms/hr/doctype/overtime_slip/overtime_slip.py:521
+#: hrms/hr/doctype/overtime_slip/overtime_slip.py:520
 msgid "Overtime Slip Submitted"
 msgstr "Obračun prekovremenog rada je podnet"
 
-#: hrms/hr/doctype/overtime_slip/overtime_slip.py:485
+#: hrms/hr/doctype/overtime_slip/overtime_slip.py:484
 msgid "Overtime Slip created for {0} employee(s)"
 msgstr "Obračun prekovremenog rada je kreiran za {0} zaposlena lica"
 
@@ -7505,11 +7548,11 @@ msgstr "Podnošenje obračuna prekovremenog rada je u redu čekanja. Može potra
 msgid "Overtime Slip:{0} has been created between {1} and {2}"
 msgstr "Obračun prekovremenog rada: {0} je kreiran između {1} i {2}"
 
-#: hrms/hr/doctype/overtime_slip/overtime_slip.py:487
+#: hrms/hr/doctype/overtime_slip/overtime_slip.py:486
 msgid "Overtime Slips Created"
 msgstr "Kreirani obračuni prekovremenog rada"
 
-#: hrms/hr/doctype/overtime_slip/overtime_slip.py:519
+#: hrms/hr/doctype/overtime_slip/overtime_slip.py:518
 msgid "Overtime Slips submitted for {0} employee(s)"
 msgstr "Podneti obračuni prekovremenog rada za {0} zaposlenih lica"
 
@@ -7609,6 +7652,10 @@ msgstr "Politika lozinki ne sme sadržati razmake ili uzastopne crtice. Format �
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.py:50
 msgid "Password policy for Salary Slips is not set"
 msgstr "Politika lozinki za obračunski listić nije postavljena"
+
+#: frontend/src/views/ForgotPassword.vue:74
+msgid "Password reset link has been sent to your email."
+msgstr ""
 
 #. Label of the pay_details_tab (Tab Break) field in DocType 'Job Opening'
 #. Label of the pay_details_section (Section Break) field in DocType 'Job
@@ -7888,7 +7935,7 @@ msgstr "Upitnici na čekanju"
 msgid "Percent Deduction"
 msgstr "Odbitak u procentima"
 
-#: hrms/payroll/report/employee_ctc_break_up/employee_ctc_break_up.py:250
+#: hrms/payroll/report/employee_ctc_break_up/employee_ctc_break_up.py:252
 msgid "Percent of CTC (%)"
 msgstr ""
 
@@ -7926,7 +7973,7 @@ msgstr "Molimo Vas da omogućite automatsku evidenciju prisustva i završite pos
 msgid "Please Select Company First"
 msgstr "Molimo Vas da prvo izaberete kompaniju"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:920
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:907
 msgid "Please assign a Salary Structure for Employee {0} applicable from or before {1} first"
 msgstr "Molimo Vas da prvo dodelite strukturu zarade zaposlenom licu {0} koja važi od ili pre {1}"
 
@@ -7946,9 +7993,21 @@ msgstr "Molimo Vas da obrišete zaposleno lice {0} da biste otkazali ovaj dokume
 msgid "Please enable default incoming account before creating Daily Work Summary Group"
 msgstr "Molimo Vas da omogućite podrazumevani dolazni račun pre kreiranja grupe za dnevni izveštaj o radu"
 
+#: frontend/src/views/ForgotPassword.vue:109
+msgid "Please enter a valid email address"
+msgstr "Molimo Vas da unesete važeću imejl adresu"
+
 #: hrms/hr/doctype/staffing_plan/staffing_plan.js:97
 msgid "Please enter the designation"
 msgstr "Molimo Vas da unesete poziciju"
+
+#: frontend/src/views/ForgotPassword.vue:104
+msgid "Please enter your email address"
+msgstr ""
+
+#: frontend/src/views/ChangePassword.vue:107
+msgid "Please fill all fields"
+msgstr ""
 
 #: hrms/hr/doctype/overtime_slip/overtime_slip.js:11
 msgid "Please fill in Employee, Posting Date, and Company before fetching overtime details."
@@ -7958,7 +8017,7 @@ msgstr "Molimo Vas da unesete zaposleno lice, datum knjiženja i kompaniju pre p
 msgid "Please reduce {0} to avoid shift time overlapping with itself"
 msgstr "Molimo Vas da smanjite {0} da biste izbegli preklapanje vremena smene"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:2252
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:2241
 msgid "Please see attachment"
 msgstr "Molimo Vas da pogledate prilog"
 
@@ -8085,7 +8144,7 @@ msgstr "Molimo Vas da postavite komponentu prihoda za vrstu odsustva: {0}."
 msgid "Please set Leave Approver for the Employee: {0}"
 msgstr ""
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:581
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:587
 msgid "Please set Payroll based on in Payroll settings"
 msgstr "Molimo Vas da podesite osnovu za obračun zarade u podešavanjima obračuna zarade"
 
@@ -8102,7 +8161,7 @@ msgstr "Molimo Vas da postavite opseg datuma kraći od 90 dana."
 msgid "Please set account in Salary Component {0}"
 msgstr "Molimo Vas da podesite račun u komponenti zarade {0}"
 
-#: hrms/payroll/report/employee_ctc_break_up/employee_ctc_break_up.py:53
+#: hrms/payroll/report/employee_ctc_break_up/employee_ctc_break_up.py:54
 msgid "Please set cost to company(CTC) for employee {0} in the {1}"
 msgstr ""
 
@@ -8130,7 +8189,7 @@ msgstr "Molimo Vas da podesite šablon evaluacije za sve {0} ili da izaberete š
 msgid "Please set the Company"
 msgstr "Molimo Vas da postavite kompaniju"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:386
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:376
 msgid "Please set the Date Of Joining for employee {0}"
 msgstr "Molimo Vas da postavite datum zaposlenja za zaposleno lice {0}"
 
@@ -8159,7 +8218,7 @@ msgstr "Molimo Vas da postavite {0} za zaposleno lice {1}"
 msgid "Please set {0} for the Employee: {1}"
 msgstr "Molimo Vas da postavite {0} za zaposleno lice: {1}"
 
-#: hrms/payroll/report/employee_ctc_break_up/employee_ctc_break_up.py:310
+#: hrms/payroll/report/employee_ctc_break_up/employee_ctc_break_up.py:312
 msgid "Please set {0} to get CTC report"
 msgstr ""
 
@@ -8184,7 +8243,7 @@ msgstr "Molimo Vas da podelite Vašu povratnu informaciju o obuci klikom na 'Pov
 msgid "Please specify the job applicant to be updated."
 msgstr "Molimo Vas da navedete kandidata za posao koji treba da bude ažuriran."
 
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:192
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:227
 msgid "Please specify {0} and {1} (if any), for the correct tax calculation in future salary slips."
 msgstr "Molimo Vas da navedete {0} i {1} (ukoliko postoje), radi pravilnog obračuna poreza u budućim obračunskim listićima."
 
@@ -8242,8 +8301,8 @@ msgstr "Sprečiti samoodobravanje zahteva za troškove i ukoliko korisnik ima do
 msgid "Prevent self approval for leaves even if user has permissions"
 msgstr "Onemogući samoodobravanje odsustva čak i ukoliko korisnik ima dozvole"
 
-#: hrms/payroll/doctype/salary_structure/salary_structure.js:155
-#: hrms/payroll/doctype/salary_structure/salary_structure.js:193
+#: hrms/payroll/doctype/salary_structure/salary_structure.js:161
+#: hrms/payroll/doctype/salary_structure/salary_structure.js:199
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.js:89
 msgid "Preview Salary Slip"
 msgstr "Pregled obračunskog listića"
@@ -8404,15 +8463,15 @@ msgstr "Svrha i iznos"
 msgid "Purpose of Travel"
 msgstr "Svrha putovanja"
 
-#: frontend/src/views/AppSettings.vue:128
+#: frontend/src/views/AppSettings.vue:152
 msgid "Push Notification permission denied"
 msgstr "Dozvola za obaveštenja je odbijena"
 
-#: frontend/src/views/AppSettings.vue:96
+#: frontend/src/views/AppSettings.vue:121
 msgid "Push notifications disabled"
 msgstr "Obaveštenja su onemogućena"
 
-#: frontend/src/views/AppSettings.vue:80
+#: frontend/src/views/AppSettings.vue:106
 msgid "Push notifications have been disabled on your site"
 msgstr "Obaveštenja su onemogućena na Vašem veb-sajtu"
 
@@ -9010,7 +9069,7 @@ msgstr "Detalji zarade"
 msgid "Salary Expectation"
 msgstr "Očekivana zarada"
 
-#: frontend/src/views/Profile.vue:200
+#: frontend/src/views/Profile.vue:201
 msgid "Salary Information"
 msgstr "Informacije o zaradi"
 
@@ -9117,11 +9176,11 @@ msgstr "Kreiranje obračunskog listića je u redu čekanja. Može potrajati neko
 msgid "Salary Slip not found."
 msgstr "Obračunski listić nije pronađen."
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:420
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:410
 msgid "Salary Slip of employee {0} already created for this period"
 msgstr "Obračunski listić zaposlenog lica {0} je već kreiran za ovaj period"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:426
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:416
 msgid "Salary Slip of employee {0} already created for time sheet {1}"
 msgstr "Obračunski listić zaposlenog lica {0} je već kreiran za vremensku evidenciju {1}"
 
@@ -9184,7 +9243,7 @@ msgstr "Struktura zarade"
 #. Label of a Workspace Sidebar Item
 #: hrms/payroll/doctype/income_tax_slab/income_tax_slab.js:8
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
-#: hrms/payroll/report/employee_ctc_break_up/employee_ctc_break_up.js:34
+#: hrms/payroll/report/employee_ctc_break_up/employee_ctc_break_up.js:51
 #: hrms/payroll/workspace/payroll/payroll.json
 #: hrms/workspace_sidebar/payroll.json
 msgid "Salary Structure Assignment"
@@ -9194,7 +9253,7 @@ msgstr "Dodela strukture zarade"
 msgid "Salary Structure Assignment field"
 msgstr "Polje za dodelu strukture zarade"
 
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:80
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:115
 msgid "Salary Structure Assignment for Employee already exists"
 msgstr "Dodela strukture zarade za zaposleno lice već postoji"
 
@@ -9202,7 +9261,7 @@ msgstr "Dodela strukture zarade za zaposleno lice već postoji"
 msgid "Salary Structure Assignment not found for employee {0} on date {1}"
 msgstr "Dodela strukture zarade nije pronađena za zaposleno lice {0} na datum {1}"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:526
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:519
 msgid "Salary Structure Missing"
 msgstr "Nedostaje struktura zarade"
 
@@ -9214,7 +9273,7 @@ msgstr "Struktura zarade mora biti podneta pre podnošenja {0}"
 msgid "Salary Structure not assigned for employee {0} for date {1}"
 msgstr "Struktura zarade nije dodeljena zaposlenom licu {0} za datum {1}"
 
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:104
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:139
 msgid "Salary Structure {0} does not belong to company {1}"
 msgstr "Struktura zarade {0} ne pripada kompaniji {1}"
 
@@ -9268,7 +9327,7 @@ msgstr "Komponente zarade vrste penzioni fond, dodatni penzioni fond ili kredit 
 msgid "Salary components should be part of the Salary Structure."
 msgstr "Komponenta zarade bi trebalo da bude deo strukture zarade."
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:2736
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:2662
 msgid "Salary slip emails have been enqueued for sending. Check {0} for status."
 msgstr "Imejlovi sa obračunskim listićima su stavljeni u red za slanje. Proverite {0} za status."
 
@@ -9498,6 +9557,10 @@ msgstr "Pošalji podsetnik za intervju"
 msgid "Send Leave Notification"
 msgstr "Pošalji obaveštenje o odsustvu"
 
+#: frontend/src/views/ForgotPassword.vue:45
+msgid "Send Reset Link"
+msgstr ""
+
 #. Label of the sender_copy (Link) field in DocType 'Payroll Settings'
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.json
 msgid "Sender Copy"
@@ -9669,7 +9732,7 @@ msgstr "Istorija dodele smene"
 msgid "Shift Assignment Tool"
 msgstr "Alat za dodelu smene"
 
-#: hrms/hr/doctype/shift_request/shift_request.py:81
+#: hrms/hr/doctype/shift_request/shift_request.py:82
 msgid "Shift Assignment: {0} created for Employee: {1}"
 msgstr "Dodela smene: {0} je kreirana za zaposleno lice: {1}"
 
@@ -9877,7 +9940,7 @@ msgstr "Prikaži stanje odsustva u obračunskom listiću"
 msgid "Show Leaves Of All Department Members In Calendar"
 msgstr "Prikaži odsustva svih članova odeljenja u kalendaru"
 
-#: hrms/payroll/doctype/salary_structure/salary_structure.js:204
+#: hrms/payroll/doctype/salary_structure/salary_structure.js:210
 msgid "Show Salary Slip"
 msgstr "Prikaži obračunski listić"
 
@@ -9889,7 +9952,7 @@ msgstr "Prikazano"
 msgid "Sick Leave"
 msgstr "Bolovanje"
 
-#: hrms/payroll/doctype/salary_structure/salary_structure.js:120
+#: hrms/payroll/doctype/salary_structure/salary_structure.js:126
 msgid "Single Assignment"
 msgstr "Jedna dodela"
 
@@ -9998,7 +10061,7 @@ msgstr "Standardni iznos poreskog oslobođenja"
 msgid "Standard Working Hours"
 msgstr "Standardni radni časovi"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:1890
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:1879
 msgid "Start and end dates not in a valid Payroll Period, cannot calculate {0}."
 msgstr "Početni i krajnji datumi nisu važeći u obračunskom periodu, nije moguće izračunati {0}."
 
@@ -10142,7 +10205,8 @@ msgstr "Sažeti prikaz"
 msgid "Sync {0}"
 msgstr "Sinhronizuj {0}"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:1401
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:1390
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:393
 msgid "Syntax error"
 msgstr "Greška sintakse"
 
@@ -10168,7 +10232,7 @@ msgstr "Porezi i beneficije"
 #. Label of the tax_deducted_till_date (Currency) field in DocType 'Salary
 #. Structure Assignment'
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:196
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:231
 msgid "Tax Deducted Till Date"
 msgstr "Porez odbijen do danas"
 
@@ -10213,7 +10277,7 @@ msgstr "Porez na fleksibilne beneficije"
 #. Label of the taxable_earnings_till_date (Currency) field in DocType 'Salary
 #. Structure Assignment'
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:195
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:230
 msgid "Taxable Earnings Till Date"
 msgstr "Oporezivi prihodi do danas"
 
@@ -10360,7 +10424,7 @@ msgstr "Vreme početka smene u kojem se prijava zaposlenog lica računa kao pris
 msgid "Theory"
 msgstr "Teorija"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:578
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:584
 msgid "There are more holidays than working days this month."
 msgstr "Ovaj mesec ima više praznika nego radnih dana."
 
@@ -10378,7 +10442,7 @@ msgstr "Nema nepopunjenih radnih mesta prema planu osoblja {0}"
 
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:82
 #: hrms/payroll/doctype/employee_incentive/employee_incentive.py:39
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:241
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:457
 msgid "There is no Salary Structure assigned to {0}. First assign a Salary Structure."
 msgstr "Struktura zarade nije dodeljena za {0}. Prvo morate dodeliti strukturu zarade."
 
@@ -10408,15 +10472,18 @@ msgstr "Ovo kompenzaciono odsustvo biće primenjivo od {0}."
 msgid "This employee already has a log with the same timestamp.{0}"
 msgstr "Ovo zaposleno lice već ima evidentiran unos sa istim vremenom.{0}"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:1409
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:1398
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:401
 msgid "This error can be due to invalid formula or condition."
 msgstr "Greška može biti uzrokovana neispravnom formulom ili uslovom."
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:1402
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:1391
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:394
 msgid "This error can be due to invalid syntax."
 msgstr "Greška može biti uzrokovana neispravnom sintaksom."
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:1395
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:1384
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:387
 msgid "This error can be due to missing or deleted field."
 msgstr "Greška može biti uzrokovana nedostajućim ili obrisanim poljem."
 
@@ -10745,7 +10812,7 @@ msgstr "Ukupna otplata zajma"
 msgid "Total Net Pay"
 msgstr "Ukupna neto zarada"
 
-#: hrms/hr/report/employee_hours_utilization_based_on_timesheet/employee_hours_utilization_based_on_timesheet.py:228
+#: hrms/hr/report/employee_hours_utilization_based_on_timesheet/employee_hours_utilization_based_on_timesheet.py:230
 msgid "Total Non-Billed Hours"
 msgstr "Ukupan broj nefakturisanih časova"
 
@@ -10871,7 +10938,7 @@ msgstr "Ukupan ponder za sve {0} mora iznositi 100. Trenutno je {1}%"
 msgid "Total working Days Per Year"
 msgstr "Ukupan broj radnih dana godišnje"
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:263
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:253
 msgid "Total working hours should not be greater than max working hours {0}"
 msgstr "Ukupno radnih časova ne sme biti veće od maksimalnih radnih časova {0}"
 
@@ -11151,7 +11218,7 @@ msgstr "Transakcije koje nisu poravnate"
 msgid "Unsubmitted Appraisals"
 msgstr "Evaluacije koje nisu podnete"
 
-#: hrms/hr/report/employee_hours_utilization_based_on_timesheet/employee_hours_utilization_based_on_timesheet.py:251
+#: hrms/hr/report/employee_hours_utilization_based_on_timesheet/employee_hours_utilization_based_on_timesheet.py:253
 msgid "Untracked Hours"
 msgstr "Časovi koji nisu praćeni"
 
@@ -11204,11 +11271,11 @@ msgstr "Ažuriraj status"
 msgid "Update Tax"
 msgstr "Ažuriraj porez"
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:198
+#: hrms/hr/doctype/attendance_request/attendance_request.py:200
 msgid "Updated Status for Other Half from {0} to {1} for date {2} in the attendance record {3}"
 msgstr ""
 
-#: hrms/hr/doctype/attendance_request/attendance_request.py:181
+#: hrms/hr/doctype/attendance_request/attendance_request.py:183
 msgid "Updated status from {0} to {1} for date {2} in the attendance record {3}"
 msgstr "Status je ažuriran sa {0} na {1} za datum {2} u evidenciji prisustva {3}"
 
@@ -11575,7 +11642,7 @@ msgstr "Niste bili prisutni tokom svih dana u periodu za koji ste podneli zahtev
 msgid "You can not define multiple slabs if you have a slab with no lower and upper limits."
 msgstr "Ne možete definisati više razreda ukoliko već postoji razred bez donjih i gornjih granica."
 
-#: hrms/hr/doctype/shift_request/shift_request.py:102
+#: hrms/hr/doctype/shift_request/shift_request.py:103
 msgid "You can not request for your Default Shift: {0}"
 msgstr "Ne možete tražiti svoju podrazumevanu smenu: {0}"
 
@@ -11587,13 +11654,17 @@ msgstr "Možete planirati najviše do {0} nepopunjenih radnih mesta i budžet {1
 msgid "You can only submit Leave Encashment for a valid encashment amount"
 msgstr "Možete podneti naknadu za neiskorišćeno odsustvo samo uz važeći iznos uplate"
 
-#: hrms/api/__init__.py:741
+#: hrms/api/__init__.py:751
 msgid "You can only upload JPG, PNG, PDF, TXT or Microsoft documents."
 msgstr "Možete otpremiti isključivo JPG, PNG, PDF, TXT ili Majkrosoft dokumenta."
 
 #: hrms/payroll/doctype/payroll_correction/payroll_correction.py:78
 msgid "You cannot reverse more than the total LWP days {0}. You have already reversed {1} days for this employee."
 msgstr "Nije moguće stornirati više od ukupnog broja dana odsustva bez naknade {0}. Već ste stornirali {1} dana za ovo zaposleno lice."
+
+#: hrms/hr/doctype/shift_request/shift_request.py:165
+msgid "You do not have permission to change the Status of a Shift Request."
+msgstr ""
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:458
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:621
@@ -11644,7 +11715,11 @@ msgstr "Bili ste prisutni samo polovinu radnog dana {}. Nije moguće podneti zah
 msgid "Your Interview session is rescheduled from {0} {1} - {2} to {3} {4} - {5}"
 msgstr "Vaš intervju je pomeren sa {0} {1} - {2} na {3} {4} - {5}"
 
-#: frontend/src/views/Login.vue:63
+#: frontend/src/views/ChangePassword.vue:85
+msgid "Your password has been updated."
+msgstr ""
+
+#: frontend/src/views/Login.vue:22
 msgid "Your password has expired. Please reset your password to continue"
 msgstr "Vaša lozinka je istekla. Molimo Vas da je resetujete kako biste nastavili"
 
@@ -11680,7 +11755,7 @@ msgstr "kreirano"
 msgid "here"
 msgstr "ovde"
 
-#: frontend/src/views/Login.vue:16
+#: frontend/src/views/Login.vue:46
 msgid "johndoe@mail.com"
 msgstr "petarpetrovic@mail.com"
 
@@ -11743,7 +11818,7 @@ msgstr "{0} i {1}"
 msgid "{0} & {1} more"
 msgstr "{0} i još {1}"
 
-#: hrms/hr/doctype/overtime_slip/overtime_slip.py:513
+#: hrms/hr/doctype/overtime_slip/overtime_slip.py:512
 msgid "{0} : {1}"
 msgstr "{0} : {1}"
 
@@ -11767,7 +11842,7 @@ msgstr "{0} nedostaje"
 msgid "{0} Row #{1}: Formula is set but {2} is disabled for the Salary Component {3}."
 msgstr "{0} Red #{1}: Formula je postavljena, ali je {2} onemogućeno za komponentu zarade {3}."
 
-#: hrms/payroll/doctype/salary_structure/salary_structure.js:319
+#: hrms/payroll/doctype/salary_structure/salary_structure.js:325
 msgid "{0} Row #{1}: {2} needs to be enabled for the formula to be considered."
 msgstr "{0} Red#{1}: {2} mora biti omogućeno da bi se formula uzela u obzir."
 
@@ -11854,7 +11929,7 @@ msgstr "{0} odsustva su ručno dodeljena od strane {1} na {2}"
 msgid "{0} must be submitted"
 msgstr "{0} mora biti podneto"
 
-#: hrms/hr/doctype/goal/goal.py:221
+#: hrms/hr/doctype/goal/goal.py:223
 msgid "{0} of {1} Completed"
 msgstr "{0} od {1} završeno"
 
@@ -11890,7 +11965,7 @@ msgstr "{0} {1} {2}?"
 msgid "{0}. Check error log for more details."
 msgstr "{0}. Proverite evidenciju grešaka za više detalja."
 
-#: hrms/payroll/doctype/salary_slip/salary_slip.py:2286
+#: hrms/payroll/doctype/salary_slip/salary_slip.py:2275
 msgid "{0}: Employee email not found, hence email not sent"
 msgstr "{0}: Imejl zaposlenog lica nije pronađen, zbog čega imejl nije ni poslat"
 
