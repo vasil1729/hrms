@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2026-06-14 10:34+0000\n"
-"PO-Revision-Date: 2026-06-15 18:55\n"
+"POT-Creation-Date: 2026-06-21 10:42+0000\n"
+"PO-Revision-Date: 2026-06-22 20:41\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Serbian (Latin)\n"
 "MIME-Version: 1.0\n"
@@ -601,15 +601,15 @@ msgstr "Vrsta korekcije"
 msgid "Advance"
 msgstr "Akontacija"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:78
+#: hrms/hr/doctype/employee_advance/employee_advance.py:85
 msgid "Advance Account Required"
 msgstr "Akontacioni račun je obavezan"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:82
+#: hrms/hr/doctype/employee_advance/employee_advance.py:89
 msgid "Advance Account is mandatory. Please set the {0} in the Company {1} and submit this document."
 msgstr "Akontacioni račun je obavezan. Molimo Vas da podesite {0} u kompaniji {1} i podnesete ovaj dokument."
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:125
+#: hrms/hr/doctype/employee_advance/employee_advance.py:132
 msgid "Advance Account {} currency should be same as Salary Currency of Employee {}. Please select same currency Advance Account"
 msgstr "Valuta akontacionog računa {} mora biti ista kao valuta zarade zaposlenog lica. Molimo Vas da izaberete akontacioni račun sa istom valutom"
 
@@ -1580,7 +1580,7 @@ msgstr "Čeka se odgovor"
 msgid "Backdated Leave Application is restricted. Please set the {} in {}"
 msgstr "Zahtevi za odsustvo sa retroaktivnim datumima su ograničeni. Molimo Vas da postavite {} u {}"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:281
+#: hrms/hr/doctype/expense_claim/expense_claim.js:282
 msgid "Bank Entries"
 msgstr "Bankarsko knjiženje"
 
@@ -2006,7 +2006,7 @@ msgid "Claim an Expense"
 msgstr "Zahtevaj nadoknadu troškova"
 
 #. Option for the 'Status' (Select) field in DocType 'Employee Advance'
-#: frontend/src/views/employee_advance/List.vue:42
+#: frontend/src/views/employee_advance/List.vue:43
 #: hrms/hr/doctype/employee_advance/employee_advance.json
 msgid "Claimed"
 msgstr "Zahtevano"
@@ -2532,7 +2532,7 @@ msgstr "Zaostatak odbitaka"
 msgid "Deduction Reports"
 msgstr "Izveštaji o odbicima"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.js:79
+#: hrms/hr/doctype/employee_advance/employee_advance.js:81
 msgid "Deduction from Salary"
 msgstr "Odbitak od zarade"
 
@@ -2591,10 +2591,6 @@ msgstr "Podrazumevana smena"
 #: frontend/src/components/FileUploaderView.vue:49
 msgid "Delete Attachment"
 msgstr "Obriši prilog"
-
-#: frontend/src/components/FormView.vue:224
-msgid "Delete {0}"
-msgstr "Obriši {0}"
 
 #. Name of a DocType
 #: hrms/hr/doctype/department_approver/department_approver.json
@@ -3385,8 +3381,8 @@ msgstr "Detalji o premeštaju zaposlenog lica"
 msgid "Employee Transfer cannot be submitted before Transfer Date"
 msgstr "Premeštaj zaposlenog lica ne može biti podnet pre datuma premeštaja"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:115
-#: hrms/hr/doctype/employee_advance/employee_advance.py:185
+#: hrms/hr/doctype/employee_advance/employee_advance.py:122
+#: hrms/hr/doctype/employee_advance/employee_advance.py:193
 msgid "Employee advance account {0} should be of type {1}."
 msgstr "Akontacioni račun zaposlenog lica {0} treba da bude vrste {1}."
 
@@ -3695,7 +3691,7 @@ msgid "Error downloading PDF"
 msgstr "Greška prilikom preuzimanja PDF"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1397
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:400
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:401
 msgid "Error in formula or condition"
 msgstr "Greška u formuli ili uslovu"
 
@@ -5501,7 +5497,7 @@ msgstr "Nevažeći termini smene"
 msgid "Invalid employee filter: {0}"
 msgstr ""
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:879
+#: hrms/hr/doctype/expense_claim/expense_claim.py:883
 msgid "Invalid parameters provided. Please pass the required arguments."
 msgstr "Prosleđeni su nevažeći parametri. Molimo Vas da uneste neophodne argumente."
 
@@ -6752,7 +6748,7 @@ msgstr "Minimalni broj godina za otpremninu"
 msgid "Minimum calendar days required since Date of Joining to apply for this leave"
 msgstr ""
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:90
+#: hrms/hr/doctype/employee_advance/employee_advance.py:97
 msgid "Missing Advance Account"
 msgstr "Nedostaje akontacioni račun"
 
@@ -6846,7 +6842,7 @@ msgstr "Moji zahtevi"
 
 #: hrms/payroll/doctype/income_tax_slab/income_tax_slab.py:123
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1383
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:386
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:387
 msgid "Name error"
 msgstr "Naziv greške"
 
@@ -6933,7 +6929,7 @@ msgstr ""
 msgid "New shift assignments will be created after this date."
 msgstr "Nova dodela smene biće kreirana nakon ovog datuma."
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:380
+#: hrms/hr/doctype/employee_advance/employee_advance.py:394
 msgid "No Bank/Cash Account found for currency {0}. Please create one under company {1}."
 msgstr "Nije pronađen tekući račun/blagajna za valutu {0}. Molimo Vas da ga kreirate u okviru kompanije {1}."
 
@@ -7635,7 +7631,7 @@ msgid "Partially Sponsored, Require Partial Funding"
 msgstr "Delimično sponzorisano, neophodan je dodatni deo sredstava"
 
 #. Option for the 'Status' (Select) field in DocType 'Employee Advance'
-#: frontend/src/views/employee_advance/List.vue:42
+#: frontend/src/views/employee_advance/List.vue:43
 #: hrms/hr/doctype/employee_advance/employee_advance.json
 msgid "Partly Claimed and Returned"
 msgstr "Delimično potraživano i vraćeno"
@@ -8177,7 +8173,7 @@ msgstr "Molimo Vas da postavite podrazumevani šablon za obaveštenje o statusu 
 msgid "Please set employee's total cost to company to see CTC breakup."
 msgstr ""
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:74
+#: hrms/hr/doctype/employee_advance/employee_advance.py:81
 msgid "Please set the Advance Account {0} or in {1}"
 msgstr "Molimo Vas da podesite akontacioni račun {0} ili u {1}"
 
@@ -8185,7 +8181,7 @@ msgstr "Molimo Vas da podesite akontacioni račun {0} ili u {1}"
 msgid "Please set the Appraisal Template for all the {0} or select the template in the Employees table below."
 msgstr "Molimo Vas da podesite šablon evaluacije za sve {0} ili da izaberete šablon u tabeli zaposlenih lica ispod."
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:514
+#: hrms/hr/doctype/expense_claim/expense_claim.js:515
 msgid "Please set the Company"
 msgstr "Molimo Vas da postavite kompaniju"
 
@@ -8864,7 +8860,7 @@ msgstr "Ponovni pokušaj je uspeo"
 msgid "Retrying allocations"
 msgstr "Pokušaj ponovne dodele"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:231
+#: hrms/hr/doctype/employee_advance/employee_advance.py:239
 msgid "Return amount cannot be greater than unclaimed amount"
 msgstr "Iznos za povraćaj ne može biti veći od neiskorišćenog iznosa"
 
@@ -8942,7 +8938,7 @@ msgstr "Red #{0}: Komponenta {1} ima omogućene opcije {2} i {3}."
 msgid "Row #{0}: Timesheet amount will overwrite the Earning component amount for the Salary Component {1}"
 msgstr "Red #{0}: Iznos iz evidencije vremena će zameniti iznos komponente prihoda sa iznosom komponente zarade {1}"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:847
+#: hrms/hr/doctype/expense_claim/expense_claim.py:851
 msgid "Row No {0}: Amount cannot be greater than the Outstanding Amount against Expense Claim {1}. Outstanding Amount is {2}"
 msgstr "Red broj {0}: Iznos ne može biti veći od neizmirenog iznosa u zahtevu za nadoknadu troškova {1}. Neizmireni iznos je {2}"
 
@@ -8958,7 +8954,7 @@ msgstr "Red {0}# isplaćeni iznos ne može biti veći od iznosa za isplatu nakna
 msgid "Row {0}# Paid Amount cannot be greater than Total amount"
 msgstr "Red {0}# isplaćeni iznos ne može biti veći od ukupnog iznosa"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:223
+#: hrms/hr/doctype/employee_advance/employee_advance.py:231
 msgid "Row {0}# Paid Amount cannot be greater than requested advance amount"
 msgstr "Red {0}# isplaćeni iznos ne može biti veći od zahtevanog iznosa akontacije"
 
@@ -9424,7 +9420,7 @@ msgstr "Izaberite uslove i odredbe"
 msgid "Select Users"
 msgstr "Izaberite korisnike"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:559
+#: hrms/hr/doctype/expense_claim/expense_claim.js:560
 msgid "Select an employee to get the employee advance."
 msgstr "Izaberite zaposleno lice za isplatu akontacije."
 
@@ -9482,7 +9478,7 @@ msgstr "Izaberite vrstu odsustva za koju zaposleno lice želi da aplicira, kao �
 msgid "Select your Leave Approver i.e. the person who approves or rejects your leaves."
 msgstr "Izaberite odobravaoca odsustva, tj. osobu koja odobrava ili odbija Vaše zahteve za odsustvo."
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:594
+#: hrms/hr/doctype/expense_claim/expense_claim.js:595
 msgid "Selected employee advance is not of employee {0}"
 msgstr "Izabrana akontacija zaposlenog lica ne pripada zaposlenom licu {0}"
 
@@ -10206,7 +10202,7 @@ msgid "Sync {0}"
 msgstr "Sinhronizuj {0}"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1390
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:393
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:394
 msgid "Syntax error"
 msgstr "Greška sintakse"
 
@@ -10442,7 +10438,7 @@ msgstr "Nema nepopunjenih radnih mesta prema planu osoblja {0}"
 
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:82
 #: hrms/payroll/doctype/employee_incentive/employee_incentive.py:39
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:457
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:458
 msgid "There is no Salary Structure assigned to {0}. First assign a Salary Structure."
 msgstr "Struktura zarade nije dodeljena za {0}. Prvo morate dodeliti strukturu zarade."
 
@@ -10473,17 +10469,17 @@ msgid "This employee already has a log with the same timestamp.{0}"
 msgstr "Ovo zaposleno lice već ima evidentiran unos sa istim vremenom.{0}"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1398
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:401
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:402
 msgid "This error can be due to invalid formula or condition."
 msgstr "Greška može biti uzrokovana neispravnom formulom ili uslovom."
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1391
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:394
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:395
 msgid "This error can be due to invalid syntax."
 msgstr "Greška može biti uzrokovana neispravnom sintaksom."
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1384
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:387
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:388
 msgid "This error can be due to missing or deleted field."
 msgstr "Greška može biti uzrokovana nedostajućim ili obrisanim poljem."
 
@@ -11751,7 +11747,7 @@ msgstr "kreiraj/podnesi"
 msgid "created"
 msgstr "kreirano"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:75
+#: hrms/hr/doctype/employee_advance/employee_advance.py:82
 msgid "here"
 msgstr "ovde"
 
