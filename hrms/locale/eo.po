@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2026-06-14 10:34+0000\n"
-"PO-Revision-Date: 2026-06-15 18:55\n"
+"POT-Creation-Date: 2026-06-21 10:42+0000\n"
+"PO-Revision-Date: 2026-06-22 20:41\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Esperanto\n"
 "MIME-Version: 1.0\n"
@@ -576,15 +576,15 @@ msgstr "crwdns159436:0crwdne159436:0"
 msgid "Advance"
 msgstr "crwdns140906:0crwdne140906:0"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:78
+#: hrms/hr/doctype/employee_advance/employee_advance.py:85
 msgid "Advance Account Required"
 msgstr "crwdns194872:0crwdne194872:0"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:82
+#: hrms/hr/doctype/employee_advance/employee_advance.py:89
 msgid "Advance Account is mandatory. Please set the {0} in the Company {1} and submit this document."
 msgstr "crwdns194874:0{0}crwdnd194874:0{1}crwdne194874:0"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:125
+#: hrms/hr/doctype/employee_advance/employee_advance.py:132
 msgid "Advance Account {} currency should be same as Salary Currency of Employee {}. Please select same currency Advance Account"
 msgstr "crwdns161214:0crwdne161214:0"
 
@@ -1555,7 +1555,7 @@ msgstr "crwdns141076:0crwdne141076:0"
 msgid "Backdated Leave Application is restricted. Please set the {} in {}"
 msgstr "crwdns105424:0crwdne105424:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:281
+#: hrms/hr/doctype/expense_claim/expense_claim.js:282
 msgid "Bank Entries"
 msgstr "crwdns105434:0crwdne105434:0"
 
@@ -1980,7 +1980,7 @@ msgid "Claim an Expense"
 msgstr "crwdns151174:0crwdne151174:0"
 
 #. Option for the 'Status' (Select) field in DocType 'Employee Advance'
-#: frontend/src/views/employee_advance/List.vue:42
+#: frontend/src/views/employee_advance/List.vue:43
 #: hrms/hr/doctype/employee_advance/employee_advance.json
 msgid "Claimed"
 msgstr "crwdns141146:0crwdne141146:0"
@@ -2506,7 +2506,7 @@ msgstr "crwdns159498:0crwdne159498:0"
 msgid "Deduction Reports"
 msgstr "crwdns106118:0crwdne106118:0"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.js:79
+#: hrms/hr/doctype/employee_advance/employee_advance.js:81
 msgid "Deduction from Salary"
 msgstr "crwdns106120:0crwdne106120:0"
 
@@ -2565,10 +2565,6 @@ msgstr "crwdns141288:0crwdne141288:0"
 #: frontend/src/components/FileUploaderView.vue:49
 msgid "Delete Attachment"
 msgstr "crwdns151186:0crwdne151186:0"
-
-#: frontend/src/components/FormView.vue:224
-msgid "Delete {0}"
-msgstr "crwdns151188:0{0}crwdne151188:0"
 
 #. Name of a DocType
 #: hrms/hr/doctype/department_approver/department_approver.json
@@ -3359,8 +3355,8 @@ msgstr "crwdns141392:0crwdne141392:0"
 msgid "Employee Transfer cannot be submitted before Transfer Date"
 msgstr "crwdns106872:0crwdne106872:0"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:115
-#: hrms/hr/doctype/employee_advance/employee_advance.py:185
+#: hrms/hr/doctype/employee_advance/employee_advance.py:122
+#: hrms/hr/doctype/employee_advance/employee_advance.py:193
 msgid "Employee advance account {0} should be of type {1}."
 msgstr "crwdns159514:0{0}crwdnd159514:0{1}crwdne159514:0"
 
@@ -3669,7 +3665,7 @@ msgid "Error downloading PDF"
 msgstr "crwdns159532:0crwdne159532:0"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1397
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:400
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:401
 msgid "Error in formula or condition"
 msgstr "crwdns107014:0crwdne107014:0"
 
@@ -5475,7 +5471,7 @@ msgstr "crwdns152551:0crwdne152551:0"
 msgid "Invalid employee filter: {0}"
 msgstr "crwdns202005:0{0}crwdne202005:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:879
+#: hrms/hr/doctype/expense_claim/expense_claim.py:883
 msgid "Invalid parameters provided. Please pass the required arguments."
 msgstr "crwdns152402:0crwdne152402:0"
 
@@ -6726,7 +6722,7 @@ msgstr "crwdns141912:0crwdne141912:0"
 msgid "Minimum calendar days required since Date of Joining to apply for this leave"
 msgstr "crwdns201807:0crwdne201807:0"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:90
+#: hrms/hr/doctype/employee_advance/employee_advance.py:97
 msgid "Missing Advance Account"
 msgstr "crwdns159590:0crwdne159590:0"
 
@@ -6820,7 +6816,7 @@ msgstr "crwdns151276:0crwdne151276:0"
 
 #: hrms/payroll/doctype/income_tax_slab/income_tax_slab.py:123
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1383
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:386
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:387
 msgid "Name error"
 msgstr "crwdns108470:0crwdne108470:0"
 
@@ -6907,7 +6903,7 @@ msgstr "crwdns202397:0crwdne202397:0"
 msgid "New shift assignments will be created after this date."
 msgstr "crwdns148538:0crwdne148538:0"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:380
+#: hrms/hr/doctype/employee_advance/employee_advance.py:394
 msgid "No Bank/Cash Account found for currency {0}. Please create one under company {1}."
 msgstr "crwdns161228:0{0}crwdnd161228:0{1}crwdne161228:0"
 
@@ -7609,7 +7605,7 @@ msgid "Partially Sponsored, Require Partial Funding"
 msgstr "crwdns142052:0crwdne142052:0"
 
 #. Option for the 'Status' (Select) field in DocType 'Employee Advance'
-#: frontend/src/views/employee_advance/List.vue:42
+#: frontend/src/views/employee_advance/List.vue:43
 #: hrms/hr/doctype/employee_advance/employee_advance.json
 msgid "Partly Claimed and Returned"
 msgstr "crwdns142054:0crwdne142054:0"
@@ -8151,7 +8147,7 @@ msgstr "crwdns109008:0crwdne109008:0"
 msgid "Please set employee's total cost to company to see CTC breakup."
 msgstr "crwdns201913:0crwdne201913:0"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:74
+#: hrms/hr/doctype/employee_advance/employee_advance.py:81
 msgid "Please set the Advance Account {0} or in {1}"
 msgstr "crwdns194910:0{0}crwdnd194910:0{1}crwdne194910:0"
 
@@ -8159,7 +8155,7 @@ msgstr "crwdns194910:0{0}crwdnd194910:0{1}crwdne194910:0"
 msgid "Please set the Appraisal Template for all the {0} or select the template in the Employees table below."
 msgstr "crwdns109010:0{0}crwdne109010:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:514
+#: hrms/hr/doctype/expense_claim/expense_claim.js:515
 msgid "Please set the Company"
 msgstr "crwdns109012:0crwdne109012:0"
 
@@ -8838,7 +8834,7 @@ msgstr "crwdns160894:0crwdne160894:0"
 msgid "Retrying allocations"
 msgstr "crwdns160896:0crwdne160896:0"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:231
+#: hrms/hr/doctype/employee_advance/employee_advance.py:239
 msgid "Return amount cannot be greater than unclaimed amount"
 msgstr "crwdns109350:0crwdne109350:0"
 
@@ -8916,7 +8912,7 @@ msgstr "crwdns109390:0#{0}crwdnd109390:0{1}crwdnd109390:0{2}crwdnd109390:0{3}crw
 msgid "Row #{0}: Timesheet amount will overwrite the Earning component amount for the Salary Component {1}"
 msgstr "crwdns109392:0#{0}crwdnd109392:0{1}crwdne109392:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:847
+#: hrms/hr/doctype/expense_claim/expense_claim.py:851
 msgid "Row No {0}: Amount cannot be greater than the Outstanding Amount against Expense Claim {1}. Outstanding Amount is {2}"
 msgstr "crwdns109394:0{0}crwdnd109394:0{1}crwdnd109394:0{2}crwdne109394:0"
 
@@ -8932,7 +8928,7 @@ msgstr "crwdns152565:0{0}crwdne152565:0"
 msgid "Row {0}# Paid Amount cannot be greater than Total amount"
 msgstr "crwdns109398:0{0}crwdne109398:0"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:223
+#: hrms/hr/doctype/employee_advance/employee_advance.py:231
 msgid "Row {0}# Paid Amount cannot be greater than requested advance amount"
 msgstr "crwdns109400:0{0}crwdne109400:0"
 
@@ -9398,7 +9394,7 @@ msgstr "crwdns142362:0crwdne142362:0"
 msgid "Select Users"
 msgstr "crwdns142364:0crwdne142364:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:559
+#: hrms/hr/doctype/expense_claim/expense_claim.js:560
 msgid "Select an employee to get the employee advance."
 msgstr "crwdns109588:0crwdne109588:0"
 
@@ -9456,7 +9452,7 @@ msgstr "crwdns109604:0crwdne109604:0"
 msgid "Select your Leave Approver i.e. the person who approves or rejects your leaves."
 msgstr "crwdns109606:0crwdne109606:0"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:594
+#: hrms/hr/doctype/expense_claim/expense_claim.js:595
 msgid "Selected employee advance is not of employee {0}"
 msgstr "crwdns200148:0{0}crwdne200148:0"
 
@@ -10180,7 +10176,7 @@ msgid "Sync {0}"
 msgstr "crwdns142490:0{0}crwdne142490:0"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1390
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:393
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:394
 msgid "Syntax error"
 msgstr "crwdns109990:0crwdne109990:0"
 
@@ -10416,7 +10412,7 @@ msgstr "crwdns110082:0{0}crwdne110082:0"
 
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:82
 #: hrms/payroll/doctype/employee_incentive/employee_incentive.py:39
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:457
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:458
 msgid "There is no Salary Structure assigned to {0}. First assign a Salary Structure."
 msgstr "crwdns162092:0{0}crwdne162092:0"
 
@@ -10447,17 +10443,17 @@ msgid "This employee already has a log with the same timestamp.{0}"
 msgstr "crwdns110094:0{0}crwdne110094:0"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1398
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:401
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:402
 msgid "This error can be due to invalid formula or condition."
 msgstr "crwdns110096:0crwdne110096:0"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1391
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:394
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:395
 msgid "This error can be due to invalid syntax."
 msgstr "crwdns110098:0crwdne110098:0"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1384
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:387
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:388
 msgid "This error can be due to missing or deleted field."
 msgstr "crwdns110100:0crwdne110100:0"
 
@@ -11725,7 +11721,7 @@ msgstr "crwdns142756:0crwdne142756:0"
 msgid "created"
 msgstr "crwdns142758:0crwdne142758:0"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:75
+#: hrms/hr/doctype/employee_advance/employee_advance.py:82
 msgid "here"
 msgstr "crwdns194914:0crwdne194914:0"
 
