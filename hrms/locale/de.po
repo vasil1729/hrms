@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2026-06-21 10:42+0000\n"
-"PO-Revision-Date: 2026-06-22 20:40\n"
+"PO-Revision-Date: 2026-06-23 20:42\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -250,7 +250,26 @@ msgid "<h3>Help</h3>\n\n"
 "<pre><code>Condition: employment_type==\"Intern\"</code></pre>\n"
 "<pre><code>Amount: 1000</code></pre></li>\n"
 "</ol>"
-msgstr ""
+msgstr "<h3>Hilfe</h3>\n\n"
+"<p>Hinweise:</p>\n\n"
+"<ol>\n"
+"<li>Verwenden Sie das Feld <code>base</code>, um das Grundgehalt des Mitarbeiters zu nutzen</li>\n"
+"<li>Verwenden Sie Abkürzungen der Gehaltskomponenten in Bedingungen und Formeln. <code>BS = Grundgehalt</code></li>\n"
+"<li>Verwenden Sie den Feldnamen für Mitarbeiterdetails in Bedingungen und Formeln. <code>Employment Type = employment_type</code><code>Branch = branch</code></li>\n"
+"<li>Verwenden Sie den Feldnamen aus dem Gehaltszettel in Bedingungen und Formeln. <code>Payment Days = payment_days</code><code>Leave without pay = leave_without_pay</code></li>\n"
+"<li>Ein direkter Betrag kann ebenfalls basierend auf einer Bedingung eingegeben werden. Siehe Beispiel 3</li></ol>\n\n"
+"<h4>Beispiele</h4>\n"
+"<ol>\n"
+"<li>Berechnung des Grundgehalts basierend auf <code>base</code>\n"
+"<pre><code>Bedingung: base &lt; 10000</code></pre>\n"
+"<pre><code>Formel: base * .2</code></pre></li>\n"
+"<li>Berechnung der HRA basierend auf dem Grundgehalt <code>BS</code> \n"
+"<pre><code>Bedingung: BS &gt; 2000</code></pre>\n"
+"<pre><code>Formel: BS * .1</code></pre></li>\n"
+"<li>Berechnung der TDS basierend auf Beschäftigungsart <code>employment_type</code> \n"
+"<pre><code>Bedingung: employment_type==\"Intern\"</code></pre>\n"
+"<pre><code>Betrag: 1000</code></pre></li>\n"
+"</ol>"
 
 #. Content of the 'html_6' (HTML) field in DocType 'Taxable Salary Slab'
 #: hrms/payroll/doctype/taxable_salary_slab/taxable_salary_slab.json
@@ -3689,7 +3708,7 @@ msgstr "Fehler beim Aktualisieren von {0}"
 
 #: hrms/payroll/utils.py:134
 msgid "Error while evaluating the {doctype} {doclink} at row {row_id}. <br><br> <b>Error:</b> {error} <br><br> <b>Hint:</b> {description}"
-msgstr ""
+msgstr "Fehler beim Auswerten von {doctype} {doclink} in Zeile {row_id}. <br><br> <b>Fehler:</b> {error} <br><br> <b>Hinweis:</b> {description}"
 
 #. Label of the estimated_cost_per_position (Currency) field in DocType
 #. 'Staffing Plan Detail'
@@ -4642,7 +4661,7 @@ msgstr "Gratifikation"
 #. Name of a DocType
 #: hrms/payroll/doctype/gratuity_applicable_component/gratuity_applicable_component.json
 msgid "Gratuity Applicable Component"
-msgstr ""
+msgstr "Abfindungsrelevante Komponente"
 
 #. Label of the gratuity_rule (Link) field in DocType 'Gratuity'
 #. Name of a DocType
@@ -4654,7 +4673,7 @@ msgstr "Gratifikationsregel"
 #. Name of a DocType
 #: hrms/payroll/doctype/gratuity_rule_slab/gratuity_rule_slab.json
 msgid "Gratuity Rule Slab"
-msgstr ""
+msgstr "Stufe der Abfindungsregel"
 
 #. Label of a Card Break in the Tenure Workspace
 #: hrms/hr/workspace/tenure/tenure.json
@@ -5109,7 +5128,7 @@ msgstr "Anreizbetrag"
 
 #: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:122
 msgid "Include Company Descendants"
-msgstr ""
+msgstr "Tochtergesellschaften einbeziehen"
 
 #. Label of the include_holidays (Check) field in DocType 'Attendance Request'
 #: hrms/hr/doctype/attendance_request/attendance_request.json
@@ -5873,7 +5892,7 @@ msgstr "Späte Einreise"
 #. field in DocType 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "Late Entry & Early Exit Settings for Auto Attendance"
-msgstr ""
+msgstr "Einstellungen für Spätantritt & Frühabgang (Auto-Anwesenheit)"
 
 #: hrms/hr/report/shift_attendance/shift_attendance.py:88
 msgid "Late Entry By"
@@ -6088,7 +6107,7 @@ msgstr "Ledger-Eintrag verlassen"
 
 #: hrms/hr/doctype/leave_ledger_entry/leave_ledger_entry.py:43
 msgid "Leave Ledger Entry's To date needs to be after From date. Currently, From Date is {0} and To Date is {1}"
-msgstr ""
+msgstr "Das „Bis-Datum“ des Urlaubskonto-Eintrags muss nach dem „Von-Datum“ liegen. Aktuell ist das Von-Datum {0} und das Bis-Datum {1}"
 
 #. Label of the leave_period (Link) field in DocType 'Leave Allocation'
 #. Option for the 'Dates Based On' (Select) field in DocType 'Leave Control
@@ -10351,7 +10370,7 @@ msgstr "Die Tage zwischen {0} und {1} sind keine gültigen Feiertage."
 
 #: hrms/setup.py:132
 msgid "The first Approver in the list will be set as the default Approver."
-msgstr ""
+msgstr "Der erste Genehmiger in der Liste wird automatisch als Standard festgelegt."
 
 #: hrms/hr/doctype/leave_type/leave_type.py:84
 msgid "The fraction of Daily Salary per Leave should be between 0 and 1"
@@ -11738,7 +11757,7 @@ msgstr "maxmustermann@email.de"
 #. Label of the modify_half_day_status (Check) field in DocType 'Attendance'
 #: hrms/hr/doctype/attendance/attendance.json
 msgid "modify_half_day_status"
-msgstr ""
+msgstr "Halbtagsstatus ändern"
 
 #: hrms/hr/doctype/department_approver/department_approver.py:103
 msgid "or for the Employee's Department: {0}"
