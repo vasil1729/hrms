@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2026-06-14 10:34+0000\n"
-"PO-Revision-Date: 2026-06-15 18:54\n"
+"POT-Creation-Date: 2026-06-21 10:42+0000\n"
+"PO-Revision-Date: 2026-06-22 20:40\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -601,15 +601,15 @@ msgstr "Тип регулировки"
 msgid "Advance"
 msgstr "Улучшение"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:78
+#: hrms/hr/doctype/employee_advance/employee_advance.py:85
 msgid "Advance Account Required"
 msgstr ""
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:82
+#: hrms/hr/doctype/employee_advance/employee_advance.py:89
 msgid "Advance Account is mandatory. Please set the {0} in the Company {1} and submit this document."
 msgstr ""
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:125
+#: hrms/hr/doctype/employee_advance/employee_advance.py:132
 msgid "Advance Account {} currency should be same as Salary Currency of Employee {}. Please select same currency Advance Account"
 msgstr "Валюта авансового счета {} должна совпадать с валютой зарплаты сотрудника {}. Выберите ту же валюту для авансового счета"
 
@@ -1580,7 +1580,7 @@ msgstr "Ожидание ответа"
 msgid "Backdated Leave Application is restricted. Please set the {} in {}"
 msgstr "Заявка на отпуск задним числом ограничена. Пожалуйста, установите {} в {}"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:281
+#: hrms/hr/doctype/expense_claim/expense_claim.js:282
 msgid "Bank Entries"
 msgstr "Банковские записи"
 
@@ -2008,7 +2008,7 @@ msgid "Claim an Expense"
 msgstr "Запросить расход"
 
 #. Option for the 'Status' (Select) field in DocType 'Employee Advance'
-#: frontend/src/views/employee_advance/List.vue:42
+#: frontend/src/views/employee_advance/List.vue:43
 #: hrms/hr/doctype/employee_advance/employee_advance.json
 msgid "Claimed"
 msgstr "Получено"
@@ -2534,7 +2534,7 @@ msgstr "Вычет задолженности"
 msgid "Deduction Reports"
 msgstr "Отчеты о вычетах"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.js:79
+#: hrms/hr/doctype/employee_advance/employee_advance.js:81
 msgid "Deduction from Salary"
 msgstr "Вычет из зарплаты"
 
@@ -2593,10 +2593,6 @@ msgstr "Смена по умолчанию"
 #: frontend/src/components/FileUploaderView.vue:49
 msgid "Delete Attachment"
 msgstr "Удалить вложение"
-
-#: frontend/src/components/FormView.vue:224
-msgid "Delete {0}"
-msgstr "Удалить {0}"
 
 #. Name of a DocType
 #: hrms/hr/doctype/department_approver/department_approver.json
@@ -3387,8 +3383,8 @@ msgstr "Подробности перевода сотрудников"
 msgid "Employee Transfer cannot be submitted before Transfer Date"
 msgstr "Перевод сотрудника не может быть подан до даты перевода"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:115
-#: hrms/hr/doctype/employee_advance/employee_advance.py:185
+#: hrms/hr/doctype/employee_advance/employee_advance.py:122
+#: hrms/hr/doctype/employee_advance/employee_advance.py:193
 msgid "Employee advance account {0} should be of type {1}."
 msgstr "Авансовый счет сотрудника {0} должен иметь тип {1}."
 
@@ -3697,7 +3693,7 @@ msgid "Error downloading PDF"
 msgstr "Ошибка загрузки PDF"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1397
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:400
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:401
 msgid "Error in formula or condition"
 msgstr "Ошибка в формуле или условия"
 
@@ -5503,7 +5499,7 @@ msgstr "Недопустимое время смены"
 msgid "Invalid employee filter: {0}"
 msgstr ""
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:879
+#: hrms/hr/doctype/expense_claim/expense_claim.py:883
 msgid "Invalid parameters provided. Please pass the required arguments."
 msgstr "Предоставлены неверные параметры. Пожалуйста, передайте необходимые аргументы."
 
@@ -6754,7 +6750,7 @@ msgstr "Минимальный год для получения пособия"
 msgid "Minimum calendar days required since Date of Joining to apply for this leave"
 msgstr ""
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:90
+#: hrms/hr/doctype/employee_advance/employee_advance.py:97
 msgid "Missing Advance Account"
 msgstr "Отсутствует авансовый счет"
 
@@ -6848,7 +6844,7 @@ msgstr "Мои запросы"
 
 #: hrms/payroll/doctype/income_tax_slab/income_tax_slab.py:123
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1383
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:386
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:387
 msgid "Name error"
 msgstr "Ошибка имени"
 
@@ -6935,7 +6931,7 @@ msgstr ""
 msgid "New shift assignments will be created after this date."
 msgstr "Новые сменные назначения будут созданы после этой даты."
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:380
+#: hrms/hr/doctype/employee_advance/employee_advance.py:394
 msgid "No Bank/Cash Account found for currency {0}. Please create one under company {1}."
 msgstr "Не найден банковский/денежный счёт для валюты {0}. Создайте его для компании {1}."
 
@@ -7637,7 +7633,7 @@ msgid "Partially Sponsored, Require Partial Funding"
 msgstr "Частично спонсируется, требуется частичное финансирование"
 
 #. Option for the 'Status' (Select) field in DocType 'Employee Advance'
-#: frontend/src/views/employee_advance/List.vue:42
+#: frontend/src/views/employee_advance/List.vue:43
 #: hrms/hr/doctype/employee_advance/employee_advance.json
 msgid "Partly Claimed and Returned"
 msgstr "Частично востребовано и возвращено"
@@ -8179,7 +8175,7 @@ msgstr "Установите шаблон по умолчанию для уве�
 msgid "Please set employee's total cost to company to see CTC breakup."
 msgstr ""
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:74
+#: hrms/hr/doctype/employee_advance/employee_advance.py:81
 msgid "Please set the Advance Account {0} or in {1}"
 msgstr ""
 
@@ -8187,7 +8183,7 @@ msgstr ""
 msgid "Please set the Appraisal Template for all the {0} or select the template in the Employees table below."
 msgstr "Пожалуйста, установите Шаблон оценки для всех {0} или выберите шаблон в таблице «Сотрудники» ниже."
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:514
+#: hrms/hr/doctype/expense_claim/expense_claim.js:515
 msgid "Please set the Company"
 msgstr "Пожалуйста, укажите компанию"
 
@@ -8866,7 +8862,7 @@ msgstr "Повтор успешен"
 msgid "Retrying allocations"
 msgstr "Повторные попытки распределения"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:231
+#: hrms/hr/doctype/employee_advance/employee_advance.py:239
 msgid "Return amount cannot be greater than unclaimed amount"
 msgstr "Сумма возврата не может быть больше невостребованной суммы"
 
@@ -8944,7 +8940,7 @@ msgstr "Строка #{0}: компонент {1} имеет включенны�
 msgid "Row #{0}: Timesheet amount will overwrite the Earning component amount for the Salary Component {1}"
 msgstr "Строка #{0}: Сумма табеля учета рабочего времени заменит сумму компонента заработка для компонента зарплаты {1}"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:847
+#: hrms/hr/doctype/expense_claim/expense_claim.py:851
 msgid "Row No {0}: Amount cannot be greater than the Outstanding Amount against Expense Claim {1}. Outstanding Amount is {2}"
 msgstr "Номер строки {0}: Сумма не может быть больше суммы задолженности по претензии на возмещение расходов {1}. Сумма задолженности составляет {2}"
 
@@ -8960,7 +8956,7 @@ msgstr "Строка {0}# Сумма оплаты не может быть бо�
 msgid "Row {0}# Paid Amount cannot be greater than Total amount"
 msgstr "Строка {0}# Оплаченная сумма не может быть больше общей суммы"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:223
+#: hrms/hr/doctype/employee_advance/employee_advance.py:231
 msgid "Row {0}# Paid Amount cannot be greater than requested advance amount"
 msgstr "Строка {0}# Оплаченная сумма не может быть больше запрошенной суммы аванса"
 
@@ -9426,7 +9422,7 @@ msgstr "Выберите положения и условия"
 msgid "Select Users"
 msgstr "Выбрать пользователей"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:559
+#: hrms/hr/doctype/expense_claim/expense_claim.js:560
 msgid "Select an employee to get the employee advance."
 msgstr "Выберите сотрудника, чтобы получить аванс."
 
@@ -9484,7 +9480,7 @@ msgstr "Выберите тип отпуска, на который хочет �
 msgid "Select your Leave Approver i.e. the person who approves or rejects your leaves."
 msgstr "Выберите утверждающего отпуск, т.е. человека, который одобряет или отклоняет ваши отпуска."
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:594
+#: hrms/hr/doctype/expense_claim/expense_claim.js:595
 msgid "Selected employee advance is not of employee {0}"
 msgstr ""
 
@@ -10208,7 +10204,7 @@ msgid "Sync {0}"
 msgstr "Синхронизация {0}"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1390
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:393
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:394
 msgid "Syntax error"
 msgstr "Синтаксическая ошибка"
 
@@ -10444,7 +10440,7 @@ msgstr "В штатном расписании вакансий нет {0}"
 
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:82
 #: hrms/payroll/doctype/employee_incentive/employee_incentive.py:39
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:457
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:458
 msgid "There is no Salary Structure assigned to {0}. First assign a Salary Structure."
 msgstr "Для {0} не назначена структура заработной платы. Сначала назначьте структуру заработной платы."
 
@@ -10475,17 +10471,17 @@ msgid "This employee already has a log with the same timestamp.{0}"
 msgstr "У этого сотрудника уже есть журнал с такой же временной меткой.{0}"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1398
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:401
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:402
 msgid "This error can be due to invalid formula or condition."
 msgstr "Эта ошибка может быть вызвана неверной формулой или условием."
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1391
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:394
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:395
 msgid "This error can be due to invalid syntax."
 msgstr "Эта ошибка может быть вызвана неверным синтаксисом."
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1384
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:387
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:388
 msgid "This error can be due to missing or deleted field."
 msgstr "Эта ошибка может быть вызвана отсутствием или удалением поля."
 
@@ -11753,7 +11749,7 @@ msgstr "создать/отправить"
 msgid "created"
 msgstr "созданный"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:75
+#: hrms/hr/doctype/employee_advance/employee_advance.py:82
 msgid "here"
 msgstr "здесь"
 

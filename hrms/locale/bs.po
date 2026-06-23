@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2026-06-14 10:34+0000\n"
-"PO-Revision-Date: 2026-06-15 18:55\n"
+"POT-Creation-Date: 2026-06-21 10:42+0000\n"
+"PO-Revision-Date: 2026-06-22 20:41\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Bosnian\n"
 "MIME-Version: 1.0\n"
@@ -441,7 +441,7 @@ msgstr "Obračunava se po ciklusu, plaća se samo prilikom podnošenja zahtjeva"
 #. Label of the accrued_benefits (Table) field in DocType 'Salary Slip'
 #: hrms/payroll/doctype/salary_slip/salary_slip.json
 msgid "Accrued Benefits"
-msgstr "Nagomilane Beneficije"
+msgstr "Obračunate Pogodnosti"
 
 #. Name of a report
 #. Label of a Workspace Sidebar Item
@@ -452,7 +452,7 @@ msgstr "Izvještaj Nagomilane Zarade"
 
 #: hrms/payroll/doctype/employee_benefit_ledger/employee_benefit_ledger.py:123
 msgid "Accrued amount {0} is less than paid amount {1} for Benefit {2} in payroll period {3}"
-msgstr "Obračunati iznos {0} je manji od isplaćenog iznosa {1} za Beneficije {2} u periodu obračuna plate {3}"
+msgstr "Obračunati iznos {0} je manji od isplaćenog iznosa {1} za Pogodnost {2} u periodu obračuna plate {3}"
 
 #: hrms/hr/doctype/attendance_request/attendance_warnings.html:8
 msgid "Action on Submission"
@@ -601,15 +601,15 @@ msgstr "Tip Podešavanja"
 msgid "Advance"
 msgstr "Predujam"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:78
+#: hrms/hr/doctype/employee_advance/employee_advance.py:85
 msgid "Advance Account Required"
 msgstr "Ppredujamni Račun je obavezan"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:82
+#: hrms/hr/doctype/employee_advance/employee_advance.py:89
 msgid "Advance Account is mandatory. Please set the {0} in the Company {1} and submit this document."
 msgstr "Predujamni račun je obavezan. Postavi {0} u {1} i podnesi ovaj dokument."
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:125
+#: hrms/hr/doctype/employee_advance/employee_advance.py:132
 msgid "Advance Account {} currency should be same as Salary Currency of Employee {}. Please select same currency Advance Account"
 msgstr "Valuta Računa Predujma {} treba biti ista kao valuta plaće {}. Odaberi istu valutu Računa Predujma"
 
@@ -1234,7 +1234,7 @@ msgstr "Datum i Vrijeme Dolaska"
 
 #: hrms/payroll/doctype/employee_benefit_application/employee_benefit_application.py:49
 msgid "As per your assigned Salary Structure you cannot apply for benefits"
-msgstr "Prema vašoj dodijeljenoj Strukturi Plata, ne možete se prijaviti za beneficije"
+msgstr "Prema vašoj dodijeljenoj Strukturi Plata, ne možete se prijaviti za pogodnosti"
 
 #: hrms/hr/doctype/full_and_final_statement/full_and_final_statement.py:132
 msgid "Asset Recovery Cost for {0}: {1}"
@@ -1580,7 +1580,7 @@ msgstr "Čeka se Odgovor"
 msgid "Backdated Leave Application is restricted. Please set the {} in {}"
 msgstr "Zahtjev za Odsustvo sa zastarjelim datumom je ograničena. Postavi {} u {}"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:281
+#: hrms/hr/doctype/expense_claim/expense_claim.js:282
 msgid "Bank Entries"
 msgstr "Bankovni Unosi"
 
@@ -1625,7 +1625,7 @@ msgstr "Iznos Beneficija"
 #. Label of a Workspace Sidebar Item
 #: hrms/workspace_sidebar/tax_&_benefits.json
 msgid "Benefit Application"
-msgstr "Zahtjev za Beneficije"
+msgstr "Zahtjev Pogodnosti"
 
 #. Label of a Workspace Sidebar Item
 #: hrms/workspace_sidebar/tax_&_benefits.json
@@ -1636,15 +1636,15 @@ msgstr "Zahtjev za Naknadu"
 #. DocType 'Employee Benefit Ledger'
 #: hrms/payroll/doctype/employee_benefit_ledger/employee_benefit_ledger.json
 msgid "Benefit Details"
-msgstr "Detalji Beneficije"
+msgstr "Detalji Pogodnosti"
 
 #: hrms/payroll/doctype/employee_benefit_application/employee_benefit_application.py:62
 msgid "Benefit amount of component {0} exceeds {1}"
-msgstr "Iznos beneficije komponente {0} prelazi {1}"
+msgstr "Iznos Pogodnosti komponente {0} prelazi {1}"
 
 #: hrms/payroll/doctype/employee_benefit_application/employee_benefit_application.py:56
 msgid "Benefit amount of component {0} should be greater than 0"
-msgstr "Iznos beneficije komponente {0} treba biti veći od 0"
+msgstr "Iznos Pogodnosti komponente {0} treba biti veći od 0"
 
 #: hrms/payroll/doctype/salary_structure/salary_structure.py:487
 msgid "Benefit amount {0} for Salary Component {1} should not be greater than maximum benefit amount {2} set in {3}"
@@ -2008,7 +2008,7 @@ msgid "Claim an Expense"
 msgstr "Potraživanje Troška"
 
 #. Option for the 'Status' (Select) field in DocType 'Employee Advance'
-#: frontend/src/views/employee_advance/List.vue:42
+#: frontend/src/views/employee_advance/List.vue:43
 #: hrms/hr/doctype/employee_advance/employee_advance.json
 msgid "Claimed"
 msgstr "Zatraženo"
@@ -2534,7 +2534,7 @@ msgstr "Zaostale obaveze po odbitku"
 msgid "Deduction Reports"
 msgstr "Izvještaji Odbitaka"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.js:79
+#: hrms/hr/doctype/employee_advance/employee_advance.js:81
 msgid "Deduction from Salary"
 msgstr "Odbitak od Plate"
 
@@ -2593,10 +2593,6 @@ msgstr "Standard Smjena"
 #: frontend/src/components/FileUploaderView.vue:49
 msgid "Delete Attachment"
 msgstr "Izbriši Prilog"
-
-#: frontend/src/components/FormView.vue:224
-msgid "Delete {0}"
-msgstr "Izbriši {0}"
 
 #. Name of a DocType
 #: hrms/hr/doctype/department_approver/department_approver.json
@@ -2925,19 +2921,19 @@ msgstr "Alat Prisustva"
 #: hrms/payroll/doctype/employee_benefit_application/employee_benefit_application.json
 #: hrms/payroll/workspace/tax_&_benefits/tax_&_benefits.json
 msgid "Employee Benefit Application"
-msgstr "Zahtjev za Beneficije"
+msgstr "Zahtjev Pogodnosti"
 
 #. Name of a DocType
 #: hrms/payroll/doctype/employee_benefit_application_detail/employee_benefit_application_detail.json
 msgid "Employee Benefit Application Detail"
-msgstr "Detalji Zahtjeva za Beneficije"
+msgstr "Detalji Zahtjeva Pogodnosti"
 
 #. Name of a DocType
 #. Label of a Link in the Tax & Benefits Workspace
 #: hrms/payroll/doctype/employee_benefit_claim/employee_benefit_claim.json
 #: hrms/payroll/workspace/tax_&_benefits/tax_&_benefits.json
 msgid "Employee Benefit Claim"
-msgstr "Potraživanje za Beneficije"
+msgstr "Potraživanje Pogodnosti"
 
 #. Name of a DocType
 #: hrms/payroll/doctype/employee_benefit_detail/employee_benefit_detail.json
@@ -2954,7 +2950,7 @@ msgstr "Registar Beneficija"
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 #: hrms/setup.py:412
 msgid "Employee Benefits"
-msgstr "Beneficije"
+msgstr "Pogodnosti"
 
 #. Name of a report
 #. Label of a Link in the HR Setup Workspace
@@ -3387,8 +3383,8 @@ msgstr "Detalji Premještaja"
 msgid "Employee Transfer cannot be submitted before Transfer Date"
 msgstr "Premještaj se ne može podnijeti prije datuma premještaja"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:115
-#: hrms/hr/doctype/employee_advance/employee_advance.py:185
+#: hrms/hr/doctype/employee_advance/employee_advance.py:122
+#: hrms/hr/doctype/employee_advance/employee_advance.py:193
 msgid "Employee advance account {0} should be of type {1}."
 msgstr "Predujamni račun {0} treba biti tipa {1}."
 
@@ -3449,7 +3445,7 @@ msgstr "{0} se već prijavio za {1} između {2} i {3} : {4}"
 
 #: hrms/payroll/doctype/employee_benefit_claim/employee_benefit_claim.py:70
 msgid "Employee {0} has already claimed the benefit '{1}' for {2} ({3}).<br>To prevent overpayments, only one claim per benefit type is allowed in each payroll cycle."
-msgstr "Personal {0} je već zatražio/la beneficiju '{1}' za {2} ({3}).<br>Da bi se spriječile prekomjerne isplate, dozvoljen je samo jedan zahtjev po tipui beneficije u svakom ciklusu obračuna plata."
+msgstr "Personal {0} je već zatražio/la pogodnost '{1}' za {2} ({3}).<br>Da bi se spriječile prekomjerne isplate, dozvoljen je samo jedan zahtjev po tipu pogodnosti u svakom ciklusu obračuna plata."
 
 #: hrms/hr/doctype/attendance/attendance.py:248
 msgid "Employee {0} is not active or does not exist"
@@ -3697,7 +3693,7 @@ msgid "Error downloading PDF"
 msgstr "Greška pri preuzimanju PDF-a"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1397
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:400
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:401
 msgid "Error in formula or condition"
 msgstr "Greška u formuli ili stanju"
 
@@ -4348,7 +4344,7 @@ msgstr "Fleksibilna Beneficija"
 #: hrms/payroll/doctype/salary_structure/salary_structure.json
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 msgid "Flexible Benefits"
-msgstr "Fleksibilne Beneficije"
+msgstr "Fleksibilne Pogodnosti"
 
 #: hrms/payroll/report/accrued_earnings_report/accrued_earnings_report.py:64
 msgid "Flexible Component"
@@ -4983,7 +4979,7 @@ msgstr "Ako je navedeno, Obračun Plate će se knjižiti prema personalu"
 #. 'Payroll Settings'
 #: hrms/payroll/doctype/payroll_settings/payroll_settings.json
 msgid "If checked, flexible benefits are considered only if benefit application exists"
-msgstr "Ako je odabrano, fleksibilne beneficije se uzimaju u obzir samo ako postoji zahtjev za beneficije"
+msgstr "Ako je odabrano, fleksibilne pogodnosti se uzimaju u obzir samo ako postoji zahtjev pogodnosti"
 
 #. Description of the 'Disable Rounded Total' (Check) field in DocType 'Payroll
 #. Settings'
@@ -5503,7 +5499,7 @@ msgstr "Nevažeća Vremena Smjena"
 msgid "Invalid employee filter: {0}"
 msgstr "Nevažeći filter za personal: {0}"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:879
+#: hrms/hr/doctype/expense_claim/expense_claim.py:883
 msgid "Invalid parameters provided. Please pass the required arguments."
 msgstr "Navedeni su nevažeći parametri. Navedi tražene argumente."
 
@@ -6604,24 +6600,24 @@ msgstr "Maksimalni Iznos koji se može Zatražiti"
 #. Benefit Application Detail'
 #: hrms/payroll/doctype/employee_benefit_application_detail/employee_benefit_application_detail.json
 msgid "Max Benefit Amount"
-msgstr "Maksimalni Iznos Beneficije"
+msgstr "Maksimalni Iznos Pogodnosti"
 
 #. Label of the max_benefit_amount (Currency) field in DocType 'Salary
 #. Component'
 #: hrms/payroll/doctype/salary_component/salary_component.json
 msgid "Max Benefit Amount (Yearly)"
-msgstr "Maksimalni Iznos Beneficije (Godišnje)"
+msgstr "Maksimalni Iznos Pogodnosti (Godišnje)"
 
 #. Label of the max_benefits (Currency) field in DocType 'Salary Structure'
 #: hrms/payroll/doctype/salary_structure/salary_structure.json
 msgid "Max Benefits (Amount)"
-msgstr "Maksimalne Beneficije (Iznos)"
+msgstr "Maksimalne Pogodnosti (Iznos)"
 
 #. Label of the max_benefits (Currency) field in DocType 'Employee Benefit
 #. Application'
 #: hrms/payroll/doctype/employee_benefit_application/employee_benefit_application.json
 msgid "Max Benefits (Yearly)"
-msgstr "Maksimalne Beneficije (Godišnje)"
+msgstr "Maksimalne Pogodnosti (Godišnje)"
 
 #. Label of the max_amount (Currency) field in DocType 'Employee Tax Exemption
 #. Category'
@@ -6652,7 +6648,7 @@ msgstr "Maksimalno radno vrijeme prema Radnom Listu"
 #. Assignment'
 #: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.json
 msgid "Maximum Benefit Amount"
-msgstr "Maksimalni Iznos Beneficije"
+msgstr "Maksimalni Iznos Pogodnosti"
 
 #. Label of the maximum_carry_forwarded_leaves (Float) field in DocType 'Leave
 #. Type'
@@ -6754,7 +6750,7 @@ msgstr "Minimalni broj godina za Nagradu"
 msgid "Minimum calendar days required since Date of Joining to apply for this leave"
 msgstr "Minimalni broj kalendarskih dana obaveznih od datuma pridruživanja da biste mogli da zatražite ovo odsustvo"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:90
+#: hrms/hr/doctype/employee_advance/employee_advance.py:97
 msgid "Missing Advance Account"
 msgstr "Nedostaje Račun Predujma"
 
@@ -6848,7 +6844,7 @@ msgstr "Moji Zahtjevi"
 
 #: hrms/payroll/doctype/income_tax_slab/income_tax_slab.py:123
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1383
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:386
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:387
 msgid "Name error"
 msgstr "Greška Imena"
 
@@ -6935,7 +6931,7 @@ msgstr "Nove lozinke se ne podudaraju"
 msgid "New shift assignments will be created after this date."
 msgstr "Nove dodjele smjene biti će kreirane nakon ovog datuma."
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:380
+#: hrms/hr/doctype/employee_advance/employee_advance.py:394
 msgid "No Bank/Cash Account found for currency {0}. Please create one under company {1}."
 msgstr "Nije pronađen Bankovni/Gotovinski račun za valutu {0}. Molimo vas da kreirate jedan u {1}."
 
@@ -7637,7 +7633,7 @@ msgid "Partially Sponsored, Require Partial Funding"
 msgstr "Djelomično Sponzorirano, Zahtijeva Djelimično Finansiranje"
 
 #. Option for the 'Status' (Select) field in DocType 'Employee Advance'
-#: frontend/src/views/employee_advance/List.vue:42
+#: frontend/src/views/employee_advance/List.vue:43
 #: hrms/hr/doctype/employee_advance/employee_advance.json
 msgid "Partly Claimed and Returned"
 msgstr "Djelomično Potraživan i Vraćeno"
@@ -8179,7 +8175,7 @@ msgstr "Postavi standard šablon Obavijesti Statusa Odsustva u Postavkama Person
 msgid "Please set employee's total cost to company to see CTC breakup."
 msgstr "Postavi ukupne troškove osoblja za poduzeće kako biste vidjeli raspodjelu godišnje plate."
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:74
+#: hrms/hr/doctype/employee_advance/employee_advance.py:81
 msgid "Please set the Advance Account {0} or in {1}"
 msgstr "Postavite Predujamni Račun {0} ili u {1}"
 
@@ -8187,7 +8183,7 @@ msgstr "Postavite Predujamni Račun {0} ili u {1}"
 msgid "Please set the Appraisal Template for all the {0} or select the template in the Employees table below."
 msgstr "Postavi Šablon Ocjenjivanjaza sve {0} ili odaberi šablon u tabeli Personala ispod."
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:514
+#: hrms/hr/doctype/expense_claim/expense_claim.js:515
 msgid "Please set the Company"
 msgstr "Postavi Poduzeće"
 
@@ -8690,7 +8686,7 @@ msgstr "Nedostaje Datum Otkaza"
 #. Application'
 #: hrms/payroll/doctype/employee_benefit_application/employee_benefit_application.json
 msgid "Remaining Benefits (Yearly)"
-msgstr "Preostale Beneficije (Godišnje)"
+msgstr "Preostale Pogodnosti (Godišnje)"
 
 #. Label of the remind_before (Time) field in DocType 'HR Settings'
 #: hrms/hr/doctype/hr_settings/hr_settings.json
@@ -8866,7 +8862,7 @@ msgstr "Ponovni Pokušaj Uspješan"
 msgid "Retrying allocations"
 msgstr "Ponovni pokušaj dodjela"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:231
+#: hrms/hr/doctype/employee_advance/employee_advance.py:239
 msgid "Return amount cannot be greater than unclaimed amount"
 msgstr "Iznos povrata ne može biti veći od nezatraženog iznosa"
 
@@ -8944,7 +8940,7 @@ msgstr "Red #{0}: Komponenta {1} ima omogućene opcije {2} i {3}."
 msgid "Row #{0}: Timesheet amount will overwrite the Earning component amount for the Salary Component {1}"
 msgstr "Red #{0}: Iznos Radnog Lista će prepisati Iznos Komponente Zarade za Komponentu Plate {1}"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:847
+#: hrms/hr/doctype/expense_claim/expense_claim.py:851
 msgid "Row No {0}: Amount cannot be greater than the Outstanding Amount against Expense Claim {1}. Outstanding Amount is {2}"
 msgstr "Red Broj {0}: Iznos ne može biti veći od Nepodmirenog iznosa prema Potraživanju Troškova {1}. Nepodmireni iznos je {2}"
 
@@ -8960,7 +8956,7 @@ msgstr "Red {0}# Plaćeni Iznos ne može biti veći od Iznosa Naplate"
 msgid "Row {0}# Paid Amount cannot be greater than Total amount"
 msgstr "Red {0}# Uplaćeni iznos ne može biti veći od Ukupnog Iznosa"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:223
+#: hrms/hr/doctype/employee_advance/employee_advance.py:231
 msgid "Row {0}# Paid Amount cannot be greater than requested advance amount"
 msgstr "Red {0}# Uplaćeni iznos ne može biti veći od traženog iznosa predujma"
 
@@ -9426,7 +9422,7 @@ msgstr "Odaberi Uslove i Odredbe"
 msgid "Select Users"
 msgstr "Odaberi Korisnike"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:559
+#: hrms/hr/doctype/expense_claim/expense_claim.js:560
 msgid "Select an employee to get the employee advance."
 msgstr "Navedi Personal za koji preuzmete stanje predujma."
 
@@ -9484,7 +9480,7 @@ msgstr "Odaberi tip odsustva za koju se personal želi prijaviti, kao što je Bo
 msgid "Select your Leave Approver i.e. the person who approves or rejects your leaves."
 msgstr "Odaberi svog odobravatelja odsustva, tj. osobu koja odobrava ili odbija vaša odsustva."
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:594
+#: hrms/hr/doctype/expense_claim/expense_claim.js:595
 msgid "Selected employee advance is not of employee {0}"
 msgstr "Odabrani predujam personala nije od {0}"
 
@@ -10208,7 +10204,7 @@ msgid "Sync {0}"
 msgstr "Sinhronizuj {0}"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1390
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:393
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:394
 msgid "Syntax error"
 msgstr "Sintaksička greška"
 
@@ -10229,7 +10225,7 @@ msgstr "Uzmite Tačno Završene Godine"
 #: hrms/payroll/workspace/tax_&_benefits/tax_&_benefits.json
 #: hrms/workspace_sidebar/tax_&_benefits.json
 msgid "Tax & Benefits"
-msgstr "Porez&Beneficije"
+msgstr "Porez&Pogodnosti"
 
 #. Label of the tax_deducted_till_date (Currency) field in DocType 'Salary
 #. Structure Assignment'
@@ -10274,7 +10270,7 @@ msgstr "Porez na Dodatnu Platu"
 #. Detail'
 #: hrms/payroll/doctype/salary_detail/salary_detail.json
 msgid "Tax on flexible benefit"
-msgstr "Porez na Fleksibilne Beneficije"
+msgstr "Porez Fleksibilne Pogodnosti"
 
 #. Label of the taxable_earnings_till_date (Currency) field in DocType 'Salary
 #. Structure Assignment'
@@ -10444,7 +10440,7 @@ msgstr "Nema slobodnih radnih mjesta prema planu zapošljavanja {0}"
 
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:82
 #: hrms/payroll/doctype/employee_incentive/employee_incentive.py:39
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:457
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:458
 msgid "There is no Salary Structure assigned to {0}. First assign a Salary Structure."
 msgstr "Nije dodijeljena struktura plata za {0}. Prvo dodijeli strukturu plata."
 
@@ -10475,17 +10471,17 @@ msgid "This employee already has a log with the same timestamp.{0}"
 msgstr "Personal već ima yapisnik sa istom vremenskom oznakom.{0}"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1398
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:401
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:402
 msgid "This error can be due to invalid formula or condition."
 msgstr "Ova greška može biti posljedica nevažeće formule ili uvjeta."
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1391
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:394
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:395
 msgid "This error can be due to invalid syntax."
 msgstr "Ova greška može biti zbog nevažeće sintakse."
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1384
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:387
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:388
 msgid "This error can be due to missing or deleted field."
 msgstr "Ova greška može biti zbog toga što polje nedostaje ili je izbrisano."
 
@@ -11753,7 +11749,7 @@ msgstr "kreiraj/podnesi"
 msgid "created"
 msgstr "kreirano"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:75
+#: hrms/hr/doctype/employee_advance/employee_advance.py:82
 msgid "here"
 msgstr "ovdje"
 

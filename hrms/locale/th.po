@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2026-06-14 10:34+0000\n"
-"PO-Revision-Date: 2026-06-15 18:55\n"
+"POT-Creation-Date: 2026-06-21 10:42+0000\n"
+"PO-Revision-Date: 2026-06-22 20:41\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Thai\n"
 "MIME-Version: 1.0\n"
@@ -601,15 +601,15 @@ msgstr "ประเภทการปรับปรุง"
 msgid "Advance"
 msgstr "เงินทดรอง"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:78
+#: hrms/hr/doctype/employee_advance/employee_advance.py:85
 msgid "Advance Account Required"
 msgstr "ต้องใช้บัญชีล่วงหน้า"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:82
+#: hrms/hr/doctype/employee_advance/employee_advance.py:89
 msgid "Advance Account is mandatory. Please set the {0} in the Company {1} and submit this document."
 msgstr "{1} บัญชีล่วงหน้าเป็นสิ่งที่จำเป็น กรุณาตั้งค่า {0} ในบัญชีบริษัท และส่งเอกสารนี้"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:125
+#: hrms/hr/doctype/employee_advance/employee_advance.py:132
 msgid "Advance Account {} currency should be same as Salary Currency of Employee {}. Please select same currency Advance Account"
 msgstr "บัญชีเงินกู้ล่วงหน้า {} ควรใช้สกุลเงินเดียวกับเงินเดือนของพนักงาน {}. กรุณาเลือกสกุลเงินเดียวกันสำหรับบัญชีเงินกู้ล่วงหน้า"
 
@@ -1580,7 +1580,7 @@ msgstr "รอการตอบกลับ"
 msgid "Backdated Leave Application is restricted. Please set the {} in {}"
 msgstr "การยื่นใบลาย้อนหลังถูกจำกัด โปรดตั้งค่า {} ใน {}"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:281
+#: hrms/hr/doctype/expense_claim/expense_claim.js:282
 msgid "Bank Entries"
 msgstr "รายการธนาคาร"
 
@@ -2008,7 +2008,7 @@ msgid "Claim an Expense"
 msgstr "เบิกค่าใช้จ่าย"
 
 #. Option for the 'Status' (Select) field in DocType 'Employee Advance'
-#: frontend/src/views/employee_advance/List.vue:42
+#: frontend/src/views/employee_advance/List.vue:43
 #: hrms/hr/doctype/employee_advance/employee_advance.json
 msgid "Claimed"
 msgstr "เบิกแล้ว"
@@ -2534,7 +2534,7 @@ msgstr "ค้างชำระค่าหัก ณ ที่จ่าย"
 msgid "Deduction Reports"
 msgstr "รายงานการหัก"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.js:79
+#: hrms/hr/doctype/employee_advance/employee_advance.js:81
 msgid "Deduction from Salary"
 msgstr "การหักจากเงินเดือน"
 
@@ -2593,10 +2593,6 @@ msgstr "กะเริ่มต้น"
 #: frontend/src/components/FileUploaderView.vue:49
 msgid "Delete Attachment"
 msgstr "ลบไฟล์แนบ"
-
-#: frontend/src/components/FormView.vue:224
-msgid "Delete {0}"
-msgstr "ลบ {0}"
 
 #. Name of a DocType
 #: hrms/hr/doctype/department_approver/department_approver.json
@@ -3387,8 +3383,8 @@ msgstr "รายละเอียดการย้ายพนักงาน
 msgid "Employee Transfer cannot be submitted before Transfer Date"
 msgstr "ไม่สามารถส่งการย้ายพนักงานก่อนวันที่ย้ายได้"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:115
-#: hrms/hr/doctype/employee_advance/employee_advance.py:185
+#: hrms/hr/doctype/employee_advance/employee_advance.py:122
+#: hrms/hr/doctype/employee_advance/employee_advance.py:193
 msgid "Employee advance account {0} should be of type {1}."
 msgstr "บัญชีเงินกู้ล่วงหน้าของพนักงาน {0} ควรเป็นประเภท {1}"
 
@@ -3697,7 +3693,7 @@ msgid "Error downloading PDF"
 msgstr "เกิดข้อผิดพลาดในการดาวน์โหลด PDF"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1397
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:400
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:401
 msgid "Error in formula or condition"
 msgstr "เกิดข้อผิดพลาดในสูตรหรือเงื่อนไข"
 
@@ -5503,7 +5499,7 @@ msgstr "เวลาของกะไม่ถูกต้อง"
 msgid "Invalid employee filter: {0}"
 msgstr ""
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:879
+#: hrms/hr/doctype/expense_claim/expense_claim.py:883
 msgid "Invalid parameters provided. Please pass the required arguments."
 msgstr "พารามิเตอร์ที่ให้มาไม่ถูกต้อง โปรดส่งอาร์กิวเมนต์ที่จำเป็น"
 
@@ -6754,7 +6750,7 @@ msgstr "จำนวนปีขั้นต่ำสำหรับเงิน
 msgid "Minimum calendar days required since Date of Joining to apply for this leave"
 msgstr ""
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:90
+#: hrms/hr/doctype/employee_advance/employee_advance.py:97
 msgid "Missing Advance Account"
 msgstr "บัญชีล่วงหน้าสูญหาย"
 
@@ -6848,7 +6844,7 @@ msgstr "คำขอของฉัน"
 
 #: hrms/payroll/doctype/income_tax_slab/income_tax_slab.py:123
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1383
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:386
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:387
 msgid "Name error"
 msgstr "ชื่อผิดพลาด"
 
@@ -6935,7 +6931,7 @@ msgstr ""
 msgid "New shift assignments will be created after this date."
 msgstr "การมอบหมายกะใหม่จะถูกสร้างขึ้นหลังวันที่นี้"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:380
+#: hrms/hr/doctype/employee_advance/employee_advance.py:394
 msgid "No Bank/Cash Account found for currency {0}. Please create one under company {1}."
 msgstr "ไม่พบบัญชีธนาคาร/เงินสดสำหรับสกุลเงิน {0}. กรุณาสร้างบัญชีภายใต้บริษัท {1}."
 
@@ -7637,7 +7633,7 @@ msgid "Partially Sponsored, Require Partial Funding"
 msgstr "ได้รับการสนับสนุนบางส่วน ต้องการเงินทุนบางส่วน"
 
 #. Option for the 'Status' (Select) field in DocType 'Employee Advance'
-#: frontend/src/views/employee_advance/List.vue:42
+#: frontend/src/views/employee_advance/List.vue:43
 #: hrms/hr/doctype/employee_advance/employee_advance.json
 msgid "Partly Claimed and Returned"
 msgstr "เบิกและคืนบางส่วนแล้ว"
@@ -8179,7 +8175,7 @@ msgstr "โปรดตั้งค่าแม่แบบเริ่มต้
 msgid "Please set employee's total cost to company to see CTC breakup."
 msgstr ""
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:74
+#: hrms/hr/doctype/employee_advance/employee_advance.py:81
 msgid "Please set the Advance Account {0} or in {1}"
 msgstr "กรุณาตั้งค่าบัญชีล่วงหน้าได้ที่ {0} หรือที่ {1}"
 
@@ -8187,7 +8183,7 @@ msgstr "กรุณาตั้งค่าบัญชีล่วงหน้
 msgid "Please set the Appraisal Template for all the {0} or select the template in the Employees table below."
 msgstr "โปรดตั้งค่าแม่แบบการประเมินผลสำหรับ {0} ทั้งหมดหรือเลือกแม่แบบในตารางพนักงานด้านล่าง"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:514
+#: hrms/hr/doctype/expense_claim/expense_claim.js:515
 msgid "Please set the Company"
 msgstr "โปรดตั้งค่าบริษัท"
 
@@ -8866,7 +8862,7 @@ msgstr "ลองใหม่สำเร็จ"
 msgid "Retrying allocations"
 msgstr "ลองจัดสรรทรัพยากรใหม่"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:231
+#: hrms/hr/doctype/employee_advance/employee_advance.py:239
 msgid "Return amount cannot be greater than unclaimed amount"
 msgstr "จำนวนเงินที่คืนไม่สามารถมากกว่าจำนวนเงินที่ไม่ได้เบิก"
 
@@ -8944,7 +8940,7 @@ msgstr "แถวที่ #{0}: องค์ประกอบ {1} มีตั
 msgid "Row #{0}: Timesheet amount will overwrite the Earning component amount for the Salary Component {1}"
 msgstr "แถวที่ #{0}: จำนวนเงินในไทม์ชีทจะเขียนทับจำนวนเงินขององค์ประกอบรายรับสำหรับองค์ประกอบเงินเดือน {1}"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.py:847
+#: hrms/hr/doctype/expense_claim/expense_claim.py:851
 msgid "Row No {0}: Amount cannot be greater than the Outstanding Amount against Expense Claim {1}. Outstanding Amount is {2}"
 msgstr "แถวที่ {0}: จำนวนเงินไม่สามารถมากกว่าจำนวนเงินค้างชำระของการเบิกค่าใช้จ่าย {1} ได้ โดยจำนวนเงินค้างชำระคือ {2}"
 
@@ -8960,7 +8956,7 @@ msgstr "แถวที่ {0}# จำนวนเงินที่จ่าย
 msgid "Row {0}# Paid Amount cannot be greater than Total amount"
 msgstr "แถวที่ {0}# จำนวนเงินที่จ่ายไม่สามารถมากกว่าจำนวนเงินทั้งหมดได้"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:223
+#: hrms/hr/doctype/employee_advance/employee_advance.py:231
 msgid "Row {0}# Paid Amount cannot be greater than requested advance amount"
 msgstr "แถว {0}# จำนวนเงินที่จ่ายไม่สามารถมากกว่าจำนวนเงินล่วงหน้าที่ร้องขอได้"
 
@@ -9426,7 +9422,7 @@ msgstr "เลือกข้อกำหนดและเงื่อนไข
 msgid "Select Users"
 msgstr "เลือกผู้ใช้"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:559
+#: hrms/hr/doctype/expense_claim/expense_claim.js:560
 msgid "Select an employee to get the employee advance."
 msgstr "เลือกพนักงานเพื่อรับเงินทดรองของพนักงาน"
 
@@ -9484,7 +9480,7 @@ msgstr "เลือกประเภทการลาที่พนักง
 msgid "Select your Leave Approver i.e. the person who approves or rejects your leaves."
 msgstr "เลือกผู้อนุมัติการลาของคุณ คือบุคคลที่อนุมัติหรือปฏิเสธการลาของคุณ"
 
-#: hrms/hr/doctype/expense_claim/expense_claim.js:594
+#: hrms/hr/doctype/expense_claim/expense_claim.js:595
 msgid "Selected employee advance is not of employee {0}"
 msgstr ""
 
@@ -10208,7 +10204,7 @@ msgid "Sync {0}"
 msgstr "ซิงค์ {0}"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1390
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:393
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:394
 msgid "Syntax error"
 msgstr "ข้อผิดพลาดทางไวยากรณ์"
 
@@ -10444,7 +10440,7 @@ msgstr "ไม่มีตำแหน่งงานว่างภายใต
 
 #: hrms/payroll/doctype/additional_salary/additional_salary.py:82
 #: hrms/payroll/doctype/employee_incentive/employee_incentive.py:39
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:457
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:458
 msgid "There is no Salary Structure assigned to {0}. First assign a Salary Structure."
 msgstr "ไม่มีโครงสร้างเงินเดือนที่กำหนดไว้สำหรับ {0}กรุณาเลือกโครงสร้างเงินเดือนก่อน"
 
@@ -10475,17 +10471,17 @@ msgid "This employee already has a log with the same timestamp.{0}"
 msgstr "พนักงานนี้มีบันทึกที่มีการประทับเวลาเดียวกันอยู่แล้ว {0}"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1398
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:401
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:402
 msgid "This error can be due to invalid formula or condition."
 msgstr "ข้อผิดพลาดนี้อาจเกิดจากสูตรหรือเงื่อนไขที่ไม่ถูกต้อง"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1391
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:394
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:395
 msgid "This error can be due to invalid syntax."
 msgstr "ข้อผิดพลาดนี้อาจเกิดจากไวยากรณ์ที่ไม่ถูกต้อง"
 
 #: hrms/payroll/doctype/salary_slip/salary_slip.py:1384
-#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:387
+#: hrms/payroll/doctype/salary_structure_assignment/salary_structure_assignment.py:388
 msgid "This error can be due to missing or deleted field."
 msgstr "ข้อผิดพลาดนี้อาจเกิดจากฟิลด์ที่หายไปหรือถูกลบ"
 
@@ -11753,7 +11749,7 @@ msgstr "สร้าง/ส่ง"
 msgid "created"
 msgstr "สร้างแล้ว"
 
-#: hrms/hr/doctype/employee_advance/employee_advance.py:75
+#: hrms/hr/doctype/employee_advance/employee_advance.py:82
 msgid "here"
 msgstr "ที่นี่"
 
