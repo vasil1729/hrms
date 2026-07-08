@@ -13,16 +13,74 @@ users:
     # Set reset_password: true to force password update on re-sync.
     # Without this flag, existing users keep their current password.
 
-  # ─── Common Roles ─────────────────────────────────────
-  # System Manager    — Full access to everything
-  # HR Manager        — Full HR access (employees, payroll, leaves, attendance)
-  # HR User           — View/create HR documents (no delete/submit)
-  # Employee          — Self-service (apply leave, view salary slips, etc.)
-  # Expense Approver  — Approve expense claims
-  # Fleet Manager     — Manage vehicle logs
-  # Accounts Manager  — Accounting module access
-  # Stock Manager     — Inventory management
-  # Projects Manager  — Project management
+  # ─── All Available Roles ──────────────────────────────
+  #
+  # ── Admin ──
+  # System Manager         Full access to everything
+  #
+  # ── HR ──
+  # HR Manager             Full HR access (employees, payroll, leaves, attendance)
+  # HR User                View/create HR documents (no delete/submit)
+  # Employee               Self-service (apply leave, view salary slips, etc.)
+  # Employee Self Service  Limited self-service
+  # Leave Approver         Approve leave applications
+  # Expense Approver       Approve expense claims
+  # Fleet Manager          Manage vehicle logs
+  # Interviewer            Manage interviews
+  #
+  # ── Accounts ──
+  # Accounts Manager       Full accounting access
+  # Accounts User          View/create accounting documents
+  # Auditor                Read-only audit access
+  #
+  # ── Sales / CRM ──
+  # Sales Manager          Full sales access
+  # Sales User             View/create sales documents
+  # Sales Master Manager   Manage master data (customers, items, etc.)
+  #
+  # ── Purchases ──
+  # Purchase Manager       Full purchase access
+  # Purchase User          View/create purchase documents
+  # Purchase Master Manager Manage supplier master data
+  #
+  # ── Stock / Inventory ──
+  # Stock Manager          Full stock access
+  # Stock User             View/create stock transactions
+  # Item Manager           Manage item master
+  #
+  # ── Manufacturing ──
+  # Manufacturing Manager  Full manufacturing access
+  # Manufacturing User     View/create manufacturing documents
+  #
+  # ── Projects ──
+  # Projects Manager       Full project access
+  # Projects User          View/create project documents
+  #
+  # ── Maintenance ──
+  # Maintenance Manager    Full maintenance access
+  # Maintenance User       View/create maintenance documents
+  #
+  # ── Quality ──
+  # Quality Manager        Quality management access
+  #
+  # ── Support ──
+  # Support Team           Support ticket access
+  #
+  # ── Other ──
+  # Delivery Manager / User  Delivery & shipping
+  # Fulfillment User         Fulfillment operations
+  # Supplier                 Supplier portal access
+  # Customer                 Customer portal access
+  # Blogger                  Blog management
+  # Website Manager          Website content management
+  # Workspace Manager        Manage workspaces
+  # Dashboard Manager        Manage dashboards
+  # Report Manager           Manage reports
+  # Script Manager           Manage server/client scripts
+  # Translator               Translation management
+  # Newsletter Manager       Newsletter management
+  # Analytics                Analytics access
+  # Prepared Report User     View prepared reports
 
   # ─── Examples ─────────────────────────────────────────
 
