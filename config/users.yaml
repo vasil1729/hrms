@@ -1,0 +1,11 @@
+# Frappe HRMS Allowed Users
+# Only users listed here can access the system. Self-signup is disabled.
+# Run `make sync-users` to apply changes.
+
+users:
+  - email: admin@example.com
+    first_name: Vasil
+    last_name: Admin
+    password: "<replace-with-strong-password>"
+    role: System Manager
+    enabled: 1

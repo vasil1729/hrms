@@ -1,0 +1,294 @@
+name: hrms
+
+networks:
+  internal:
+    driver: bridge
+    internal: true
+  proxy:
+    external: true
+    name: proxy
+
+volumes:
+  db-data:
+  sites:
+  assets:
+  logs:
+
+x-security: &security
+  security_opt:
+    - no-new-privileges:true
+  cap_drop:
+    - ALL
+  cap_add:
+    - CHOWN
+    - DAC_OVERRIDE
+    - FOWNER
+    - SETUID
+    - SETGID
+
+x-restart: &restart
+  restart: unless-stopped
+
+x-frappe-env: &frappe-env
+  environment:
+    DB_NAME: ${DB_NAME:-hrms}
+    DB_PASSWORD: ${DB_PASSWORD:?}
+    DB_HOST: db
+    DB_PORT: "3306"
+    REDIS_CACHE: redis://redis-cache:6379
+    REDIS_QUEUE: redis://redis-queue:6379
+    REDIS_SOCKETIO: redis://redis-socketio:6379
+    SITE_NAME: ${SITE_NAME:-hrms.example.com}
+    ADMIN_PASSWORD: ${ADMIN_PASSWORD:?}
+    BENCH_APPS: erpnext,hrms
+    INSTALL_APPS: erpnext,hrms
+    PROXY_FIX: "true"
+    WORKERS: ${WORKERS:-4}
+    BACKUP_LIMIT: ${BACKUP_LIMIT:-14}
+    TZ: ${TZ:-UTC}
+
+x-frappe-volumes: &frappe-volumes
+  volumes:
+    - sites:/home/frappe/frappe-bench/sites
+    - assets:/home/frappe/frappe-bench/sites/assets
+    - logs:/home/frappe/frappe-bench/logs
+
+services:
+  db:
+    image: mariadb:10.8
+    <<: [*restart, *security]
+    cap_add:
+      - CHOWN
+      - DAC_OVERRIDE
+      - FOWNER
+      - SETUID
+      - SETGID
+    networks:
+      - internal
+    volumes:
+      - db-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:?}
+      MYSQL_DATABASE: ${DB_NAME:-hrms}
+      MARIADB_ROOT_PASSWORD: ${DB_PASSWORD:?}
+      MARIADB_DATABASE: ${DB_NAME:-hrms}
+      TZ: ${TZ:-UTC}
+    command: |
+      mariadbd
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_unicode_ci
+      --innodb-file-format=barracuda
+      --innodb-file-per-table=1
+      --innodb-large-prefix=1
+      --max-allowed-packet=256M
+      --innodb-log-file-size=256M
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      start_period: 60s
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    mem_limit: 1g
+
+  redis-cache:
+    image: redis:7-alpine
+    <<: [*restart, *security]
+    cap_add:
+      - DAC_OVERRIDE
+      - FOWNER
+      - SETUID
+      - SETGID
+    networks:
+      - internal
+    command: redis-server --appendonly no --maxmemory 256mb --maxmemory-policy allkeys-lru
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    mem_limit: 256m
+
+  redis-queue:
+    image: redis:7-alpine
+    <<: [*restart, *security]
+    cap_add:
+      - DAC_OVERRIDE
+      - FOWNER
+      - SETUID
+      - SETGID
+    networks:
+      - internal
+    command: redis-server --appendonly yes --appendfsync everysec --maxmemory 512mb
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    mem_limit: 512m
+
+  redis-socketio:
+    image: redis:7-alpine
+    <<: [*restart, *security]
+    cap_add:
+      - DAC_OVERRIDE
+      - FOWNER
+      - SETUID
+      - SETGID
+    networks:
+      - internal
+    command: redis-server --appendonly no --maxmemory 128mb --maxmemory-policy allkeys-lru
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    mem_limit: 128m
+
+  configurator:
+    build:
+      context: .
+    image: hrms-custom:${ERPNext_VERSION:-v15.41.0}
+    <<: [*security]
+    networks:
+      - internal
+    depends_on:
+      db:
+        condition: service_healthy
+      redis-cache:
+        condition: service_healthy
+      redis-queue:
+        condition: service_healthy
+    environment:
+      <<: [*frappe-env]
+    volumes:
+      - sites:/home/frappe/frappe-bench/sites
+      - assets:/home/frappe/frappe-bench/sites/assets
+      - ./config/setup-site.py:/home/frappe/setup-site.py:ro
+    command: >
+      bash -c "
+        set -e
+        echo '=== Configurator: Setting up Frappe site ==='
+        if [ -f /home/frappe/frappe-bench/sites/\$SITE_NAME/site_config.json ]; then
+          echo 'Site already exists. Running post-setup...'
+          bench --site \$SITE_NAME console --quiet -c '
+            import frappe.utils.install
+          ' 2>/dev/null || true
+        else
+          echo 'Creating new site: \$SITE_NAME'
+          bench new-site \
+            --force \
+            --db-name \$DB_NAME \
+            --mariadb-root-password \$DB_PASSWORD \
+            --admin-password \$ADMIN_PASSWORD \
+            --no-mariadb-socket \
+            \$SITE_NAME
+          echo 'Installing ERPNext...'
+          bench --site \$SITE_NAME install-app erpnext
+          echo 'Installing HRMS...'
+          bench --site \$SITE_NAME install-app hrms
+          echo 'Applying site configuration...'
+          bench --site \$SITE_NAME console --quiet -c '
+            import sys
+            sys.path.insert(0, \"/home/frappe\")
+            import setup_site
+            setup_site.run()
+          '
+          echo 'Building assets...'
+          bench build
+        fi
+        echo '=== Configurator complete ==='
+      "
+    restart: "no"
+    mem_limit: 2g
+
+  backend:
+    build:
+      context: .
+    image: hrms-custom:${ERPNext_VERSION:-v15.41.0}
+    <<: [*restart, *security]
+    networks:
+      - internal
+      - proxy
+    depends_on:
+      configurator:
+        condition: service_completed_successfully
+    <<:
+      - *frappe-env
+      - *frappe-volumes
+    command: start
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/method/ping"]
+      start_period: 60s
+      interval: 15s
+      timeout: 10s
+      retries: 5
+    mem_limit: 2g
+
+  worker:
+    build:
+      context: .
+    image: hrms-custom:${ERPNext_VERSION:-v15.41.0}
+    <<: [*restart, *security]
+    networks:
+      - internal
+    depends_on:
+      configurator:
+        condition: service_completed_successfully
+    <<:
+      - *frappe-env
+      - *frappe-volumes
+    command: worker
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -f 'bench worker' || exit 1"]
+      start_period: 30s
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    deploy:
+      replicas: ${WORKER_REPLICAS:-2}
+    mem_limit: 1g
+
+  scheduler:
+    build:
+      context: .
+    image: hrms-custom:${ERPNext_VERSION:-v15.41.0}
+    <<: [*restart, *security]
+    networks:
+      - internal
+    depends_on:
+      configurator:
+        condition: service_completed_successfully
+    <<:
+      - *frappe-env
+      - *frappe-volumes
+    command: schedule
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -f 'bench schedule' || exit 1"]
+      start_period: 30s
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    mem_limit: 512m
+
+  websocket:
+    build:
+      context: .
+    image: hrms-custom:${ERPNext_VERSION:-v15.41.0}
+    <<: [*restart, *security]
+    networks:
+      - internal
+      - proxy
+    depends_on:
+      configurator:
+        condition: service_completed_successfully
+    <<:
+      - *frappe-env
+      - *frappe-volumes
+    command: websocket
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -f 'node' || exit 1"]
+      start_period: 30s
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    mem_limit: 256m

@@ -1,0 +1,11 @@
+{
+  "_comment": "Site config overrides. Applied by setup-site.py on first deploy.",
+  "deny_self_signup": 1,
+  "allow_signup": 0,
+  "disable_signup": 1,
+  "developer_mode": 0,
+  "pause_scheduler": 0,
+  "max_file_size": 10485760,
+  "file_size_limit": 10485760,
+  "session_expiry": "6:00:00"
+}
