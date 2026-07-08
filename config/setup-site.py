@@ -9,6 +9,7 @@ def create_admin_user():
     """Create the initial admin user if not already present."""
     email = os.environ.get("HRMS_ADMIN_EMAIL", "admin@example.com")
     password = os.environ.get("HRMS_ADMIN_PASSWORD", "<replace-with-strong-password>")
+    first_name = os.environ.get("HRMS_ADMIN_FIRST_NAME", "Admin")
 
     if frappe.db.exists("User", email):
         print(f"User {email} already exists, skipping creation")
@@ -16,13 +17,14 @@ def create_admin_user():
 
     user = frappe.new_doc("User")
     user.email = email
-    user.first_name = "Dev"
+    user.first_name = first_name
     user.last_name = "Admin"
     user.new_password = password
     user.send_welcome_email = 0
     user.flags.ignore_permissions = True
     user.append("roles", {"role": "System Manager"})
     user.insert(ignore_permissions=True)
+    frappe.db.commit()
     print(f"Created admin user: {email}")
 
 
@@ -32,13 +34,15 @@ def disable_self_signup():
     ss.allow_signup = 0
     ss.deny_self_signup = 1
     ss.flags.ignore_permissions = True
-    ss.save()
+    ss.save(ignore_permissions=True)
+    frappe.db.commit()
     print("Self-signup disabled")
 
 
 def apply_site_config():
     """Apply overrides from site_config.json to the site config."""
-    config_path = "/home/frappe/frappe-bench/sites/hrms.example.com/site_config.json"
+    site_name = os.environ.get("SITE_NAME", "hrms.example.com")
+    config_path = f"/home/frappe/frappe-bench/sites/{site_name}/site_config.json"
     overrides_path = "/home/frappe/site_config.json"
 
     if not os.path.exists(overrides_path):
@@ -59,6 +63,7 @@ def apply_site_config():
     with open(config_path, "w") as f:
         json.dump(config, f, indent=1)
 
+    frappe.db.commit()
     print(f"Applied {len(overrides)} site config overrides")
 
 

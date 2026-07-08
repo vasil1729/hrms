@@ -9,3 +9,6 @@ users:
     password: "<replace-with-strong-password>"
     role: System Manager
     enabled: 1
+    # Set reset_password: true to force password update on re-sync.
+    # Without this flag, existing users keep their current password.
+    # reset_password: false

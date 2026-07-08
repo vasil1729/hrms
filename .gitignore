@@ -1,4 +1,5 @@
 .env
+config/users.yaml
 volumes/*
 !volumes/.gitkeep
 backups/*

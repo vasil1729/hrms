@@ -172,6 +172,9 @@ services:
       WORKERS: ${WORKERS:-4}
       BACKUP_LIMIT: ${BACKUP_LIMIT:-14}
       TZ: ${TZ:-UTC}
+      HRMS_ADMIN_EMAIL: ${HRMS_ADMIN_EMAIL:-admin@example.com}
+      HRMS_ADMIN_PASSWORD: ${HRMS_ADMIN_PASSWORD:-CHANGE_ME}
+      HRMS_ADMIN_FIRST_NAME: ${HRMS_ADMIN_FIRST_NAME:-Admin}
     volumes:
       - sites:/home/frappe/frappe-bench/sites
       - assets:/home/frappe/frappe-bench/sites/assets

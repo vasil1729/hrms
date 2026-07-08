@@ -14,8 +14,11 @@ SITE=$(get_site)
 USERS_YAML="config/users.yaml"
 
 if [[ ! -f "$USERS_YAML" ]]; then
-    log_error "Users file not found: $USERS_YAML"
-    exit 1
+    USERS_YAML="config/users.yaml.example"
+    if [[ ! -f "$USERS_YAML" ]]; then
+        log_error "Users file not found: config/users.yaml or config/users.yaml.example"
+        exit 1
+    fi
 fi
 
 log_info "Reading users from: $USERS_YAML"
@@ -28,7 +31,7 @@ import yaml
 import frappe
 from frappe.core.doctype.user.user import create_contact
 
-yaml_path = "/home/fraffe/config/users.yaml"
+yaml_path = "/home/frappe/config/users.yaml"
 if not os.path.exists(yaml_path):
     # Try alternative paths
     for p in ["/home/frappe/config/users.yaml", "/home/frappe/users.yaml"]:
@@ -64,7 +67,8 @@ for entry in users:
         user.first_name = first_name
         user.last_name = last_name
         user.enabled = enabled
-        if password:
+        reset = entry.get("reset_password", False)
+        if password and reset:
             user.new_password = password
         user.flags.ignore_permissions = True
         user.save()

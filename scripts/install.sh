@@ -37,7 +37,7 @@ fi
 
 log_ok "Installation complete!"
 log_info "Frontend: https://${SITE_NAME:-hrms.example.com}"
-log_info "Admin login: admin@example.com / (password from .env ADMIN_PASSWORD)"
+log_info "Admin login: ${HRMS_ADMIN_EMAIL:-admin@example.com} / (password from .env)"
 log_info ""
 log_info "Next steps:"
 log_info "  1. Configure DNS: point ${SITE_NAME:-hrms.example.com} to your server IP"
