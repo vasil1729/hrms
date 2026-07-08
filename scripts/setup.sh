@@ -5,7 +5,6 @@ echo '=== Configurator: Setting up Frappe site ==='
 
 if [ -f /home/frappe/frappe-bench/sites/$SITE_NAME/site_config.json ]; then
   echo 'Site already exists. Running post-setup...'
-  echo "Site exists, skipping setup"
 else
   echo "Creating new site: $SITE_NAME"
   bench new-site \
@@ -24,13 +23,27 @@ else
   echo 'Installing HRMS...'
   bench --site "$SITE_NAME" install-app hrms
 
-  echo 'Applying site configuration...'
-  cd /home/frappe/frappe-bench
-  echo -e "import sys\nsys.path.insert(0, '/home/frappe')\nimport setup_site\nsetup_site.run()" | \
-    bench --site "$SITE_NAME" console
-
   echo 'Building assets...'
   bench build
 fi
+
+echo 'Configuring Redis connections...'
+cat > /home/frappe/frappe-bench/sites/common_site_config.json << 'EOF'
+{
+  "redis_cache": "redis://redis-cache:6379",
+  "redis_queue": "redis://redis-queue:6379",
+  "redis_socketio": "redis://redis-socketio:6379"
+}
+EOF
+
+echo 'Applying site configuration...'
+cd /home/frappe/frappe-bench
+cat > /tmp/setup_script.py << 'PYEOF'
+import sys
+sys.path.insert(0, '/home/frappe')
+import setup_site
+setup_site.run()
+PYEOF
+bench --site "$SITE_NAME" console < /tmp/setup_script.py
 
 echo '=== Configurator complete ==='
