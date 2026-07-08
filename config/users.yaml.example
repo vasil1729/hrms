@@ -3,6 +3,7 @@
 # Run `make sync-users` to apply changes.
 
 users:
+  # ─── Admin ────────────────────────────────────────────
   - email: admin@example.com
     first_name: Admin
     last_name: User
@@ -11,4 +12,49 @@ users:
     enabled: 1
     # Set reset_password: true to force password update on re-sync.
     # Without this flag, existing users keep their current password.
-    # reset_password: false
+
+  # ─── Common Roles ─────────────────────────────────────
+  # System Manager    — Full access to everything
+  # HR Manager        — Full HR access (employees, payroll, leaves, attendance)
+  # HR User           — View/create HR documents (no delete/submit)
+  # Employee          — Self-service (apply leave, view salary slips, etc.)
+  # Expense Approver  — Approve expense claims
+  # Fleet Manager     — Manage vehicle logs
+  # Accounts Manager  — Accounting module access
+  # Stock Manager     — Inventory management
+  # Projects Manager  — Project management
+
+  # ─── Examples ─────────────────────────────────────────
+
+  # HR Manager with Employee self-service:
+  # - email: hr@example.com
+  #   first_name: HR
+  #   last_name: Manager
+  #   password: "<password>"
+  #   roles:
+  #     - HR Manager
+  #     - Employee
+  #   enabled: 1
+
+  # Employee only (self-service):
+  # - email: employee@example.com
+  #   first_name: John
+  #   last_name: Doe
+  #   password: "<password>"
+  #   roles:
+  #     - Employee
+  #   enabled: 1
+
+  # Accounts user:
+  # - email: accounts@example.com
+  #   first_name: Accounts
+  #   password: "<password>"
+  #   role: Accounts Manager
+  #   enabled: 1
+
+  # Disabled user (cannot log in):
+  # - email: former@example.com
+  #   first_name: Former
+  #   password: "<password>"
+  #   role: Employee
+  #   enabled: 0

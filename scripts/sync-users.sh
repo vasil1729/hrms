@@ -23,58 +23,64 @@ fi
 
 log_info "Reading users from: $USERS_YAML"
 
-docker compose exec -T backend bench --site "$SITE" console --quiet -c '
-import json
+# Copy users.yaml into the container
+docker compose cp "$USERS_YAML" backend:/home/frappe/users.yaml
+
+# Generate and run sync script
+docker compose exec -T backend bash -c "cat > /tmp/sync_users.py << 'PYEOF'
 import os
 import yaml
 
 import frappe
-from frappe.core.doctype.user.user import create_contact
 
-yaml_path = "/home/frappe/config/users.yaml"
+yaml_path = '/home/frappe/users.yaml'
 if not os.path.exists(yaml_path):
-    # Try alternative paths
-    for p in ["/home/frappe/config/users.yaml", "/home/frappe/users.yaml"]:
-        if os.path.exists(p):
-            yaml_path = p
-            break
-
-if not os.path.exists(yaml_path):
-    print("ERROR: users.yaml not found in container")
+    print('ERROR: users.yaml not found in container')
     exit(1)
 
 with open(yaml_path) as f:
     data = yaml.safe_load(f)
 
-users = data.get("users", [])
+users = data.get('users', [])
 if not users:
-    print("No users found in config")
+    print('No users found in config')
     exit(0)
 
 for entry in users:
-    email = entry.get("email", "").strip()
+    email = entry.get('email', '').strip()
     if not email:
         continue
 
-    first_name = entry.get("first_name", email.split("@")[0])
-    last_name = entry.get("last_name", "")
-    password = entry.get("password", "")
-    role = entry.get("role", "System Manager")
-    enabled = entry.get("enabled", 1)
+    first_name = entry.get('first_name', email.split('@')[0])
+    last_name = entry.get('last_name', '')
+    password = entry.get('password', '')
+    roles_raw = entry.get('roles') or entry.get('role', 'System Manager')
+    if isinstance(roles_raw, str):
+        roles_raw = [roles_raw]
+    enabled = entry.get('enabled', 1)
 
-    if frappe.db.exists("User", email):
-        user = frappe.get_doc("User", email)
-        user.first_name = first_name
-        user.last_name = last_name
-        user.enabled = enabled
-        reset = entry.get("reset_password", False)
-        if password and reset:
-            user.new_password = password
-        user.flags.ignore_permissions = True
-        user.save()
-        print(f"Updated: {email} ({role})")
+    if frappe.db.exists('User', email):
+        frappe.db.set_value('User', email, 'first_name', first_name)
+        frappe.db.set_value('User', email, 'last_name', last_name)
+        frappe.db.set_value('User', email, 'enabled', enabled)
+        if password and entry.get('reset_password', False):
+            frappe.db.set_value('User', email, 'new_password', password)
+        frappe.db.delete('Has Role', {'parent': email, 'parenttype': 'User'})
+        for r in roles_raw:
+            rdoc = frappe.get_doc({
+                'doctype': 'Has Role',
+                'parent': email,
+                'parenttype': 'User',
+                'parentfield': 'roles',
+                'role': r,
+            })
+            rdoc.flags.ignore_permissions = True
+            rdoc.insert()
+        frappe.db.commit()
+        frappe.clear_cache(user=email)
+        print('Updated: %s (%s)' % (email, ', '.join(roles_raw)))
     else:
-        user = frappe.new_doc("User")
+        user = frappe.new_doc('User')
         user.email = email
         user.first_name = first_name
         user.last_name = last_name
@@ -83,19 +89,14 @@ for entry in users:
         if password:
             user.new_password = password
         user.flags.ignore_permissions = True
-        user.append("roles", {"role": role})
+        for r in roles_raw:
+            user.append('roles', {'role': r})
         user.insert(ignore_permissions=True)
-        print(f"Created: {email} ({role})")
+        print('Created: %s (%s)' % (email, ', '.join(roles_raw)))
 
-print(f"Synced {len(users)} user(s)")
-' 2>/dev/null || {
-    log_warn "Direct sync failed, trying fallback method..."
-    # Fallback: use bench execute with a Python script
-    docker compose cp "$USERS_YAML" backend:/home/frappe/users.yaml
-    docker compose exec -T backend bench --site "$SITE" execute /home/frappe/sync_users.py 2>/dev/null || {
-        log_error "Sync failed"
-        exit 1
-    }
-}
+frappe.db.commit()
+print('Synced %d user(s)' % len(users))
+PYEOF
+bench --site $SITE console < /tmp/sync_users.py"
 
 log_ok "User sync complete"
