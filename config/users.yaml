@@ -4,8 +4,8 @@
 
 users:
   - email: admin@example.com
-    first_name: Vasil
-    last_name: Admin
+    first_name: Admin
+    last_name: User
     password: "<replace-with-strong-password>"
     role: System Manager
     enabled: 1
