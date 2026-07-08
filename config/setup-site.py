@@ -22,7 +22,8 @@ def create_admin_user():
     user.new_password = password
     user.send_welcome_email = 0
     user.flags.ignore_permissions = True
-    user.append("roles", {"role": "System Manager"})
+    for role in ["System Manager", "HR Manager", "HR User"]:
+        user.append("roles", {"role": role})
     user.insert(ignore_permissions=True)
     frappe.db.commit()
     print(f"Created admin user: {email}")
