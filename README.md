@@ -83,7 +83,7 @@ hrms.example.com.  A  <your-server-ip>
 
 ### Caddy Reverse Proxy
 
-Caddy runs as a separate container on the host (outside this project) and proxies all traffic to the Nginx frontend container. See [caddy-docker](https://github.com/vasil1729/caddy-docker) for the full setup. The Caddy config handles:
+Caddy runs as a separate container on the host (outside this project) and proxies all traffic to the Nginx frontend container. The Caddy config handles:
 
 - TLS termination with origin certificates
 - WebSocket path routing (`/socket.io/*`)
