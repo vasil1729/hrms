@@ -5,21 +5,29 @@ Production-grade Docker Compose deployment of [Frappe HRMS](https://github.com/f
 ## Architecture
 
 ```
-┌─────────────┐     ┌──────────┐     ┌─────────────────────┐
-│  Internet   │────▶│  Caddy   │────▶│  Frappe Backend     │
-│  (HTTPS)    │     │  (Proxy) │     │  (Gunicorn :8000)   │
-└─────────────┘     └──────────┘     └──────────┬──────────┘
-                                                │
-                    ┌───────────────────────────┼───────────┐
-                    │                           │           │
-              ┌─────▼─────┐            ┌────────▼────┐ ┌───▼────┐
-              │  MariaDB  │            │    Redis    │ │Worker  │
-              │  (Port    │            │  (Cache,    │ │ x N    │
-              │   3306)   │            │  Queue, IO) │ │        │
-              └───────────┘            └─────────────┘ └────────┘
+┌─────────────┐     ┌──────────┐     ┌──────────────────┐
+│  Internet   │────▶│  Caddy   │────▶│  Nginx Frontend  │
+│  (HTTPS)    │     │  (TLS)   │     │  (Port 8080)     │
+└─────────────┘     └──────────┘     └────────┬─────────┘
+                                              │
+                    ┌─────────────────────────┼──────────────────┐
+                    │  /assets/ (static)      │  / (API)         │  /socket.io/
+                    ▼                         ▼                  ▼
+              ┌──────────┐           ┌────────────────┐  ┌────────────┐
+              │  Disk    │           │  Frappe/Gunicorn│  │  WebSocket │
+              │ (Volumes)│           │  (:8000)       │  │  (Node.js) │
+              └──────────┘           └────────┬───────┘  │  (:9000)   │
+                                              │          └────────────┘
+                    ┌─────────────────────────┼──────────────────────┐
+                    │                         │                      │
+              ┌─────▼─────┐           ┌───────▼───────┐     ┌──────▼─────┐
+              │  MariaDB  │           │  Redis × 3    │     │  Workers   │
+              │  (:3306)  │           │  (Cache,Queue,│     │  +         │
+              └───────────┘           │   SocketIO)   │     │  Scheduler │
+                                      └───────────────┘     └────────────┘
 ```
 
-Services run on an internal Docker network. Only the backend (via Caddy) is publicly exposed.
+Services are segmented into internal and proxy networks. Database and Redis are on the internal network — no external access, not even from the host.
 
 ## Prerequisites
 
@@ -75,13 +83,22 @@ hrms.example.com.  A  <your-server-ip>
 
 ### Caddy Reverse Proxy
 
-Add the configuration from `compose/caddy/Caddyfile` to your existing Caddy setup. The config handles:
+Caddy runs as a separate container on the host (outside this project) and proxies all traffic to the Nginx frontend container. See [caddy-docker](https://github.com/vasil1729/caddy-docker) for the full setup. The Caddy config handles:
 
-- Automatic TLS via Cloudflare DNS challenge
-- Static asset caching (immutable, 1 year)
-- WebSocket support for Frappe real-time
-- Security headers (HSTS, CSP, etc.)
+- TLS termination with origin certificates
+- WebSocket path routing (`/socket.io/*`)
+- Security headers (HSTS, XSS, XFO, CSP, etc.)
 - Gzip/Brotli compression
+
+### Nginx Frontend
+
+An Nginx sidecar (the `frontend` service in `compose.yaml`) shares the Frappe volumes and handles:
+
+- **Static asset serving** — `/assets/*` served directly from disk with 1-year immutable cache
+- **WebSocket proxying** — `/socket.io/*` → `websocket:9000`
+- **API proxying** — everything else → `backend:8000`
+
+> **Important**: 404 responses from the `/assets/` location must not carry cache headers, otherwise Cloudflare will cache the error for a year. The Nginx config uses a named `@asset_404` location to serve 404s without `Cache-Control` headers.
 
 ### Allowed Users
 
@@ -263,6 +280,14 @@ docker compose logs worker
 docker compose exec redis-queue redis-cli LLEN rq:queue:default
 ```
 
+### Assets returning 404 (Cloudflare cache poisoning)
+
+If assets return 404 after initial setup, Cloudflare may have cached Nginx's 404 response (from before the site was fully provisioned). The Nginx config's `expires 1y` on the `/assets/` block caused the 404 to be cached for a year at Cloudflare's edge.
+
+**Fix:** Purge Cloudflare cache (Dashboard → Caching → Purge Everything) and reload.
+
+**Prevention:** The `@asset_404` named location in `config/nginx.conf` returns 404s without cache headers, preventing future cache poisoning.
+
 ### Permission denied errors
 
 The backup and restore scripts need Docker socket access. Ensure your user is in the `docker` group:
@@ -276,18 +301,17 @@ newgrp docker
 
 ```
 hrms/
-├── compose.yaml          # Docker Compose orchestrator
+├── compose.yaml          # Docker Compose orchestrator (all services)
 ├── Dockerfile            # Custom image with HRMS
 ├── .env.example          # Environment template
 ├── Makefile              # Operation shortcuts
-├── compose/
-│   └── caddy/
-│       └── Caddyfile     # Reverse proxy configuration
 ├── config/
+│   ├── nginx.conf        # Nginx frontend config
 │   ├── users.yaml        # Allowed users list
 │   ├── site_config.json  # Frappe site overrides
 │   └── setup-site.py     # First-run configuration script
 ├── scripts/
+│   ├── setup.sh          # Configurator entrypoint (one-shot setup)
 │   ├── install.sh        # First-time deployment
 │   ├── update.sh         # Update with rollback
 │   ├── backup.sh         # Database + files backup
