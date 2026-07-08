@@ -25,6 +25,12 @@ else
 
   echo 'Building assets...'
   bench build
+
+  echo 'Copying static assets from apps...'
+  cp -r /home/frappe/frappe-bench/apps/frappe/frappe/public/images /home/frappe/frappe-bench/sites/assets/frappe/images
+  mkdir -p /home/frappe/frappe-bench/sites/assets/frappe/css
+  cp -r /home/frappe/frappe-bench/apps/frappe/frappe/public/css/fonts /home/frappe/frappe-bench/sites/assets/frappe/css/fonts
+  cp -r /home/frappe/frappe-bench/apps/erpnext/erpnext/public/images /home/frappe/frappe-bench/sites/assets/erpnext/images 2>/dev/null || true
 fi
 
 echo 'Configuring Redis connections...'
