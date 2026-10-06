@@ -1,6 +1,6 @@
 .env
+.api_keys.env
 config/users.yaml
-config/setup-site.py
 volumes/*
 !volumes/.gitkeep
 backups/*

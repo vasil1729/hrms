@@ -27,10 +27,16 @@ else
   bench build
 
   echo 'Copying static assets from apps...'
-  cp -r /home/frappe/frappe-bench/apps/frappe/frappe/public/images /home/frappe/frappe-bench/sites/assets/frappe/images
-  mkdir -p /home/frappe/frappe-bench/sites/assets/frappe/css
-  cp -r /home/frappe/frappe-bench/apps/frappe/frappe/public/css/fonts /home/frappe/frappe-bench/sites/assets/frappe/css/fonts
-  cp -r /home/frappe/frappe-bench/apps/erpnext/erpnext/public/images /home/frappe/frappe-bench/sites/assets/erpnext/images 2>/dev/null || true
+  for app in frappe erpnext hrms; do
+    src="/home/frappe/frappe-bench/apps/$app/$app/public"
+    dst="/home/frappe/frappe-bench/sites/assets/$app"
+    for subdir in icons images sounds js html css; do
+      if [ -d "$src/$subdir" ]; then
+        mkdir -p "$dst/$subdir"
+        cp -r "$src/$subdir"/* "$dst/$subdir/" 2>/dev/null || true
+      fi
+    done
+  done
 fi
 
 echo 'Configuring Redis connections...'
@@ -51,5 +57,12 @@ import setup_site
 setup_site.run()
 PYEOF
 bench --site "$SITE_NAME" console < /tmp/setup_script.py
+
+# Print API keys path for sync-users.sh
+KEYS_FILE="/home/frappe/frappe-bench/sites/api_keys.json"
+if [ -f "$KEYS_FILE" ]; then
+  echo "API keys generated at: $KEYS_FILE"
+  echo "Run on host to save: docker compose exec backend cat $KEYS_FILE > ../.api_keys.env"
+fi
 
 echo '=== Configurator complete ==='

@@ -4,14 +4,23 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 source scripts/lib.sh
 
-log_info "Frappe HRMS — Sync Users from YAML"
-log_info "==================================="
+log_info "Frappe HRMS — Sync Users via REST API"
+log_info "======================================"
 
-require_docker
-require_env DB_PASSWORD ADMIN_PASSWORD
+# Load API credentials from generated file
+API_KEYS_FILE="$(dirname "$0")/../.api_keys.env"
+if [[ -f "$API_KEYS_FILE" ]]; then
+    set -a
+    source "$API_KEYS_FILE"
+    set +a
+fi
+
+require_env HRMS_API_KEY HRMS_API_SECRET
 
 SITE=$(get_site)
 USERS_YAML="config/users.yaml"
+API_URL="https://${SITE}/api/resource"
+AUTH="Authorization: token ${HRMS_API_KEY}:${HRMS_API_SECRET}"
 
 if [[ ! -f "$USERS_YAML" ]]; then
     USERS_YAML="config/users.yaml.example"
@@ -23,80 +32,85 @@ fi
 
 log_info "Reading users from: $USERS_YAML"
 
-# Copy users.yaml into the container
-docker compose cp "$USERS_YAML" backend:/home/frappe/users.yaml
-
-# Generate and run sync script
-docker compose exec -T backend bash -c "cat > /tmp/sync_users.py << 'PYEOF'
+# Use Python on the host to parse YAML and make API calls
+python3 << PYEOF
+import json
 import os
+import sys
+import urllib.request
+import urllib.error
+import urllib.parse
 import yaml
 
-import frappe
+SITE = os.environ.get("SITE_NAME", "$SITE")
+API_KEY = os.environ.get("HRMS_API_KEY", "${HRMS_API_KEY:-}")
+API_SECRET = os.environ.get("HRMS_API_SECRET", "${HRMS_API_SECRET:-}")
+BASE = f"https://{SITE}/api/resource"
 
-yaml_path = '/home/frappe/users.yaml'
-if not os.path.exists(yaml_path):
-    print('ERROR: users.yaml not found in container')
-    exit(1)
-
-with open(yaml_path) as f:
+with open("$USERS_YAML") as f:
     data = yaml.safe_load(f)
 
-users = data.get('users', [])
+users = data.get("users", [])
 if not users:
-    print('No users found in config')
-    exit(0)
+    print("No users found")
+    sys.exit(0)
+
+
+def api(method, path, body=None):
+    url = BASE + path
+    data = json.dumps(body).encode() if body else None
+    req = urllib.request.Request(url, data=data, method=method)
+    req.add_header("Authorization", f"token {API_KEY}:{API_SECRET}")
+    req.add_header("Content-Type", "application/json")
+    req.add_header("User-Agent", "curl/8.18.0")
+    req.add_header("Accept", "*/*")
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            return json.loads(resp.read())
+    except urllib.error.HTTPError as e:
+        body = e.read().decode()[:300]
+        print(f"  HTTP {e.code}: {body}")
+        return None
+    except urllib.error.URLError as e:
+        print(f"  Connection error: {e.reason}")
+        return None
+
 
 for entry in users:
-    email = entry.get('email', '').strip()
+    email = entry.get("email", "").strip()
     if not email:
         continue
+    encoded = urllib.parse.quote(email, safe="")
 
-    first_name = entry.get('first_name', email.split('@')[0])
-    last_name = entry.get('last_name', '')
-    password = entry.get('password', '')
-    roles_raw = entry.get('roles') or entry.get('role', 'System Manager')
+    first_name = entry.get("first_name", email.split("@")[0])
+    last_name = entry.get("last_name", "")
+    password = entry.get("password", "")
+    roles_raw = entry.get("roles") or entry.get("role", "System Manager")
     if isinstance(roles_raw, str):
         roles_raw = [roles_raw]
-    enabled = entry.get('enabled', 1)
+    enabled = entry.get("enabled", 1)
 
-    if frappe.db.exists('User', email):
-        frappe.db.set_value('User', email, 'first_name', first_name)
-        frappe.db.set_value('User', email, 'last_name', last_name)
-        frappe.db.set_value('User', email, 'enabled', enabled)
-        if password and entry.get('reset_password', False):
-            frappe.db.set_value('User', email, 'new_password', password)
-        frappe.db.delete('Has Role', {'parent': email, 'parenttype': 'User'})
-        for r in roles_raw:
-            rdoc = frappe.get_doc({
-                'doctype': 'Has Role',
-                'parent': email,
-                'parenttype': 'User',
-                'parentfield': 'roles',
-                'role': r,
-            })
-            rdoc.flags.ignore_permissions = True
-            rdoc.insert()
-        frappe.db.commit()
-        frappe.clear_cache(user=email)
-        print('Updated: %s (%s)' % (email, ', '.join(roles_raw)))
+    roles = [{"role": r} for r in roles_raw]
+    payload = {
+        "first_name": first_name,
+        "last_name": last_name,
+        "enabled": enabled,
+        "roles": roles,
+    }
+    if password:
+        payload["new_password"] = password
+
+    resp = api("GET", f"/User/{encoded}")
+    if resp and "data" in resp:
+        result = api("PUT", f"/User/{encoded}", payload)
+        if result:
+            print(f"  Updated: {email} ({', '.join(roles_raw)})")
     else:
-        user = frappe.new_doc('User')
-        user.email = email
-        user.first_name = first_name
-        user.last_name = last_name
-        user.enabled = enabled
-        user.send_welcome_email = 0
-        if password:
-            user.new_password = password
-        user.flags.ignore_permissions = True
-        for r in roles_raw:
-            user.append('roles', {'role': r})
-        user.insert(ignore_permissions=True)
-        print('Created: %s (%s)' % (email, ', '.join(roles_raw)))
+        payload["email"] = email
+        payload["send_welcome_email"] = 0
+        result = api("POST", "/User", payload)
+        if result:
+            print(f"  Created: {email} ({', '.join(roles_raw)})")
 
-frappe.db.commit()
-print('Synced %d user(s)' % len(users))
+print(f"Done — {len(users)} user(s) processed")
 PYEOF
-bench --site $SITE console < /tmp/sync_users.py"
-
-log_ok "User sync complete"
